@@ -1,0 +1,193 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<a href="../../index.html"><img src="../../gambar/logo.png" id="logo" style="float:left"/></a>
+			<div class="tooltip">
+			<a href="../info.html"><i class='fas fa-info'></i></a>
+			<span class="tooltiptext">Info Aplikasi</span>
+			</div>
+			<div class="tooltip">
+			<a href="../kikd.html"><i class='far fa-file-alt'></i></a>
+			<span class="tooltiptext">KI, KD, dan Peta Konsep</span>
+			</div>
+			<div class="tooltip">
+			<a href="#"><i class='fas fa-book'></i></a>
+			<span class="tooltiptext">Materi</span>
+			</div>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="#">Pengenalan</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:50px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Evaluasi</a>
+				    </div>
+				</li>
+				<li class="dropdown1" style="background-color: rgb(20,20,20);">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:70px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="display:block;">
+				      <a href="mean1.html" style="border-bottom:3px solid rgb(0,156,255);">1.  Mean</a>
+				      <a href="median1.html">2.  Median</a>
+				      <a href="modus1.html">3.  Modus</a>
+				      <a href="evaluasiB.html">Evaluasi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:70px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="jangkauan1.html">1. Jangkauan</a>
+				      <a href="kuartil1.html">2. Kuartil</a>
+				      <a href="interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="evaluasiC.html">Evaluasi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten3">
+				<div class="materi3">
+					<h2>Mean (Rata-Rata)</h2>
+					<div class="submateri3">
+					<p>
+						Dalam suatu kumpuan data, adakalanya terdapat satu nilai data yang jauh lebih besar atau jauh lebih kecil daripada nilai-nilai yang lainnya. Ketika nilai tersebut dimasukkan ke dalam kumpulan data akan memengaruhi nilai rata-rata. Perhatikan contoh berikut !
+					</p>
+					<p>
+						Tabel berikut menunjukkan nomor sepatu anak yang mewakili sekolah dalam ajang pekan olahraga di kabupaten. 
+					</p>
+					<center>
+					<div  class="tabel fontt">
+						<table>
+							<tr>
+								<th colspan="5">Nomor Sepatu Anak-Anak yang Mewakili POR</th>
+							</tr>
+							<tr>
+								<td>40</td>
+								<td>37</td>
+								<td>39</td>
+								<td>40</td>
+								<td>42</td>
+							</tr>
+							<tr>
+								<td>38</td>
+								<td>38</td>
+								<td>37</td>
+								<td>28</td>
+								<td>40</td>
+							</tr>
+						</table>
+					</div>
+					</center>
+					<p>
+						Perhatikan penjelasan di samping untuk menjawab soal berikut.
+					</p>
+					<ol style="padding-left:20px;">
+						<li>Tentukan nilai yang dapat memengaruhi nilai rata-rata.</li>
+						<li>Tentukan rata-rata dengan dan tanpa nilai dari poin a.</li>
+					</ol>
+					</div>
+					
+				</div>
+
+				<div class="conso3">
+					<div style="width:100%;">
+					  <ul class="nav nav-tabs fontt" style="padding-left: 21%;">
+					    <li class="active"><a data-toggle="tab" href="#home">Pembahasan 1</a></li>
+					    <li><a data-toggle="tab" href="#menu1">Pembahasan 2</a></li>
+					  </ul>
+
+					  <div class="tab-content">
+					    <div id="home" class="tab-pane fade in active" style="width:100%;">
+					      <p>Berdasarkan data dalam tabel, kita bisa mengetahui nilai yang dapat memengaruhi nilai rata-rata dengan membuat plot data seperti berikut.</p>
+					      <embed src="../../flash/mean.swf" style="width:100%;height:80%">
+					    </div>
+					    <div id="menu1" class="tab-pane fade" style="width:100%;">
+					      <p>Untuk membuktikan data 28 adalah nilai yang memengaruhi rata-rata, maka dilakukan perhitungan nilai rata-rata dengan dan tanpa data 28 sebagai berikut.</p>
+					      <div class="r28">
+					      		<h3>Rata-rata dengan data 28</h3>
+					      		<table>
+					      			<tr>
+					      				<td style="border-bottom:1px solid black">40 + 37 + 39 + 40 + 42 + 38 + 38 + 37 + 28 + 40</td>
+					      				<td rowspan="2">=</td>
+					      				<td style="border-bottom:1px solid black">379</td>
+					      				<td rowspan="2">=</td>
+					      				<td rowspan="2">37,9</td>
+					      			</tr>
+					      			<tr>
+					      				<td>10</td>
+					      				<td>10</td>
+									</tr>
+					      		</table>
+					      	</div>
+					      	<div class="r28">
+					      		<h3>Rata-rata tanpa data 28</h3>
+					      		<table>
+					      			<tr>
+					      				<td style="border-bottom:1px solid black">40 + 37 + 39 + 40 + 42 + 38 + 38 + 37 + 40</td>
+					      				<td rowspan="2">=</td>
+					      				<td style="border-bottom:1px solid black">351</td>
+					      				<td rowspan="2">=</td>
+					      				<td rowspan="2">39</td>
+					      			</tr>
+					      			<tr>
+					      				<td>10</td>
+					      				<td>10</td>
+									</tr>
+					      		</table>
+					      	</div>
+					      	<p>Perhatikan bahwa rata-rata dengan dan tanpa mengikutsertakan data 28 dalam kumpulan data memiliki nilai yang berbeda. Sehingga, rata-rata tanpa nilai 28 lebih baik untuk menyatakan nomor sepatu.</p>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="mean1.html"><< Sebelumnya</a>
+					<a href="mean1.html">1</a>
+					<a href="mean2.html">2</a>
+					<a href=javascript:void(0)  class="active">3</a>
+					<a href="mean4.html">4</a>
+					<a href="mean5.html">5</a>
+					<a href="mean4.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/style.js"></script>
+		<script src="../../js/isian1.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
+		<script src="../../js/jquery-2.2.4.min.js"></script>
+	</body>
+	
+</html>

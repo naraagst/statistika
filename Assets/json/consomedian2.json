@@ -1,0 +1,16 @@
+{
+	"consomedian":[
+		{
+			"soal":"<b>Soal :</b><br/>Berapakah median dari data tinggi badan siswa kelas VII SMPN 2 Banjarmasin berikut?",
+			"data":"<center><img src='../../gambar/consomedian2.png' style='width:50%'></center>",
+			"soal2":"",
+			"pembahasan":"<p><b>Pembahasan :</b><br/>Banyak data (<i>n  </i>) = 25<br/><img src='../../gambar/consomedian3.png' style='width:40%'><br/><b>Jadi, median dari data tersebut adalah 150cm</b></p>"
+		},
+		{
+			"soal":"<b>Soal :</b><br/><p>Seorang siswa ditugaskan untuk mencatat jumlah saudara kandung yang dimiliki oleh teman-teman sekelasnya. Hasil catatannya adalah sebagai berikut.</p>",
+			"data":"<center><img src='../../gambar/cmedian4.jpg' style='width:80%'></center>",
+			"soal2":"<p>Berapakah median dari data tersebut?</p>",
+			"pembahasan":"<p><b>Pembahasan :</b><br/>Banyak data (<i>n  </i>) = 40<br/><img src='../../gambar/cmedian5.jpg' style='width:60%'><br/><b>Jadi, median dari data tersebut adalah 2</b></p>"
+		}
+	]
+}  

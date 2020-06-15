@@ -1,0 +1,222 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script>
+
+			window.onload = function e() {
+				document.getElementById("ulangi").hidden = true;
+            	document.getElementById("lihat").hidden = true;
+
+            	document.getElementById("jwb1a").hidden = true;
+				document.getElementById("jwb1b").hidden = true;
+				document.getElementById("jwb2a").hidden = true;
+				document.getElementById("jwb2b").hidden = true;
+				document.getElementById("jwb3a").hidden = true;
+				document.getElementById("jwb3b").hidden = true;
+				document.getElementById("jwb4a").hidden = true;
+				document.getElementById("jwb4b").hidden = true;
+				document.getElementById("jwb5a").hidden = true;
+				document.getElementById("jwb5b").hidden = true;
+				document.getElementById("jwb6a").hidden = true;
+				document.getElementById("jwb6b").hidden = true;
+				document.getElementById("jwb7a").hidden = true;
+				document.getElementById("jwb7b").hidden = true;
+				document.getElementById("jwb8a").hidden = true;
+				document.getElementById("jwb8b").hidden = true;
+				
+			var chart5 = new CanvasJS.Chart("chartContainer5", {
+				animationEnabled: true,
+				theme: "light2",
+				axisY: {
+					title: "Liter"
+				},
+				axisX: {
+					title: "Waktu (Jam)"
+				},
+				data: [{        
+					type: "line",  
+					showInLegend: true, 
+					legendText: "Perjalanan dari kota M ke kota N",     
+					dataPoints: [      
+						{ x: 4, y: 40, indexLabel: "A" },
+						{ x: 5, y: 20, indexLabel: "B" },
+						{ x: 6, y: 20, indexLabel: "C" },
+						{ x: 8, y: 10},
+						{ x: 8, y: 60, indexLabel: "D" },
+						{ x: 9, y: 50, indexLabel: "E" },
+						{ x: 10, y: 40, indexLabel: "F" },
+						{ x: 12, y: 10, indexLabel: "G" }
+					]
+				}]
+			});
+			chart5.render();
+
+			}
+
+	</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6" style="background-color: rgb(20,20,20);">
+					  <a href="analisis1.html" style="border-bottom:3px solid rgb(0,156,255);">Materi</a>
+				      <a href="evaluasiA">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown">
+				      <a href="../B/mean1.html" >1.  Mean</a>
+				      <a href="../B/median1.html">2.  Median</a>
+				      <a href="../B/modus1.html">3.  Modus</a>
+				      <a href="../B/evaluasiB">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="../C/jangkauan1.html">1. Jangkauan</a>
+				      <a href="../C/kuartil1.html">2. Kuartil</a>
+				      <a href="../C/interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="../C/simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="../C/evaluasiC">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h2>Menganalisis Data</h2>
+				<div class="submateri">
+				<p>Perhatikan grafik disamping!</p>
+				<p>
+					Grafik di samping menyajikan penggunaan bahan bakar terhadap waktu (dalam jam) pada perjalanan sebuah mobil dari kota <i>M</i> ke kota <i>N</i>. Gunakan informasi pada grafik di bawah ini untuk menjawab pertanyaan.
+				</p>
+				<form name="form">
+					<div class="isian">
+					<ol>
+						<li>
+							Berapa liter bahan bakar yang dihabiskan dalam perjalanan:
+							<div class="subisi">
+							<table>
+								<tr>
+									<td>a.</td>
+									<td>Dari titik <i>A</i> ke titik <i>B</i> ?</td>
+									<td>
+										<input type="text" name="jwb1">liter
+										<font class="hsl1" id="jwb1a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb1b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>b.</td>
+									<td>Dari titik <i>C</i> ke titik <i>D</i> ?</td>
+									<td>
+										<input type="text" name="jwb2">liter
+										<font class="hsl1" id="jwb2a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb2b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>c.</td>
+									<td>Dari titik <i>D</i> ke titik <i>E</i> ?</td>
+									<td>
+										<input type="text" name="jwb3">liter
+										<font class="hsl1" id="jwb3a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb3b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>d.</td>
+									<td>Dari titik <i>E</i> ke titik <i>F</i> ?</td>
+									<td>
+										<input type="text" name="jwb4">liter
+										<font class="hsl1" id="jwb4a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb4b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>e.</td>
+									<td>Dari titik <i>F</i> ke titik <i>G</i> ?</td>
+									<td>
+										<input type="text" name="jwb5">liter
+										<font class="hsl1" id="jwb5a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb5b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+							</table>
+							</div>
+						</li>
+						<li>
+							Berapa liter bahan bakar total yang dihabiskan dalam perjalanan tersebut ?
+							<input type="text" name="jwb6">liter
+							<font class="hsl1" id="jwb6a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl1" id="jwb6b"><i class="fas fa-times" style="color:red;"></i></font>
+						</li>
+						<li>
+							Berapa lama perjalanan dari kota <i>M</i> ke kota <i>N</i> ?
+							<input type="text" name="jwb7">jam
+							<font class="hsl1" id="jwb7a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl1" id="jwb7b"><i class="fas fa-times" style="color:red;"></i></font>
+						</li>
+						<li>
+							Berapa banyak bahan bakar yang dihabiskan dari titik <i>B</i> ke titik <i>C</i> ?
+							<input type="text" name="jwb8">liter
+							<font class="hsl1" id="jwb8a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl1" id="jwb8b"><i class="fas fa-times" style="color:red;"></i></font>
+						</li>
+					</ol>
+					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek" style="margin-left:25px;">
+					<div id="isi" style="float: right; font-size: 24px; font-weight:bold; color:red;"></div>
+					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek" id="ulangi">
+					<input type="button" name="submit" onclick="ulaang()" value="Lihat Jawaban" class="cek" id="lihat">
+					</div>
+				</form>
+				</div>
+				
+			</div>
+			<div class="conso">
+				<h3>Sajian Data Penggunaan Bahan Bakar terhadap Waktu</h3>
+				<div id="chartContainer5" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="analisis4.html"><< Sebelumnya</a>
+					<a href="analisis1.html">1</a>
+					<a href="analisis2.html" >2</a>
+					<a href="analisis4.html">3</a>
+					<a href="#" class="active">4</a>
+					<a href="evaluasiA" style="width:100px">Selanjutnya</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/analisis5.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="../../js/style.js"></script>
+		<script src="../../js/canvasjs.min.js"></script>
+	</body>
+	
+</html>

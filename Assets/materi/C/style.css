@@ -1,0 +1,49 @@
+.slide{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	z-index:1;
+	display: none;
+	transition: opacity 0.5s;
+	min-height: 400px;
+}
+
+.active-slide{
+	display:block;
+	z-index:2;
+}
+
+#jwb{
+	position: relative;
+}
+
+.quiz-container{
+	position:relative;
+	min-height: 330px;
+	margin-top: 10px;
+	font-family: Muli;
+	overflow-y: hidden;
+}
+
+.progress{
+	width:95%;
+	background-color: lightgrey;
+	height:20px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	
+}
+
+#progress-bar{
+	background-color: rgb(0,84,130);
+	float: left;
+	border-radius: 5px;
+	height: 20px;
+	color: white;
+	font-family: Muli;
+	font-weight: bold;
+	transition-property: width;
+ 	transition-duration: 1s;
+	transition-timing-function: ease-in;
+}

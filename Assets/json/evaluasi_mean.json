@@ -1,0 +1,54 @@
+{
+    "soal1":[
+      {
+        "soal": "Mean dari data: 6, 7, 8, 5, 6, 6, 7, 9 adalah ...",
+        "gbr":"",
+        "ket":"",
+        "pil_a": "6,25",
+        "pil_b": "6,5",
+        "pil_c": "6,75",
+        "pil_d": "7,3",
+        "jawaban": 3
+      },
+      {
+        "soal": "(i) 6, 7, 9, 10<br/>(ii) 7, 8, 8, 8<br/>(iii) 7, 7, 8, 10<br/>Data yang memiliki <b>mean = 8</b> adalah ...",
+        "gbr":"",
+        "ket":"",
+        "pil_a": "(i) dan (ii)",
+        "pil_b": "(i) dan (iii)",
+        "pil_c": "(ii) dan (iii)",
+        "pil_d": "(i), (ii), (iii)",
+        "jawaban": 2
+      },
+      {
+        "soal": "Data ulangan harian IPA ke-3",
+        "gbr":"<center><table><tr><th>Nilai</th><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><th>Frekuensi</th><td>1</td><td>3</td><td>10</td><td>9</td><td>6</td><td>4</td><td>1</td></tr></table></center>",
+        "ket":"Banyak siswa yang nilainya di atas nilai rata-rata adalah ...",
+        "pil_a": "20 orang",
+        "pil_b": "11 orang",
+        "pil_c": "10 orang",
+        "pil_d": "9 orang",
+        "jawaban": 1
+      },
+      {
+        "soal": "Data nilai ujian tengah semester (UTS) mata pelajaran Bahasa Indonesia.",
+        "gbr":"<center><table><tr><th>Nilai</th><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><th>Frekuensi</th><td>3</td><td>8</td><td>12</td><td>7</td><td>4</td><td>1</td></tr></table></center>",
+        "ket":"Banyak siswa yang nilainya di atas 8 adalah ...",
+        "pil_a": "7 orang",
+        "pil_b": "5 orang",
+        "pil_c": "4 orang",
+        "pil_d": "1 orang",
+        "jawaban": 2
+      },
+      {
+        "soal": "Perhatikan tabel berikut.",
+        "gbr":"<center><table><tr><th>Nilai</th><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><th>Frekuensi</th><td>3</td><td>7</td><td>9</td><td>11</td><td>5</td><td>3</td><td>1</td></tr></table></center>",
+        "ket":"Banyak siswa yang nilainya di atas nilai rata-rata adalah ...",
+        "pil_a": "20 orang",
+        "pil_b": "11 orang",
+        "pil_c": "10 orang",
+        "pil_d": "9 orang",
+        "jawaban": 1
+      }
+    ]
+}

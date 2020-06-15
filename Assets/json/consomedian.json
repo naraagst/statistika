@@ -1,0 +1,22 @@
+{
+	"consomedian":[
+		{
+			"soal":"<b>Soal :</b><br/>Tentukanlah median dari data berikut ini.",
+			"data":"<p>4, 3, 6, 5, 7, 8, 8, 9, 7</p>",
+			"soal2":"",
+			"pembahasan":"<p><b>Pembahasan :</b><br/>Untuk menyelesaikan permasalahan diatas urutkan terlebih dahulu data tersebut dari yang terkecil sampai terbesar.<br/></p><p>Data setelah diurutkan menjadi:</p><center><img src='../../gambar/cmedian1.jpg' style='width:70%;'></center><br/><p><b>Median adalah nilai data yang terletak tepat di tengah-tengah, yaitu 7. Jadi, mediannya adalah 7.</b></p>"
+		},
+		{
+			"soal":"<b>Soal :</b><br/>Tentukanlah median dari data berikut ini.",
+			"data":"<p>5, 6, 7, 4, 8, 9, 7, 7, 4, 5</p>",
+			"soal2":"",
+			"pembahasan":"<p><b>Pembahasan :</b><br/>Untuk menyelesaikan permasalahan diatas urutkan terlebih dahulu data tersebut dari yang terkecil sampai terbesar.<br/></p><p>Data setelah diurutkan menjadi:</p><center><img src='../../gambar/cmedian2.jpg' style='width:70%;'></center><br/><img src='../../gambar/cmedian3.jpg' style='width:25%;margin-left:15px;'><p><b>Jadi, mediannya adalah 6,5.</b></p>"
+		},
+		{
+			"soal":"<b>Soal :</b><br/>Tentukanlah median dari data berikut ini.",
+			"data":"<p>20, 24, 21, 24, 23, 19, 23, 25, 21, 24</p>",
+			"soal2":"",
+			"pembahasan":"<p><b>Pembahasan :</b><br/>Untuk menyelesaikan permasalahan diatas urutkan terlebih dahulu data tersebut dari angka terkecil sampai terbesar.<br/></p><p>Urutan datanya = 19, 20, 21, 21, 23, 23, 24, 24, 25<br/>Banyak data (<i>n </i>) = 10<br/><img src='../../gambar/consomedian.png' style='margin-left:10px;width:60%;'><br/><b>Jadi, median dari data tersebut adalah 23</b></p>"
+		}
+	]
+}  

@@ -1,0 +1,203 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				document.getElementById("cm1hasil").hidden=true;
+				document.getElementById("consomodusa").hidden=true;
+				document.getElementById("consomodusb").hidden=true;
+				document.getElementById("reseta").hidden=true;
+				document.getElementById("cm2hasilb").hidden=true;
+				document.getElementById("cm2e").disabled=true;
+				document.getElementById("resetb").hidden=true;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:40px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="../A/analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="background-color: rgb(20,20,20);">
+				      <a href="mean1.html" >1.  Mean</a>
+				      <a href="median1.html">2.  Median</a>
+				      <a href="modus1.html" style="border-bottom:3px solid rgb(0,156,255);">3.  Modus</a>
+				      <a href="evaluasiB.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="../C/jangkauan1.html">1. Jangkauan</a>
+				      <a href="../C/kuartil1.html">2. Kuartil</a>
+				      <a href="../C/interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="../C/simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="../C/evaluasiC.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h2>Modus</h2>
+				<p>Secara umum, pengertian modus adalah sebagai berikut:</p>
+				<center>
+				<div class="rumusmodus">
+					<p>Modus = nilai yang paling sering muncul<br/>
+					atau <br/>Modus = nilai yang frekuensinya paling tinggi</p>
+				</div>
+				</center>
+				<p>Agar lebih memahami modus, kerjakanlah beberapa contoh dibawah ini:</p>
+				<center>
+				<button onclick="consomodus1()" class="cek">Contoh 1</button>
+				<button onclick="consomodus2()" class="cek">Contoh 2</button>
+				</center>
+			</div>
+			<div class="conso" id="conso">
+				<div id="consomodusa" class="consomodus2">
+					<h3>Contoh Soal Modus 1</h3>
+					<p>Berikut ini adalah data ukuran sepatu 15 siswa kelas VIIIA.</p>
+					<p style="text-align: center;font-size: 20px; font-weight: bold">37, 37, 38, 39, 39, 38, 37, 36, <br/>40, 39, 38, 39, 36, 39, 40</p>
+					<p>Untuk mengetahui modus dari data tersebut, isilah dulu kolom di bawah ini:</p>
+					<ul>
+						<li>banyak ukuran sepatu 36 :<input type="text"id="cm1a" onkeyup="cm1a()"></li>
+						<li>banyak ukuran sepatu 37 :<input type="text" id="cm1b" onkeyup="cm1b()"></li>
+						<li>banyak ukuran sepatu 38 :<input type="text" id="cm1c" onkeyup="cm1c()"></li>
+						<li>banyak ukuran sepatu 39 :<input type="text" id="cm1d" onkeyup="cm1d()"></li>
+						<li>banyak ukuran sepatu 40 :<input type="text" id="cm1e" onkeyup="cm1e()"></li>
+					</ul>
+					<p id="cm1hasil">Nilai yang paling sering muncul adalah 39, yaitu sebanyak lima kali. <b>Jadi, modus data tersebut adalah 39.</b></p>
+					<center><button onclick="reseta()" class="cek" style="margin-bottom: 10px;" id="reseta">Reset</button></center>
+				</div>
+				<div id="consomodusb" class="consomodus2">
+						<h3>Contoh Soal Modus 2</h3>
+						<p>Data berikut menunjukkan jenis film yang disukai siswa di kelas VIIIC.</p>
+						<div class="tabelblank">
+						<center>
+						<table>
+							<tr>
+								<td>Komedi</td>
+								<td>Drama</td>
+								<td>Horror</td>
+								<td>Horror</td>
+							</tr>
+							<tr>
+								<td>Drama</td>
+								<td>Horror</td>
+								<td>Komedi</td>
+								<td>Komedi</td>
+							</tr>
+							<tr>
+								<td>Action</td>
+								<td>Action</td>
+								<td>Komedi</td>
+								<td>Action</td>
+							</tr>
+							<tr>
+								<td>Horror</td>
+								<td>Drama</td>
+								<td>Komedi</td>
+								<td>Komedi</td>
+							</tr>
+							<tr>
+								<td>Komedi</td>
+								<td>Horror</td>
+								<td>Horror</td>
+								<td>Komedi</td>
+							</tr>
+							<tr>
+								<td>Action</td>
+								<td>Horror</td>
+								<td>Action</td>
+								<td>Drama</td>
+							</tr>
+						</table>
+						</center>
+						</div>
+						<p>Untuk mengetahui modus dari data tersebut, isilah tabel frekuensi di bawah ini:</p>
+						<div class="tabel tabel2 tabelinput">
+							<center>
+							<table>
+								<tr>
+									<th>Jenis Film</th>
+									<th>Frekuensi</th>
+								</tr>
+								<tr>
+									<td>Action</td>
+									<td><input type="text" placeholder=".  .  ." onkeyup="cm2a()" id="cm2a" autofocus></td>
+								</tr>
+								<tr>
+									<td>Komedi</td>
+									<td><input type="text" placeholder=".  .  ." onkeyup="cm2b()" id="cm2b"/></td>
+								</tr>
+								<tr>
+									<td>Drama</td>
+									<td><input type="text" placeholder=".  .  ." onkeyup="cm2c()" id="cm2c"/></td>
+								</tr>
+								<tr>
+									<td>Horror</td>
+									<td><input type="text" placeholder=".  .  ." onkeyup="cm2d()" id="cm2d"/></td>
+							</table>
+							</center>
+							<p id="cm2hasil">Dari tabel di atas, jenis film yang memiliki frekuensi paling banyak adalah = <input type="text" placeholder=".  .  ." onkeyup="cm2e()" id="cm2e" style="text-transform: lowercase;width:100px"></p>
+							<p id="cm2hasilb" style="color:green;font-weight: bold">Benar, jenis film dengan frekuensi paling banyak adalah film komedi, maka modus dari data di atas adalah film komedi.</p>
+							<center><button onclick="resetb()" class="cek" id="resetb" style="margin-bottom: 20px;">Reset</button></center>
+						</div>
+				</div>
+
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="modus2.html"><< Sebelumnya</a>
+					<a href="modus1.html">1</a>
+					<a href=javascript:void(0)  class="active">2</a>
+					<a href="modus3.html">3</a>
+					<!-- <a href="modus4.html">4</a>
+					<a href="modus5.html">5</a> -->
+					<a href="modus3.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/style.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="../../js/modus2.js"></script>
+	</body>
+	
+</html>

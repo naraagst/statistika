@@ -1,0 +1,285 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				document.getElementById("k2").hidden = true; 
+				document.getElementById("k3").hidden = true; 
+				document.getElementById("k4").hidden = true; 
+				document.getElementById("gbrk2").hidden = true; 
+				document.getElementById("gbrk3").hidden = true; 
+				document.getElementById("gbrk4").hidden = true; 
+				document.getElementById("ket").hidden = true; 
+				document.getElementById("ket2").hidden = true; 
+				document.getElementById("ket3").hidden = true; 
+				document.getElementById("hasilk1").hidden = true; 
+				document.getElementById("resetk1").hidden = true; 
+				document.getElementById("consokuartil1").hidden = true;
+				document.getElementById("consokuartil2").hidden = true;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="../A/analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="background-color: rgb(20,20,20);">
+				      <a href="../B/mean1.html" >1.  Mean</a>
+				      <a href="../B/median1.html">2.  Median</a>
+				      <a href="../B/modus1.html">3.  Modus</a>
+				      <a href="../B/evaluasiB.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="jangkauan1.html">1. Jangkauan</a>
+				      <a href="kuartil1.html"  style="border-bottom:3px solid rgb(0,156,255);">2. Kuartil</a>
+				      <a href="interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="evaluasiC.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h2>Kuartil</h2>
+				<div class="submateri median">
+				<p><b>Kuartil</b> adalah nilai-nilai yang membagi data menjadi empat kelompok data sama banyak. Nilai-nilai tersebut dilambangkan dengan $Q_1,Q_2$, dan $Q_3$.</p>
+				<img src="../../gambar/kuartil1.png" style="width:98%;margin-top:-30px;">
+				<p>$Q_1$ = Kuartil Bawah<br/>$Q_2$ = Kuartil Tengah (Median)<br/>$Q_3$ = Kuartil Atas</p>
+				<p>
+					Letak kuartil dari suatu data dapat ditentukan dengan mengikuti langkah-langkah sebagai berikut.
+					<ol>
+						<li>Urutkan data dari yang terkecil.</li>
+						<li>Tentukan kuartil tengah ($Q_2$) atau median.</li>
+						<li>Tentukan kuartil bawah ($Q_1$) yang terletak di antara nilai terendah dan $Q_2$.</li>
+						<li>Tentukan kuartil atas ($Q_3$) yang terletak di antara $Q_2$ dan nilai tertinggi.</li>
+					</ol>
+				</p>
+				<p>Selain itu, nilai-nilai kuartil juga dapat ditentukan dengan rumus berikut.</p>
+				<p class="frame"><b style="margin-left:15%;">Letak $Q_i$ = data ke $\frac{i}{4}(n+1)$</b> <br/> <span style="font-size: 16">$i$ = 1, 2, dan 3<br/> $n$ = banyak data (syarat: $n$ > 4) dari data terurut</span></p>
+				<p>Agar lebih memahami bagaimana menentukan kuartil, kerjakan dan pahamilah beberapa contoh berikut ini:</p>
+				<center>
+					<button class="cek" onclick="contoh1()">Contoh 1</button>
+					<button class="cek" onclick="contoh2()">Contoh 2</button>
+					<br/>
+					<br/>
+				</center>
+				</div>
+			</div>
+			<div class="conso" id="conso" style="overflow: auto;">
+				<div id="consokuartil1">
+					<h3>Contoh Soal Kuartil (1)</h3>
+					<p>Perhatikan data berikut!</p>
+					<center>
+					<div class="tabeltulisan angka bigpad" style="margin-top:-20px;">
+						<table>
+							<tr>
+								<td>4,</td>
+								<td>7,</td>
+								<td>7,</td>
+								<td>5,</td>
+								<td>6,</td>
+								<td>5,</td>
+								<td>4,</td>
+								<td>7,</td>
+								<td>8,</td>
+								<td>9,</td>
+								<td>4.</td>
+							</tr>
+						</table>
+					</div>
+					</center>
+					<p>Kuartil dari data tersebut dapat ditentukan dengan langkah-langkah berikut.</p>
+					<div class="langkah">
+					<ol>
+						<li>Urutkan data dari yang terkecil.<br/>
+							<span class="rednote">*Isilah titik-titik di bawah ini dengan urutan data yang benar.</span><br/>
+							<div class="isian_median">
+								<input type="text" id="input_kuartil1" onkeyup="urut1()"/>,
+								<input type="text" id="input_kuartil2" onkeyup="urut2()"/>,
+								<input type="text" id="input_kuartil3" onkeyup="urut3()"/>,
+								<input type="text" id="input_kuartil4" onkeyup="urut4()"/>,
+								<input type="text" id="input_kuartil5" onkeyup="urut5()"/>,
+								<input type="text" id="input_kuartil6" onkeyup="urut6()"/>,
+								<input type="text" id="input_kuartil7" onkeyup="urut7()"/>,
+								<input type="text" id="input_kuartil8" onkeyup="urut8()"/>,
+								<input type="text" id="input_kuartil9" onkeyup="urut9()"/>,
+								<input type="text" id="input_kuartil10" onkeyup="urut10()"/>,
+								<input type="text" id="input_kuartil11" onkeyup="urut11()"/>
+							</div>
+						</li>
+						<li id="k2">Setelah data diurutkan, tentukan kuartil tengah (Q<sub>2</sub>) atau median.<br/>
+							<span class="rednote">*Klik salah satu angka dibawah ini untuk menentukan Q<sub>2</sub> atau median.</span><br/>
+							<center>
+							<div id="tengah" style="margin-top: 10px;">
+								<button onclick="t1()" id="tgh1">4</button>,
+								<button onclick="t2()" id="tgh2">4</button>,
+								<button onclick="t3()" id="tgh3">4</button>,
+								<button onclick="t4()" id="tgh4">5</button>,
+								<button onclick="t5()" id="tgh5">5</button>,
+								<button onclick="t6()" id="tgh">6</button>,
+								<button onclick="t7()" id="tgh6">7</button>,
+								<button onclick="t8()" id="tgh7">7</button>,
+								<button onclick="t9()" id="tgh8">7</button>,
+								<button onclick="t10()" id="tgh9">8</button>,
+								<button onclick="t11()" id="tgh10">9</button>
+							</div>
+							</center>
+							<center><img src="../../gambar/langkah2kuartil.png" width="70%" id="gbrk2"></center>
+							<p id="ket"></p>
+						</li>
+						<li id="k3">Tentukan kuartil bawah (Q<sub>1</sub>) yang terletak di antara nilai terendah dan Q<sub>1</sub>.<br/>
+							<span class="rednote">*Klik salah satu angka dibawah ini untuk menentukan Q<sub>1</sub>.</span>
+							<center>
+							<div id="tengah2" style="margin-top: 10px;">
+								<button onclick="qb1()" id="qb1">4</button>,
+								<button onclick="qb2()" id="qb2">4</button>,
+								<button onclick="qb3()" id="qb">4</button>,
+								<button onclick="qb4()" id="qb3">5</button>,
+								<button onclick="qb5()" id="qb4">5</button>,
+								<button class="noborder" disabled>6</button>,
+								<button class="noborder" disabled>7</button>,
+								<button class="noborder" disabled>7</button>,
+								<button class="noborder" disabled>7</button>,
+								<button class="noborder" disabled>8</button>,
+								<button class="noborder" disabled>9</button>
+							</div>
+							</center>
+							<center><img src="../../gambar/langkah3kuartil.png" width="70%" id="gbrk3"></center>
+							<p id="ket2"></p>
+						</li>
+						<li  id="k4">Tentukan kuartil atas (Q<sub>3</sub>) yang terletak di antara Q<sub>3</sub> dan nilai tertinggi.<br/><span class="rednote">*Klik salah satu angka dibawah ini untuk menentukan Q<sub>3</sub>.</span>
+							<center>
+							<div id="tengah3" style="margin-top: 10px;">
+								<button class="noborder" disabled>4</button>,
+								<button class="noborder" disabled>4</button>,
+								<button class="noborder" disabled>4</button>,
+								<button class="noborder" disabled>5</button>,
+								<button class="noborder" disabled>5</button>,
+								<button class="noborder" disabled>6</button>,
+								<button onclick="qa1()" id="qa1" >7</button>,
+								<button onclick="qa2()" id="qa2" >7</button>,
+								<button onclick="qa3()" id="qa" >7</button>,
+								<button onclick="qa4()" id="qa3" >8</button>,
+								<button onclick="qa5()" id="qa4" >9</button>
+							</div>
+							</center>
+							<center><img src="../../gambar/langkah4kuartil.png" width="70%" id="gbrk4"></center>
+							<p id="ket3">Benar, kuartil atas (Q<sub>3</sub>) dari data tersebut adalah <b>7</b>.</p>
+						</li>
+					</ol>
+					<p id="hasilk1" class="frame"><b>Jadi, kuartil dari data tersebut adalah :<br/>Q<sub>1</sub> = 4<br/>Q<sub>2</sub> = 6<br/>Q<sub>3</sub> = 7</b></p>
+					</div>
+					<center><button onclick="resetk1()" class="cek" id="resetk1">Reset</button></center>
+				</div>
+				<div id="consokuartil2">
+					<h3>Contoh Soal Kuartil (2)</h3>
+					<p>Data berikut menunjukkan hasil ulangan Matematika 19 siswa.</p>
+					<center>
+					<div class="tabeltulisan angka bigpad" style="margin-top:-20px;">
+						<table>
+							<tr>
+								<td>6,</td>
+								<td>6,</td>
+								<td>6,</td>
+								<td>7,</td>
+								<td>7,</td>
+								<td>7,</td>
+								<td>7,</td>
+								<td>8,</td>
+								<td>8,</td>
+								<td>8,</td>
+							</tr>
+							<tr>
+								<td>8,</td>
+								<td>8,</td>
+								<td>8,</td>
+								<td>9,</td>
+								<td>9,</td>
+								<td>9,</td>
+								<td>9,</td>
+								<td>9,</td>
+								<td>10.</td>
+							</tr>
+						</table>
+					</div>
+					</center>
+					<p>Tentukan kuartil bawah, kuartil tengah, dan kuartil atas dari data tersebut.</p>
+					<p><b><i>Penyelesaian :</i></b></p>
+					<p>Jumlah data ($n$) = 19</p>
+					<p>Karena data sudah terurut naik maka nilai $Q_1$, $Q_2$, dan $Q_3$ dapat langsung ditentukan.</p>
+					<ol class="langkah" style="margin-left: 40px;">
+						<li>
+							Letak $Q_1$ = data ke $\frac{1}{4}(19+1)$ = data ke-5<br/>
+							Karena data ke-5 = 7 maka $Q_1$ = 7
+						</li>
+						<li>
+							Letak $Q_2$ = data ke $\frac{2}{4}(19+1)$ = data ke-10<br/>
+							Karena data ke-10 = 8 maka $Q_2$ = 8
+						</li>
+						<li>
+							Letak $Q_3$ = data ke $\frac{3}{4}(19+1)$ = data ke-15<br/>
+							Karena data ke-15 = 9 maka $Q_2$ = 9
+						</li>
+					</ol>
+				</div>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="jangkauan2.html"><< Sebelumnya</a>
+					<a href=javascript:void(0)  class="active">1</a>
+					<a href="kuartil2.html" >2</a>
+<!-- 					<a href="modus3.html">3</a>
+					<a href="modus4.html">4</a>
+					<a href="modus5.html">5</a> -->
+ 					<a href="kuartil2.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/style.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="../../js/kuartil1.js"></script>
+	</body>
+	
+</html>

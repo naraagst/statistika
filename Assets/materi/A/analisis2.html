@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script>
+			window.onload = function c() {
+
+			var chart3 = new CanvasJS.Chart("chartContainer3", {
+				animationEnabled: true,
+				theme: "light1", // "light1", "light2", "dark1", "dark2"
+				axisY: {
+					title: "Jumlah (ribuan ton)"
+				},
+				data: [{        
+					type: "column",  
+					showInLegend: true, 
+					legendText: "Tahun",
+					dataPoints: [      
+						{ y: 3, label: "2003" },
+						{ y: 2,  label: "2004", indexLabel: "Terendah" },
+						{ y: 4,  label: "2005" },
+						{ y: 2.5,  label: "2006" },
+						{ y: 5,  label: "2007", indexLabel: "Tertinggi" },
+						{ y: 4, label: "2008" }
+					]
+				}]
+			});
+			chart3.render();
+			}
+	</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6" style="background-color: rgb(20,20,20);">
+					  <a href="analisis1.html"  style="border-bottom:3px solid rgb(0,156,255);">Materi</a>
+				      <a href="evaluasiA">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown">
+				      <a href="../B/mean1.html" >1.  Mean</a>
+				      <a href="../B/median1.html">2.  Median</a>
+				      <a href="../B/modus1.html">3.  Modus</a>
+				      <a href="../B/evaluasiB">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="../C/jangkauan1.html">1. Jangkauan</a>
+				      <a href="../C/kuartil1.html">2. Kuartil</a>
+				      <a href="../C/interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="../C/simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="../C/evaluasiC">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h2>Menganalisis Data</h2>
+				<div class="submateri">
+				<p>Perhatikan diagram batang hasil perikanan disamping!</p>
+				<p>
+					Dari diagram batang disamping dapat diketahui bahwa data hasil perikanan pada tahun 2003-2008 adalah sebagai berikut.
+				</p>
+				<p>
+					Pada tahun 2003 sebanyak 3000 ton<br/>
+					Pada tahun 2004 sebanyak 2000 ton<br/>
+					Pada tahun 2005 sebanyak 4000 ton<br/>
+					Pada tahun 2006 sebanyak 2500 ton<br/>
+					Pada tahun 2007 sebanyak 5000 ton<br/>
+					Pada tahun 2008 sebanyak 4000 ton
+				</p>
+				<p>
+					Dari diagram tersebut dapat dilihat pula bahwa hasil perikanan terendah dicapai pada tahun 2004 yaitu sebanyak 2000 ton. Sebaliknya hasil perikanan tertinggi dicapai pada tahun 2007 yaitu sebanyak 5000 ton. Kenaikan tertinggi pada tahun 2006-2007 yaitu mencapai 2500 ton.
+				</p>
+				</div>
+			</div>
+			<div class="conso">
+				<h3>Jumlah Hasil Perikanan</h3>
+				<div id="chartContainer3" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
+				<p style="color: red; font-size: 14;">*catatan: arahkan kursor ke setiap batang pada diagram untuk mengetahui jumlah data</p>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="analisis1.html"><< Sebelumnya</a>
+					<a href="analisis1.html">1</a>
+					<a href="#" class="active">2</a>
+					<a href="analisis4.html">3</a>
+					<a href="analisis5.html">4</a>
+					<a href="analisis4.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+		<script type="../../text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="../../js/style.js"></script>
+		<script src="../../js/canvasjs.min.js"></script>
+	</body>
+	
+</html>

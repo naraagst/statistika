@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="header">
+			<a href="../../index.html"><img src="../../gambar/logo.png" id="logo" style="float:left"/></a>
+			<div class="tooltip">
+			<a href="../info.html"><i class='fas fa-info'></i></a>
+			<span class="tooltiptext">Info Aplikasi</span>
+			</div>
+			<div class="tooltip">
+			<a href="../kikd.html"><i class='far fa-file-alt'></i></a>
+			<span class="tooltiptext">KI, KD, dan Peta Konsep</span>
+			</div>
+			<div class="tooltip">
+			<a href="#"><i class='fas fa-book'></i></a>
+			<span class="tooltiptext">Materi</span>
+			</div>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="#">Pengenalan</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Evaluasi</a>
+				    </div>
+				</li>
+				<li class="dropdown1" style="background-color: rgb(20,20,20);">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="display:block;">
+				      <a href="mean1.html" style="border-bottom:3px solid rgb(0,156,255);">1.  Mean</a>
+				      <a href="median1.html">2.  Median</a>
+				      <a href="modus1.html">3.  Modus</a>
+				      <a href="evaluasiB.html">Evaluasi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="jangkauan1.html">1. Jangkauan</a>
+				      <a href="kuartil1.html">2. Kuartil</a>
+				      <a href="interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="evaluasiC.html">Evaluasi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="materi2">
+				<h2>Latihan - Rata-Rata (Mean)</h2>
+				<div class="submateri4">
+					<h3>Soal :</h3>
+					<p id="soal"></p>
+					<div id="gbr">
+						
+					</div>
+					<div id="jwb" class="fontt">
+						<span style="display:none;" id="jwbsoal"></span>
+						Jawab :
+						<input type="text" id="jwbsiswa"/>
+						<span id="hasilbenar" style="color:green"></span>
+						<span id="hasilsalah" style="color:red"></span>
+					</div>
+					
+				</div>
+				<center>
+				<div class="menulat">
+					<button id="cekjwb" class="cek">Cek Jawaban</button>
+					<button id="acaksoal" class="cek">Soal Lain</button>
+				</div>
+				</center>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="mean1.html"><< Sebelumnya</a>
+					<a href="mean1.html">1</a>
+					<a href="mean2.html">2</a>
+					<a href="mean3.html">3</a>
+					<a href="mean4.html">4</a>
+					<a href="mean5.html" >5</a>
+					<a href=javascript:void(0)  class="active" style="width:100px">Latihan</a>
+					<a href="mean_evaluasi.html" style="width:100px">Evaluasi</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/style.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="../../js/latihan_mean.js"></script>
+	</body>
+	
+</html>

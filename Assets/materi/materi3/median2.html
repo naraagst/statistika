@@ -1,0 +1,169 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				document.getElementById("hid_mdn").hidden = true;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<a href="../../index.html"><img src="../../gambar/logo.png" id="logo" style="float:left"/></a>
+			<div class="tooltip">
+			<a href="../info.html"><i class='fas fa-info'></i></a>
+			<span class="tooltiptext">Info Aplikasi</span>
+			</div>
+			<div class="tooltip">
+			<a href="../kikd.html"><i class='far fa-file-alt'></i></a>
+			<span class="tooltiptext">KI, KD, dan Peta Konsep</span>
+			</div>
+			<div class="tooltip">
+			<a href="#"><i class='fas fa-book'></i></a>
+			<span class="tooltiptext">Materi</span>
+			</div>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="#">Pengenalan</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Evaluasi</a>
+				    </div>
+				</li>
+				<li class="dropdown1" style="background-color: rgb(20,20,20);">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="display:block;">
+				      <a href="mean1.html" >1.  Mean</a>
+				      <a href="median1.html" style="border-bottom:3px solid rgb(0,156,255);">2.  Median</a>
+				      <a href="modus1.html">3.  Modus</a>
+				      <a href="evaluasiB.html">Evaluasi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="jangkauan1.html">1. Jangkauan</a>
+				      <a href="kuartil1.html">2. Kuartil</a>
+				      <a href="interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="evaluasiC.html">Evaluasi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h2>Nilai Tengah (Median)</h2>
+				<div class="submateri">
+					<p>Perhatikan tabel dibawah ini</p>
+					<center>
+					<div class="tabel font2">
+						<table>
+							<tr>
+								<th>Nilai</th>
+								<td>55</td>
+								<td>60</td>
+								<td>65</td>
+								<td>70</td>
+								<td>75</td>
+								<td>80</td>
+								<td>85</td>
+							</tr>
+							<tr>
+								<th>Frekuensi</th>
+								<td id="tbl1">5</td>
+								<td id="tbl2">7</td>
+								<td id="tbl3">6</td>
+								<td id="tbl4">6</td>
+								<td id="tbl5">5</td>
+								<td id="tbl6">9</td>
+								<td id="tbl7">7</td>
+							</tr>
+						</table>
+					</div>
+					</center>
+					<p>Untuk menentukan median data di atas, ikuti langkah-langkah disamping</p>
+				</div>
+				
+			</div>
+			<div class="conso" id="conso">
+				<h3>Menentukan Median dari Tabel Distribusi Frekuensi</h3>
+				<ol>
+					<li>Tentukan banyak data dengan menjumlahkan seluruh frekuensi pada tabel<br> 
+						<div class="isian_median">
+							<form name="med2">
+							<table>
+								<tr>
+									<td>Banyak Data</td>
+									<td>=</td>
+									<td>
+										<input type="text" id="med2a" onfocus="in1()" onfocusout="out1()"/> +
+										<input type="text" id="med2b" onfocus="in2()" onfocusout="out2()"/> +
+										<input type="text" id="med2c" onfocus="in3()" onfocusout="out3()"/> +
+										<input type="text" id="med2d" onfocus="in4()" onfocusout="out4()"/> +<br/>
+										<input type="text" id="med2e" onfocus="in5()" onfocusout="out5()"/> +
+										<input type="text" id="med2f" onfocus="in6()" onfocusout="out6()"/> +
+										<input type="text" id="med2g" onfocus="in7()" onfocusout="out7()"/>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>=</td>
+									<td><input type="text" id="med2h" onfocus="in8()" onfocusout="out8()"></td>
+								</tr>
+							</table>
+							</form>
+						</div>
+					</li>
+					<li id="hid_mdn">
+						Karena banyak data (jumlah frekuensi) <b>ganjil</b>, yakni 45, maka median terletak pada data yang ke-<font size="50px">$\frac{45+1}{2}$</font>atau data ke-23. <b>Data ke-23 adalah 70</b>.
+						<p>Jadi, median dari data pada tabel di samping adalah <b>70</b>.</p>
+					</li>
+				</ol>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="median1.html"><< Sebelumnya</a>
+					<a href="median1.html">1</a>
+					<a href=javascript:void(0)  class="active">2</a>
+					<a href="median3.html">3</a>
+					<a href="">4</a>
+					<a href="mean5.html">5</a>
+					<a href="mean5.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/style.js"></script>
+		<script src="../../js/median2.js"></script>
+	</body>
+	
+</html>

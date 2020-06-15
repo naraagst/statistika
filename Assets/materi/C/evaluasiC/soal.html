@@ -1,0 +1,281 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../../css/statistik.css" rel="stylesheet">	
+		<link href="../../../css/materi2.css" rel="stylesheet">	
+		<link rel="stylesheet" href="style.css">
+		<link href="../../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				
+
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:40px !important;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="../A/analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:70px !important;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown"  style="background-color: rgb(20,20,20);">
+				      <a href="mean1.html" style="border-bottom:3px solid rgb(0,156,255);">1.  Mean</a>
+				      <a href="median1.html">2.  Median</a>
+				      <a href="modus1.html">3.  Modus</a>
+				      <a href="evaluasiB.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:70px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="../C/jangkauan1.html">1. Jangkauan</a>
+				      <a href="../C/kuartil1.html">2. Kuartil</a>
+				      <a href="../C/interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="../C/simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="../C/evaluasiC.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="ujikompetensi">
+				<div class="submateri2">
+					<div style="width:100%;display: block">
+					<h2 class="text-left" style="width:80%;float:left;">Uji Kompetensi</h2>
+					<div class="btn btn-md btn-dark text-right" id="time" style="float:right;">00 : 00</div> 
+					</div>
+					<div class="row" style="float: left;width: 100%">
+						<div class="nomor">
+							<!-- column u/ pagination -->
+							<div class="card ml-3 mrmin">
+								<div class="card-body">
+									<span class ="number-btn text-center"></span>
+								</div>
+							</div>
+						</div>
+						<div class="soal">
+							<!-- column u/ tampil soal -->
+							<div class="card">
+								<div class="card-body">
+									<div class="quiz-container">
+										<div id="quiz"></div>
+									</div>
+									<hr/>
+									<div class="btn-action text-center tombol">
+										<button id="previous" class="btn btn-sm btn-secondary">Kembali</button>
+										<button id="next" class="btn btn-sm btn-success">Selanjutnya</button>
+										<button id="submit" class="btn btn-sm btn-danger">Selesai</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<script src="../../../js/style.js"></script>
+		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
+		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+		<script src="script.js"></script>
+		<script>
+			let randomQuestion = myQuestions.sort((a,b) => {return 0.5 - Math.random()})
+			let sliceQuestion = randomQuestion.slice(0, 10)
+			let numberBtn = document.querySelector(".number-btn")
+
+			for(i=0; i<sliceQuestion.length; i++){
+				let li = document.createElement("span")
+				li.innerHTML=`
+				<button class="btn btn-md btn-outline-secondary nosoal mt-2" onclick="paginationSlide(${i})">${i+1}</button>
+				`
+
+				numberBtn.appendChild(li)
+
+			}
+
+			let nosoal = document.querySelectorAll(".nosoal")
+
+			function buildQuiz(){
+				const output = []
+				let currentNumber = 1
+
+				sliceQuestion.forEach((currentQuestion, questionNumber) =>{
+					const answers=[]
+
+					for(letter in currentQuestion.answers){
+						answers.push(
+							`
+								<label>
+									<input type="radio" name="question${questionNumber}" value="${letter}">
+									<span>${letter}. ${currentQuestion.answers[letter]}</span>
+								</label>
+							`
+						)
+					}
+
+					output.push(
+						`
+							<div class="slide">
+								<div class="question">${currentNumber}. ${currentQuestion.question}</div>
+								<hr/>
+								<div class="answers">${answers.join("")}</div>
+							</div>
+						`
+					)
+					currentNumber++
+				})
+				questionContainer.innerHTML = output.join("")
+			}
+
+			function results(){
+				const answerContainers = questionContainer.querySelectorAll('.answers')
+
+				let numCorrect = 0
+				let numWrong = 0
+
+				sliceQuestion.forEach((currentQuestion, questionNumber) => {
+					const answerContainer = answerContainers[questionNumber]
+
+					const selector = `input[name=question${questionNumber}]:checked`
+					const userAnswer = (answerContainer.querySelector(selector) || {}).value
+
+					if(userAnswer === currentQuestion.correctAnswer){
+						numCorrect++
+					}else{
+						numWrong++
+					}
+
+				})
+
+				console.log(numWrong)
+				console.log(numCorrect)
+				sessionStorage.setItem('questionLength', sliceQuestion.length)
+				sessionStorage.setItem('correct', numCorrect)
+				sessionStorage.setItem('wrong', numWrong)
+				location.href = './hasil.html'
+			}
+
+			function showSlide(n){
+				nosoal[currentSlide].classList.remove('btn-primary')
+				nosoal[currentSlide].classList.remove('nosoal2')
+				nosoal[n].classList.add('btn-primary')
+				nosoal[n].classList.add('nosoal2')
+
+				slides[currentSlide].classList.remove('active-slide')
+				slides[n].classList.add('active-slide')
+				currentSlide = n
+
+				if(currentSlide === 0){
+					previousButton.style.display = 'none'
+				} else {
+					previousButton.style.display = 'inline-block'
+				}
+
+				if(currentSlide === slides.length-1){
+					nextButton.style.display = 'none'
+					submitButton.style.display = 'inline-block'
+				} else {
+					nextButton.style.display = 'inline-block'
+					submitButton.style.display = 'none'
+				}
+
+
+			}
+
+			function showNextSlide(){
+				showSlide(currentSlide + 1)
+
+				let selector2 = `input[name=question${currentSlide}]:checked`
+				let nilai = $(selector2).val();
+				console.log(selector2)
+				console.log(nilai)
+			}
+
+			function showPreviousSlide(){
+				showSlide(currentSlide - 1)
+			}
+
+			function paginationSlide(n){
+				showSlide(n)
+			}
+			//DOM Show Question
+
+			let questionContainer = document.querySelector("#quiz")
+			let nextButton = document.querySelector("#next")
+			let previousButton = document.querySelector("#previous")
+			let submitButton = document.querySelector("#submit")
+			buildQuiz()
+			const slides = document.querySelectorAll(".slide")
+			let currentSlide = 0
+			showSlide(currentSlide)
+			submitButton.addEventListener("click", results)
+			nextButton.addEventListener("click", showNextSlide)
+			previousButton.addEventListener("click", showPreviousSlide)
+
+			let showTime = document.querySelector("#time")
+			let startMinute = 30
+			let seconds = 0
+
+			function countdown(){
+				setTimeout(countdown, 1000)
+				seconds = seconds<10 ? '0' + seconds : seconds
+				showTime.innerHTML = `${startMinute} : ${seconds}`
+
+				seconds--
+				if(seconds < 0){
+					seconds = 59
+					startMinute--
+				}
+				if(startMinute < 0){
+					startMinute = 0
+					seconds = 0
+				}
+				if(startMinute === 0 && seconds === 0){
+					results()
+				}
+
+				if(startMinute < 5){
+					// submitButton.removeAttribute("disabled", "")
+					showTime.classList.remove('btn-dark')
+					showTime.classList.add('btn-danger')
+					showTime.classList.remove('btn-md')
+					showTime.classList.add('btn-lg')
+					
+				}
+			}
+
+			countdown()
+		</script>
+	</body>
+	
+</html>

@@ -1,0 +1,28 @@
+{
+	"consomean":[
+		{
+			"soal":"<b>Soal :</b><br/>Dari 4 kali ulangan matematika, Rian memperoleh nilai <br/><b>8, 7, 10,</b> dan <b>6</b>. Berapakah nilai rata-rata ulangan Rian?",
+			"data":"",
+			"soal2":"",
+			"pembahasan":"<p><b>Pembahasan :</b><br/>Untuk memperoleh nilai rata-rata maka kita harus menjumlahkan semua nilai, kemudian membagi dengan banyaknya data seperti yang sudah dipelajari sebelumnya.</p><center><img src='../../gambar/consomean1.PNG' width='60%''></center><p><b>Jadi, nilai rata-rata ulangan Rian adalah 8</b></p>"
+		},
+		{
+			"soal":"<b>Soal :</b><br/>Tinggi yang dicapai seorang atlet loncat tinggi adalah sebagai berikut:",
+			"data":"<p>2,05 m, 2,10 m, 1,95 m, 1,85 m, 2,20 m, dan 2,15 m.</p>",
+			"soal2":"Hitunglah tinggi rata-ratanya!",
+			"pembahasan":"<p><b>Pembahasan :</b><br/><img src='../../gambar/consomean2.PNG' width='95%'><br/><b>Jadi, tinggi rata-rata yang dicapai atlet tersebut adalah 2,05 m.</b></p>"
+		},
+		{
+			"soal":"<b>Soal :</b><br/>Pendapatan tahunan untuk 8 jenis pekerjaan ditunjukkan dalam tabel di bawah ini.",
+			"data":"<center><img src='../../gambar/tabelmean.png'></center>",
+			"soal2":"Dari data tersebut, hitunglah rata-rata (mean) pendapatan tahunan dari 8 jenis pekerjaan!",
+			"pembahasan":"<p><b>Pembahasan :</b></p><center><img src='../../gambar/consomean3.png' width='80%'></center><p><b>Jadi, rata-rata pendapatan tahunan 8 jenis pekerjaan tersebut adalah 42,71 juta</b></p>"
+		},
+		{
+			"soal":"<b>Soal :</b><br/>Tinggi rata-rata suatu kelompok yang terdiri dari 5 orang anak adalah 148 cm. Satu anak lagi masuk pada kelompok itu. Tinggi rata-ratanya menjadi 152 cm. Hitunglah tinggi anak yang baru masuk tadi.",
+			"data":"",
+			"soal2":"",
+			"pembahasan":"<p><b>Pembahasan :</b><br/>Misalkan tinggi anak yang baru masuk = <i>n</i> cm<br/>Jumlah rata-rata 5 orang = 5 x 148 = 740<br/><img src='../../gambar/consomean4.png' width='90%' style='margin-top:10px;'></p><p><b>Jadi, tinggi anak yang baru masuk adalah 172 cm.</b></p>"
+		}
+	]
+}  

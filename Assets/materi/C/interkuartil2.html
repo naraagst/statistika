@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				document.getElementById("inpjinter2").disabled=true;
+				document.getElementById("inpjinter3").disabled=true;
+				document.getElementById("hasiljinter1").hidden=true;
+				document.getElementById("resetjinter1").hidden=true;
+				document.getElementById("consojinter").hidden=true;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="../A/analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="background-color: rgb(20,20,20);">
+				      <a href="../B/mean1.html" >1.  Mean</a>
+				      <a href="../B/median1.html">2.  Median</a>
+				      <a href="../B/modus1.html">3.  Modus</a>
+				      <a href="../B/evaluasiB.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="jangkauan1.html">1. Jangkauan</a>
+				      <a href="kuartil1.html">2. Kuartil</a>
+				      <a href="interkuartil1.html"  style="border-bottom:3px solid rgb(0,156,255);">3. Jangkauan Interkuartil</a>
+				      <a href="simpangan1.html" style="border-bottom:3px solid rgb(0,156,255);">4. Simpangan Kuartil</a>
+				      <a href="evaluasiC.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi" style="overflow-y: auto;overflow-x: hidden;">
+				<h2>Jangkauan Interkuartil</h2>
+				<p><b>Jangkauan interkuartil</b> adalah selisih antara kuartil atas ($Q_3$) dan kuartil bawah ($Q_1$).</p>
+				<p>Jangkauan interkuartil dinotasikan dengan $Q_R$, sehingga </p>
+				<center>
+				<p  class="frame" style="width:50%">
+					<b style="margin-left:20%;font-size: 20px">$Q_R$ = $Q_3$ - $Q_1$</b><br/><br/><span style="font-size: 16px;">$Q_R$ = Jangkauan Interkuartil<br/>$Q_3$ = Kuartil Atas<br/>$Q_1$ = Kuartil Bawah</span>
+				</p>
+				</center>
+				<h2>Simpangan Kuartil</h2>
+				<p><b>Simpangan kuartil</b> atau jangkauan semi interkuartil adalah setengah dari jangkauan interkuartil. </p>
+				<p>Simpangan kuartil dinotasikan dengan Q<sub>d</sub>, sehingga</p>
+				<center>
+				<div class="frame" style="width:60%; padding:0px;">
+
+					<p style="font-size: 20px; text-align: center;"><b>$Q_d$ = $\frac{1}{2}Q_R$ <br/>atau<br/> $Q_d$ = $\frac{1}{2}(Q_3-Q_1)$</b></p>
+
+					<p style="font-size: 16px;">$Q_d$ = Simpangan kuartil <br/>$Q_R$ = Jangkauan Interkuartil<br/>$Q_3$ = Kuartil Atas<br/>$Q_1$ = Kuartil Bawah</p>
+				</div>
+				</center>
+			</div>
+			<div class="conso" id="conso" style="overflow: hidden;">
+				<div class="containerlat">
+					<div class="judullat">
+						<h2>Latihan</h2>
+					</div>
+					<div class="soallat">
+						<div class="petunjuk">
+							<a href=javascript:void(0) onclick="petunjuk()"><p id="petunjuka"><b>Klik untuk menyembunyikan petunjuk</b></p>
+							<div id="petunjuk">
+							<ul>
+									<li>Hitunglah jangkauan interkuartil dan simpangan kuartil dari setiap soal berikut, kemudian isi jawabannya pada kolom input yang telah disediakan. </li> 
+									<li>Klik tombol "Cek Jawaban" untuk memeriksa apakah jawaban benar atau salah.</li> 
+									<li>Klik tombol "Soal Lain" untuk beralih ke soal selanjutnya.</li>
+									<li>Jika terdapat jawaban berupa bilangan desimal, bulatkan menjadi 2 angka dibelakang koma. Kemudian ganti tanda koma (,) menjadi titik (.), <b>contoh : 73.92</b></li>
+								</ul></a>
+							</div>
+						</div>
+						<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
+							<p id="soal"></p>
+							<div id="gbr">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								<span style="display:none;" id="jwbsoal"></span>
+								<span style="display:none;" id="jwbsoal2"></span>
+								Jawab :<br/>
+								<table>
+									<tr>
+										<td>Jangkauan interkuartil</td>
+										<td> = <input type="text" id="jwbsiswa"/></td>
+									</tr>
+									<tr>
+										<td>Simpangan kuartil</td>
+										<td> = <input type="text" id="jwbsiswa2"/></td>
+									</tr>
+								</table>
+								<span id="hasilbenar" style="color:green"></span>
+								<span id="hasilsalah" style="color:red"></span>
+							</div>
+						<center>
+						<div class="menulat" style="margin-bottom: 10px;">
+							<button id="cekjwb" class="cek">Cek Jawaban</button>
+							<button id="acaksoal" class="cek">Soal Lain</button>
+						</div>
+						</center>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="interkuartil1.html"><< Sebelumnya</a>
+					<a href="interkuartil1.html">1</a>
+					<a href="simpangan1.html" >2</a>
+					<a href=javascript:void(0)  class="active">3</a>
+					<!-- <a href="modus4.html">4</a>
+					<a href="modus5.html">5</a> -->
+ 					<a href="#">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/style.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="../../js/interkuartil2.js"></script>
+	</body>
+	
+</html> 

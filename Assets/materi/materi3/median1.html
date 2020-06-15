@@ -1,0 +1,225 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				document.getElementById("contoh1").hidden = true;
+				document.getElementById("letak").hidden = true;
+				document.getElementById("contoh2").hidden = true;
+				document.getElementById("lanjut1").hidden = true;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<a href="../../index.html"><img src="../../gambar/logo.png" id="logo" style="float:left"/></a>
+			<div class="tooltip">
+			<a href="../info.html"><i class='fas fa-info'></i></a>
+			<span class="tooltiptext">Info Aplikasi</span>
+			</div>
+			<div class="tooltip">
+			<a href="../kikd.html"><i class='far fa-file-alt'></i></a>
+			<span class="tooltiptext">KI, KD, dan Peta Konsep</span>
+			</div>
+			<div class="tooltip">
+			<a href="#"><i class='fas fa-book'></i></a>
+			<span class="tooltiptext">Materi</span>
+			</div>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="#">Pengenalan</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Evaluasi</a>
+				    </div>
+				</li>
+				<li class="dropdown1" style="background-color: rgb(20,20,20);">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="display:block;">
+				      <a href="mean1.html" >1.  Mean</a>
+				      <a href="median1.html" style="border-bottom:3px solid rgb(0,156,255);">2.  Median</a>
+				      <a href="modus1.html">3.  Modus</a>
+				      <a href="evaluasiB.html">Evaluasi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="jangkauan1.html">1. Jangkauan</a>
+				      <a href="kuartil1.html">2. Kuartil</a>
+				      <a href="interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="evaluasiC.html">Evaluasi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h2>Nilai Tengah (Median)</h2>
+				<div class="submateri">
+					<p>
+						Median merupakan ukuran pemusatan data yang digunakan untuk menganalisis data. Apabila data yang sudah terkumpul diurutkan, maka <b>nilai data yang terletak di tengah (nilai tengah data)</b> disebut <i>median</i>.
+					</p>
+					<p>
+						Jika banyak data yang sudah terurut <b>ganjil</b>, maka mediannya adalah nilai data yang terletak tepat di tengah-tengah, yang membagi data menjadi dua bagian yang sama.
+					</p>
+					<center><button onclick="ganjil()" class="cek" >Lihat Contoh</button></center>
+					<p>
+						Jika banyak data yang sudah terurut <b>genap</b>, maka mediannya adalah nilai rata-rata (mean) dari dua nilai data yang di tengah.
+					</p>
+					<center><button onclick="genap()" class="cek" >Lihat Contoh</button></center>
+				</div>
+				
+			</div>
+			<div class="conso" id="conso">
+				<div id="contoh1">
+					<center>
+					<h3>Menghitung Median pada Data Ganjil</h3>
+					<p>Coba amati data berat badan 9 siswa laki-laki kelas VIII D SMP Ceria berikut ini (dalam kg)</p>
+					<p style="text-align: center">
+						<b>47 &nbsp; 57 &nbsp; 53 &nbsp; 50 &nbsp; 45 &nbsp; 48 &nbsp; 52 &nbsp; 49 &nbsp; 55</b>
+					</p>
+					<p>Untuk menemukan median, data harus diurutkan terlebih dahulu. Urutkan data diatas dengan mengisi titik-titik dibawah ini</p>
+					<div class="isian_median">
+						<input type="text" id="input_median11" onchange="urut11()"/>,
+						<input type="text" id="input_median12" onchange="urut12()"/>,
+						<input type="text" id="input_median13" onchange="urut13()"/>,
+						<input type="text" id="input_median14" onchange="urut14()"/>,
+						<input type="text" id="input_median15" onchange="urut15()"/>,
+						<input type="text" id="input_median16" onchange="urut16()"/>,
+						<input type="text" id="input_median17" onchange="urut17()"/>,
+						<input type="text" id="input_median18" onchange="urut18()"/>,
+						<input type="text" id="input_median19" onchange="urut19()"/>
+					</div>
+					<div id="lanjut1">
+						<p>Setelah data diurutkan, pilihlah salah satu angka dibawah untuk menentukan angka mana yang terdapat pada posisi/urutan paling tengah</p>
+						<div id="tengah">
+							<button onclick="t1()" id="tgh1">45</button>,
+							<button onclick="t2()" id="tgh2">47</button>,
+							<button onclick="t3()" id="tgh3">48</button>,
+							<button onclick="t4()" id="tgh4">49</button>,
+							<button onclick="t5()" id="tgh">50</button>,
+							<button onclick="t6()" id="tgh5">52</button>,
+							<button onclick="t7()" id="tgh6">53</button>,
+							<button onclick="t8()" id="tgh7">55</button>,
+							<button onclick="t9()" id="tgh8">57</button>
+						</div>
+					</div>
+					<p id="ket"></p>
+					<p id="ket2"></p>
+					</center>
+				</div>
+				<div id="contoh2">
+					<h3>Menghitung Median pada Data Genap</h3>
+					<p>Tentukan median dan modus pada skor 10 anak yang mengikuti babak semifinal lomba menyanyi berikut.</p>
+					<center>
+					<div class="tabel font2">
+						<table>
+							<tr>
+								<th colspan="5">Perolehan Skor Menyanyi</th>
+							</tr>
+							<tr>
+								<td>120</td>
+								<td>135</td>
+								<td>160</td>
+								<td>125</td>
+								<td>90</td>
+							</tr>
+							<tr>
+								<td>205</td>
+								<td>160</td>
+								<td>175</td>
+								<td>105</td>
+								<td>145</td>
+							</tr>
+						</table>
+					</div>
+					<p>Untuk menyelesaikan, kita harus mengurutkan terlebih dahulu data pada tabel. Urutkanlah data pada tabel dengan mengisi titik-titik dibawah ini.</p>
+					<div class="isian_median">
+						<input type="text" id="input_median1" onchange="urut1()"/>,
+						<input type="text" id="input_median2" onchange="urut2()"/>,
+						<input type="text" id="input_median3" onchange="urut3()"/>,
+						<input type="text" id="input_median4" onchange="urut4()"/>,
+						<input type="text" id="input_median5" onchange="urut5()"/>,
+						<input type="text" id="input_median6" onchange="urut6()"/>,
+						<input type="text" id="input_median7" onchange="urut7()"/>,
+						<input type="text" id="input_median8" onchange="urut8()"/>,
+						<input type="text" id="input_median9" onchange="urut9()"/>,
+						<input type="text" id="input_median10" onchange="urut10()"/>
+						<div id="letak">
+							<svg width="120" height="40" style="margin-top:7px;">
+							   <polyline points="30,0 30,15 90,15 90,0" style="fill:none;stroke:red;stroke-width:3"/>
+							   <line x1="60" y1="15" x2="60" y2="24" style="stroke:red;stroke-width:3"/>
+							   <text x="15" y="40" fill="red">Letak Median</text>
+							</svg>
+							<p>Karena banyak data genap, maka median adalah rata-rata data <b>ke-5 dan ke-6</b>, yaitu :</p>
+							<div class="penyelesaian2">
+								<table>
+									<tr>
+										<td rowspan="2">Median</td>
+										<td rowspan="2">=</td>
+										<td style="border-bottom:1px solid black">135 + 145</td>
+										<td rowspan="2">=</td>
+										<td style="border-bottom:1px solid black">280</td>
+										<td rowspan="2">=</td>
+										<td rowspan="2">140</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>2</td>
+									</tr>
+								</table>
+							</div>
+							<p>Jadi, median dari skor lomba menyanyi adalah <b>140</b></p>
+						</div>
+					</div>
+					</center>
+				</div>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href=javascript:void(0) style="cursor: not-allowed;"><< Sebelumnya</a>
+					<a href=javascript:void(0)  class="active">1</a>
+					<a href="median2.html">2</a>
+					<a href="median3.html">3</a>
+					<a href="">4</a>
+					<a href="mean5.html">5</a>
+					<a href="mean5.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/style.js"></script>
+		<script src="../../js/median.js"></script>
+	</body>
+	
+</html>

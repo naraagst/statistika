@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../css/materi2.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container mt-5">
+			<div class="row justify-content-center">
+				<div class="col-4">
+					<div class="card mt-5">
+						<div class="card-body">
+							<h4 class="text-center">Uji Kompetensi</h4>
+							<hr/>
+							<input type="text" id="name" placeholder="Masukkan Nama" class="form-control">
+							<button class="btn btn-md btn-primary btn-block mt-2" id="submit">Mulai</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
+		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			let name = document.querySelector("#name")
+			let btnSubmit = document.querySelector("#submit")
+
+			btnSubmit.addEventListener("click", function(){
+				if(name.value === ""){
+					alert("Isi Nama Dulu !!!")
+				} else {
+					sessionStorage.setItem("name", name.value)
+					location.href = './tes.html'
+				}
+			})
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2,#div3 {
+  float: left;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  var target = ev.target.id;
+  ev.target.appendChild(document.getElementById(data));
+    if(data=="drag1"){
+    if(target=="div1"){
+      document.getElementById("div1").style="border: 5px solid green;"
+    }
+    else{
+      document.getElementById("div1").style="border: 5px solid red;"
+    }
+  }
+  else if(data=="drag2"){
+    if(target=="div2"){
+        document.getElementById("div2").style="border: 5px solid green;"
+      }
+    else{
+      document.getElementById("div1").style="border: 5px solid red;"
+    }
+  }
+  else if(data=="drag3"){
+    if(target=="div3"){
+        document.getElementById("div3").style="border: 5px solid green;"
+      }
+    else{
+      document.getElementById("div1").style="border: 5px solid red;"
+    }
+  }
+  
+}
+</script>
+</head>
+<body>
+
+<h2>Drag and Drop</h2>
+<p>Drag the image back and forth between the two div elements.</p>
+
+<table>
+	<tr>
+    	<td rowspan="2">
+        <div id="div1" ondrop="drop(event)" 			ondragover="allowDrop(event)">
+</div>
+        </td>
+        <td rowspan="2">
+        =
+        </td>
+        <td>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </td>
+    </tr>
+    <tr>
+    	<td>
+        <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </td>
+    </tr>
+</table>
+
+<img src="1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+<img src="2.png" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+<img src="3.png" draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">
+
+</body>
+</html>

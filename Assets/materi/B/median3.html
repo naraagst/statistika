@@ -1,0 +1,328 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				document.getElementById("hid_mdn").hidden = true;
+				document.getElementById("hid_mdn2").hidden = true;
+				document.getElementById("mdn_ganjil").hidden = true;
+				document.getElementById("mdn_genap").hidden = true;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:40px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="../A/analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="background-color: rgb(20,20,20);">
+				      <a href="mean1.html" >1.  Mean</a>
+				      <a href="median1.html" style="border-bottom:3px solid rgb(0,156,255);">2.  Median</a>
+				      <a href="modus1.html">3.  Modus</a>
+				      <a href="evaluasiB.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="../C/jangkauan1.html">1. Jangkauan</a>
+				      <a href="../C/kuartil1.html">2. Kuartil</a>
+				      <a href="../C/interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="../C/simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="../C/evaluasiC.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h3>Menentukan Median dari Tabel Distribusi Frekuensi</h3>
+				<div class="submateri" style="height:430px">
+					<p>Lalu bagaimana menentuan median dari data yang dikelompokkan berdasarkan frekuensinya? Median untuk data seperti itu ditentukan dengan cara sebagai berikut:</p>
+					<ol type="a" style="margin-left: 40px;margin-top: -10px; line-height: 28px">
+						<li>Menentukan banyak data dengan menjumlahkan seluruh frekuensi, kemudian disimbolkan dengan  <i>n</i>.</li>
+						<li>Sama seperti sebelumnya, median ditentukan sesuai banyak data sebagai berikut:
+							<ul type="disc" style="margin-left: 20px;line-height: 33px;">
+								<li>Jika <i>n</i> ganjil, maka median adalah nilai data </br>ke-$\frac{n+1}{2}$ </br>
+								<center><a onclick="consomdn2a()" class="cek">Lihat Contoh</a></center></li>
+								<li style="margin-top: 15px;">Jika <i>n</i> genap, maka median adalah <img src="../../gambar/rumusmedian.png"></br>
+								<center><button onclick="consomdn2b()" class="cek">Lihat Contoh</button></center></li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="conso" id="conso">
+				<div id="mdn_ganjil">
+					<h3>Contoh Soal Data Ganjil</h3>
+					<p>Perhatikan tabel dibawah ini</p>
+						<center>
+						<div class="tabel font2">
+							<table>
+								<tr>
+									<th>Nilai</th>
+									<td>55</td>
+									<td>60</td>
+									<td>65</td>
+									<td>70</td>
+									<td>75</td>
+									<td>80</td>
+									<td>85</td>
+								</tr>
+								<tr>
+									<th>Frekuensi</th>
+									<td id="tbl1">5</td>
+									<td id="tbl2">7</td>
+									<td id="tbl3">6</td>
+									<td id="tbl4">6</td>
+									<td id="tbl5">5</td>
+									<td id="tbl6">9</td>
+									<td id="tbl7">7</td>
+								</tr>
+							</table>
+						</div>
+						</center>
+						<p>Untuk menentukan median data di atas, ikuti langkah-langkah berikut ini :</p>
+					<ol>
+						<li>Tentukan banyak data dengan menjumlahkan seluruh frekuensi pada tabel<br> 
+							<div class="isian_median">
+								<form name="med2">
+								<table>
+									<tr>
+										<td>Banyak Data ( <i>n</i> )</td>
+										<td>=</td>
+										<td>
+											<input type="text" id="med2a" onfocus="in1()" onfocusout="out1()"/> +
+											<input type="text" id="med2b" onfocus="in2()" onfocusout="out2()"/> +
+											<input type="text" id="med2c" onfocus="in3()" onfocusout="out3()"/> +
+											<input type="text" id="med2d" onfocus="in4()" onfocusout="out4()"/> +<br/>
+											<input type="text" id="med2e" onfocus="in5()" onfocusout="out5()"/> +
+											<input type="text" id="med2f" onfocus="in6()" onfocusout="out6()"/> +
+											<input type="text" id="med2g" onfocus="in7()" onfocusout="out7()"/>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>=</td>
+										<td><input type="text" id="med2h" onfocus="in8()" onfocusout="out8()"></td>
+									</tr>
+								</table>
+								</form>
+							</div>
+						</li>
+						<li id="hid_mdn">
+							Karena banyak data (jumlah frekuensi) <b>ganjil</b>, yakni 45, maka median terletak pada data ke-<font size="50px">$\frac{n+1}{2}=\frac{45+1}{2}$</font>atau <b>data ke-23</b>.</br>
+							Untuk mempermudah mencari nilai data ke-23, tabel di atas dilengkapi menjadi berikut :
+							<center>
+							<div class="tabel font2 tabelkecil">
+								<table>
+									<tr>
+										<th>Nilai</th>
+										<th>Frekuensi</th>
+										<th>Data ke-</th>
+									</tr>
+									<tr>
+										<td>55</td>
+										<td>5</td>
+										<td>1-5</td>
+									</tr>
+									<tr>
+										<td>60</td>
+										<td>7</td>
+										<td>6-12</td>
+									</tr>
+									<tr>
+										<td>65</td>
+										<td>6</td>
+										<td>13-18</td>
+									</tr>
+									<tr>
+										<td>70</td>
+										<td>6</td>
+										<td style="border:5px solid green">19-24</td>
+									</tr>
+									<tr>
+										<td>75</td>
+										<td>5</td>
+										<td>25-29</td>
+									</tr>
+									<tr>
+										<td>80</td>
+										<td>9</td>
+										<td>30-38</td>
+									</tr>
+									<tr>
+										<td>85</td>
+										<td>7</td>
+										<td>39-45</td>
+									</tr>
+								</table>
+							</div>
+							</center> 
+							<b>Nilai data ke-23 adalah 70</b>.
+							</br>Jadi, median dari data pada tabel di samping adalah <b>70</b>.
+						</li>
+					</ol>
+				</div>
+				<div id="mdn_genap">
+					<h3>Contoh Soal Data Genap</h3>
+					<p>Perhatikan tabel di bawah ini</p>
+					<center>
+					<div class="tabel font2">
+						<table>
+							<table>
+								<tr>
+									<th>Nilai</th>
+									<td>40</td>
+									<td>50</td>
+									<td>60</td>
+									<td>70</td>
+									<td>80</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<th>Frekuensi</th>
+									<td id="tbl8">5</td>
+									<td id="tbl9">9</td>
+									<td id="tbl10">10</td>
+									<td id="tbl11">8</td>
+									<td id="tbl12">5</td>
+									<td id="tbl13">3</td>
+								</tr>
+							</table>
+						</table>
+					</div>
+					</center>
+					<p>Untuk menentukan median data di atas, ikuti langkah-langkah berikut ini :</p>
+					<ol>
+						<li>Tentukan banyak data dengan menjumlahkan seluruh frekuensi pada tabel<br> 
+							<div class="isian_median">
+								<form name="med2">
+								<table>
+									<tr>
+										<td>Banyak Data ( <i>n</i> )</td>
+										<td>=</td>
+										<td>
+											<input type="text" id="med2i" onfocus="in9()" onfocusout="out9()"/> +
+											<input type="text" id="med2j" onfocus="in10()" onfocusout="out10()"/> +
+											<input type="text" id="med2k" onfocus="in11()" onfocusout="out11()"/> +<br/>
+											<input type="text" id="med2l" onfocus="in12()" onfocusout="out12()"/> +
+											<input type="text" id="med2m" onfocus="in13()" onfocusout="out13()"/> +
+											<input type="text" id="med2n" onfocus="in14()" onfocusout="out14()"/>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>=</td>
+										<td><input type="text" id="med2o" onfocus="in15()" onfocusout="out15()"></td>
+									</tr>
+								</table>
+								</form>
+							</div>
+						</li>
+						<li id="hid_mdn2">
+							Karena banyak data (jumlah frekuensi) <b>genap</b>, yakni 40, maka median dapat dicari dengan cara berikut :</br>
+							<center><img src="../../gambar/rumusmedian2.png" style="width:80%;"/></center></br>
+							Untuk mempermudah mencari nilai data ke-20 dan 21, tabel di atas dilengkapi menjadi berikut :
+							<center>
+							<div class="tabel font2 tabelkecil">
+								<table>
+									<tr>
+										<th>Nilai</th>
+										<th>Frekuensi</th>
+										<th>Data ke-</th>
+									</tr>
+									<tr>
+										<td>40</td>
+										<td>5</td>
+										<td>1-5</td>
+									</tr>
+									<tr>
+										<td>50</td>
+										<td>9</td>
+										<td>6-14</td>
+									</tr>
+									<tr style="border:5px solid green">
+										<td>60</td>
+										<td>10</td>
+										<td>15-24</td>
+									</tr>
+									<tr>
+										<td>70</td>
+										<td>8</td>
+										<td>25-32</td>
+									</tr>
+									<tr>
+										<td>80</td>
+										<td>5</td>
+										<td>33-37</td>
+									</tr>
+									<tr>
+										<td>90</td>
+										<td>3</td>
+										<td>38-40</td>
+									</tr>
+								</table>
+							</div>
+							</center> 
+							Berdasarkan tabel di atas, nilai data ke-20 dan 21 adalah 60, sehingga :
+							<center><img src="../../gambar/rumusmedian3.png" width="80%" style="margin-top: 10px;"></center>
+							Jadi, median dari data pada tabel di atas adalah <b>60</b>.
+						</li>
+					</ol>
+				</div>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="median2.html"><< Sebelumnya</a>
+					<a href="median1.html">1</a>
+					<a href="median2.html" >2</a>
+					<a href=javascript:void(0)  class="active">3</a>
+					<a href="median4.html">4</a>
+					<!-- <a href="median5.html">5</a> -->
+					<a href="median4.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/style.js"></script>
+		<script src="../../js/median2.js"></script>
+	</body>
+	
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../css/materi2.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-lg-3 col-sm-12">
+					<!-- column u/ pagination -->
+					<div class="card">
+						<div class="card-body">
+							<span class ="number-btn text-center"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9 col-sm-12">
+					<!-- column u/ tampil soal -->
+					<div class="card">
+						<div class="card-header text-right">
+							<div class="btn btn-md btn-dark" id="time">00 : 00</div> 
+						</div>
+						<div class="card-body">
+							<div class="quiz-container">
+								<div id="quiz"></div>
+							</div>
+							<hr/>
+							<div class="btn-action text-center">
+								<button id="previous" class="btn btn-md btn-secondary">Kembali</button>
+								<button id="next" class="btn btn-md btn-success">Selanjutnya</button>
+								<button id="submit" class="btn btn-md btn-danger">Selesai</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
+		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+		<script src="script.js"></script>
+		<script>
+			let randomQuestion = myQuestions.sort((a,b) => {return 0.5 - Math.random()})
+			let sliceQuestion = randomQuestion.slice(0, 10)
+
+			function buildQuiz(){
+				const output = []
+				let currentNumber = 1
+
+				sliceQuestion.forEach((currentQuestion, questionNumber) =>{
+					const answers=[]
+
+					for(letter in currentQuestion.answers){
+						answers.push(
+							`
+								<label>
+									<input type="radio" name="question${questionNumber}" value="${letter}">
+									<span>${letter}. ${currentQuestion.answers[letter]}</span>
+								</label>
+							`
+						)
+					}
+
+					output.push(
+						`
+							<div class="slide">
+								<div class="question">${currentNumber}. ${currentQuestion.question}</div>
+								<hr/>
+								<div class="answers">${answers.join("")}</div>
+							</div>
+						`
+					)
+					currentNumber++
+				})
+				questionContainer.innerHTML = output.join("")
+			}
+
+			function results(){
+				const answerContainers = questionContainer.querySelectorAll('.answers')
+
+				let numCorrect = 0
+				let numWrong = 0
+
+				sliceQuestion.forEach((currentQuestion, questionNumber) => {
+					const answerContainer = answerContainers[questionNumber]
+
+					const selector = `input[name=question${questionNumber}]:checked`
+					const userAnswer = (answerContainer.querySelector(selector) || {}).value
+
+					if(userAnswer === currentQuestion.correctAnswer){
+						numCorrect++
+					}else{
+						numWrong++
+					}
+
+				})
+
+				console.log(numWrong)
+				console.log(numCorrect)
+				sessionStorage.setItem('questionLength', sliceQuestion.length)
+				sessionStorage.setItem('correct', numCorrect)
+				sessionStorage.setItem('wrong', numWrong)
+				location.href = './hasil.html'
+			}
+
+			function showSlide(n){
+				slides[currentSlide].classList.remove('active-slide')
+				slides[n].classList.add('active-slide')
+				currentSlide = n
+
+				if(currentSlide === 0){
+					previousButton.style.display = 'none'
+				} else {
+					previousButton.style.display = 'inline-block'
+				}
+
+				if(currentSlide === slides.length-1){
+					nextButton.style.display = 'none'
+					submitButton.style.display = 'inline-block'
+				} else {
+					nextButton.style.display = 'inline-block'
+					submitButton.style.display = 'none'
+				}
+
+			}
+
+			function showNextSlide(){
+				showSlide(currentSlide + 1)
+			}
+
+			function showPreviousSlide(){
+				showSlide(currentSlide - 1)
+			}
+
+			function paginationSlide(n){
+				showSlide(n)
+			}
+			//DOM Show Question
+
+			let questionContainer = document.querySelector("#quiz")
+			let nextButton = document.querySelector("#next")
+			let previousButton = document.querySelector("#previous")
+			let submitButton = document.querySelector("#submit")
+			buildQuiz()
+			const slides = document.querySelectorAll(".slide")
+			let currentSlide = 0
+
+			
+			showSlide(currentSlide)
+			submitButton.addEventListener("click", results)
+			nextButton.addEventListener("click", showNextSlide)
+			previousButton.addEventListener("click", showPreviousSlide)
+
+			let numberBtn = document.querySelector(".number-btn")
+			for(i=0; i<sliceQuestion.length; i++){
+				let li = document.createElement("span")
+				li.innerHTML=`
+				<button class="btn btn-sm btn-outline-secondary mx-1 mt-2" onclick="paginationSlide(${i})">${i+1}</button>
+				`
+
+				numberBtn.appendChild(li)
+			}
+
+			let showTime = document.querySelector("#time")
+			let startMinute = 10
+			let seconds = 0
+
+			function countdown(){
+				setTimeout(countdown, 1000)
+				seconds = seconds<10 ? '0' + seconds : seconds
+				showTime.innerHTML = `${startMinute} : ${seconds}`
+
+				seconds--
+				if(seconds < 0){
+					seconds = 59
+					startMinute--
+				}
+				if(startMinute < 0){
+					startMinute = 0
+					seconds = 0
+				}
+				if(startMinute === 0 && seconds === 0){
+					results()
+				}
+
+				// if(startMinute > 9)
+				// 	submitButton.setAttribute("disabled", "")
+
+				// if(startMinute < 9){
+				// 	submitButton.removeAttribute("disabled", "")
+				// 	submitButton.classList.remove('btn-danger')
+				// 	submitButton.classList.add('btn-outline-danger')
+					
+				// }
+			}
+
+			countdown()
+		</script>
+	</body>
+</html>

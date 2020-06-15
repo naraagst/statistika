@@ -1,0 +1,9 @@
+#dragScriptContainer{	/* BIG DIV containing HTML needed for the entire script */
+		width:400px;
+		margin:0 auto;
+		border:1px solid #000;
+		height:400px;
+		margin-top:20px;
+		padding:3px;
+		-moz-user-select:no;
+	}

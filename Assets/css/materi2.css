@@ -1,0 +1,663 @@
+.materi2{
+	width:95%;
+	height: 73.5%;
+	background-color: white;
+	margin: 10px;
+	margin-left: 27px;
+	float:left;
+}
+.ujikompetensi{
+	width:95%;
+	height: 80%;
+	background-color: white;
+	margin: 10px;
+	margin-left: 27px;
+	float:left;
+	overflow-x: hidden;
+	overflow-y: auto  !important;
+}
+.materi2 p{
+	padding-left:30px;
+	padding-right:30px;
+}
+
+.submateri2{
+	height:87%;
+}
+.submateri4{
+	height:80%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.submateri5{
+	height:83%;
+	overflow-y: auto;
+	overflow-x: hidden;	
+}
+.submateri4 p{
+	font-size:20px;
+}
+#gbr p{
+	font-size: 1.1rem;
+}
+.ukfont{
+	font-size: 1px;
+}
+
+.isian input, .angka input{
+	padding:7px;
+	margin-top: 10px;
+	font-weight:bold;
+	font-size: 15px;
+}
+
+.angka, .angka td{
+	font-weight:bold;
+	font-size: 20px;
+	line-height: 35px;
+	margin-top: 25px;
+}
+
+.angka input{
+	width:80px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.tiga td, .tiga input{
+	font-weight: bold;
+}
+
+#inp13{
+	margin-left:10px;
+}
+
+#satu, #satu b, #dua b, #tiga b, #jadi{
+	color:rgb(0,70,100);
+	font-weight: bold;
+}
+
+.tabel2 table, .tabel2 th, .tabel2 td{
+	border: 3px solid rgb(0,84,130);
+  	border-collapse: collapse;
+  	padding:4px;
+  	text-align: center;
+  	font-size: 15px;
+  	font-family: Muli;
+}
+.tabel2 table{
+	width:85%;
+}
+.tabel2 th{
+	background-color: rgb(0,84,130);
+	color: white;
+	font-weight: bold;
+}
+.tabel2 td{
+	height:50px;
+}
+
+.penyelesaian2{
+	margin-top: 30px;
+
+}
+.penyelesaian2 td{
+	padding:10px;
+	text-align: center;
+	font-size:18px;
+	font-family: Muli;
+}
+#hasil{
+	text-align: center;
+	padding:15px;
+	background-color:rgb(0,255,0,0.3);
+	border-radius:5px;
+	font-weight: bold;
+	font-size: 18px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.rumus table{
+	width:90%;
+	margin: 10px;
+}
+.rumus td{
+	padding:5px;
+}
+
+#rumusmean td, #rumusmean table{
+	padding:5px;
+	font-family: Poppins;
+	font-size:18px;
+	text-align: center;
+	font-weight:bold;
+}
+#hasildd{
+	font-weight:bold;
+	font-size:20px;
+	width:350px !important;
+	margin-left: -55% !important;
+}
+#ddrumusmean{
+	width:55%;
+	height:60%;
+}
+#ddrumusmean table{
+	margin-left: -5px;
+}
+#div1,#div2,#div3 {
+  float: left;
+  width: 180px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+
+}
+.rumus p{
+	font-family: Muli;
+}
+.rumus h2{
+	font-family: Poppins;
+	text-align: center;
+	color: white;
+	padding:10px;
+	background-color: rgb(0,84,130);
+}
+.rumus{
+		padding:0px !important;
+}
+.susunrumus{
+	width: 100%;
+}
+#drag1,#drag2,#drag3{
+	font-size:18px;
+	font-family: Muli;
+	border: 2px solid black;
+	padding:5px;
+	width:180px;
+	margin-bottom:10px;
+	background-color: white;
+}
+.grab {
+	cursor: -webkit-grab; 
+	cursor: grab;
+}
+.next{
+	background-color: rgb(0,156,255);
+	border:3px solid rgb(0,156,255);
+	border-radius: 50px;
+	padding:10px;
+	width:50px !important;
+	-webkit-transition-duration: 0.4s;
+  	transition-duration: 0.4s;
+  	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  	font-weight: bold;
+  	color: white;
+  	cursor: pointer;
+  	font-size: 18px;
+}
+.next:hover{
+	border:3px solid rgb(0,156,255);
+	background-color: white;
+	color:black;
+}
+.subkonten3{
+	width:100%;
+	height:71%;
+}
+.materi3{
+	width:42%;
+	height: 100%;
+	background-color: white;
+	margin: 10px;
+	margin-left: 27px;
+	float:left;
+}
+
+.materi3 p, .materi3 ol, .conso3 p, .r28{
+	font-size: 18px;
+	font-family: Muli;
+	text-align: justify;
+	margin:20px;
+}
+
+.materi3 h2{
+	padding:5px;
+	border-left:10px solid rgb(0,156,255);
+	color:rgb(0,106,150);
+	font-size: 26px;
+	width:100%;
+	font-family: Poppins;
+	font-weight: bold !important;
+	margin-top: 0px;
+}
+.submateri3{
+	height:89%;
+	overflow: auto;
+}
+
+.submateri3 h3{
+	color:white;
+	background-color: rgb(0,106,150);
+	text-align: center;
+	padding:5px;
+	border:2px solid rgb(0,106,150);
+	margin-top:30px;
+	width:50%;
+}
+.conso3{
+	width:52%;
+	height:100% !important;
+	background-color: white;
+	margin: 10px;
+	padding:20px;
+	float:left;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.jarak a{
+	padding-bottom: 50px;
+}
+
+.r28 td{
+	padding:7px;
+	text-align: center;
+	font-size:15px;
+}
+
+.r28{
+	border:2px solid rgb(0,106,150);
+	border-radius: 10px;
+	padding:3px;
+}
+.r28 h3{
+	font-weight: bold;
+	font-size:20px;
+	text-align: center;
+	color:rgb(0,106,150);
+}
+
+.fontt{
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.tabelpor td{
+	padding:10px;
+	text-align: center;
+	border:2px solid blue;
+}
+
+.submateri4 h3{
+	font-weight: bold;
+	font-family: Poppins;
+	margin-left: 30px;
+}
+
+#jwb{
+	margin-left: 40px;
+}
+#jwb input{
+	padding:10px;
+	width:60px;
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#gbr table{
+	text-align: center;
+}
+#gbr td{
+	padding:10px;
+	width:60px;
+	font-family: Poppins;
+	font-size: 16px;
+}
+.menulat{
+	border-top: 3px solid rgb(0,84,130,0.2);
+	width:80%;
+	padding-top: 5px;
+}
+.isian_median input{
+	width:40px;
+	padding: 5px;
+	font-family: poppins;
+	font-size:16px;
+	text-align: center;
+	border: none;
+	border-bottom:2px dotted black;
+}
+
+#tengah button, #tengah2 button, #tengah3 button{
+	font-size:16px;
+	font-family: Poppins;
+	font-weight: bold;
+	padding:10px;
+	background-color: white;
+	
+}
+
+#tengah button:hover:enabled, #tengah2 button:hover:enabled, #tengah3 button:hover:enabled{
+	border:3px solid blue;
+}
+
+.font2 table tr td, .font2 th{
+	padding:10px;
+	font-family: Poppins;
+	font-size:14px;
+}
+
+.isian_median td{
+	padding:15px;
+}
+
+#pilihan_a, #pilihan_b, #pilihan_c, #pilihan_d{
+	width:48%;
+	height:50px;
+	border: 0.1rem solid rgb(86, 165, 235, 0.5);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-family: Poppins;
+    color:black;
+}
+
+#pilihan_a:hover, #pilihan_b:hover, #pilihan_c:hover, #pilihan_d:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.tpt_huruf{
+	width:50px;
+	height:30px;
+	background-color: rgba(86, 185, 235);
+	color:white;
+	text-align: center;
+	padding:10px;
+	float: left;
+	font-weight: bold;
+}
+
+#pil_a,#pil_b,#pil_c,#pil_d{
+	float:left;
+	height:30px;
+	text-align: center;
+	padding:10px;
+	float: left;
+}
+
+#soal{
+	font-size: 1.1rem;
+	width:90%;
+}
+
+.wadah_pilihan{
+	width:80%;
+	background-color: blue;
+}
+
+#wdh_skor h1{
+	font-size: 36px;
+	font-family: Poppins;
+}
+#wdh_skor{
+	margin-top:100px;
+}
+
+.tabelkecil table, .tabelkecil th, .tabelkecil tr, .tabelkecil td{
+	padding: 3px !important;
+	width:300px !important;
+	margin: 20px;
+}
+#hid_mdn{
+	line-height: 30px;
+}
+.rumusmodus p{
+	text-align: center;
+	font-weight: bold;
+}
+.rumusmodus{
+	width:93%;
+	background-color: rgb(0,156,255, 0.5);
+	padding: 0.5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+	line-height: 30px;
+}
+.btn-group2 a {
+	background-color:rgb(0,156,255, 0.5);
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0px;
+	border:1px solid white;
+	display:inline-block;
+	font-family:Poppins;
+	font-size:17px;
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+	text-align:center;
+	cursor: pointer;
+	float: left;
+	padding:15px;
+	width:43%;
+	color: black;
+
+}
+.btn-group2 a:hover {
+	background-color: rgb(0,0,0, 0.1) !important;
+
+}
+.btn-group2 .active {
+	position:relative;
+	color: black;
+}
+.btn-group2 a:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+.btn-group2:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-group2{
+	padding-left: 5px;
+	width: 105%;
+	margin-left: -15px;
+	margin-top: -10px;
+}
+.soalmodus p{
+	text-align: center !important;
+	font-weight: bold;
+	font-size: 20px !important;
+}
+.soalmodus img{
+	width:80%;
+}
+.consomodus2{
+	overflow-y: auto !important;
+}
+.consomodus2 li{
+	font-family: Muli;
+	font-size: 16px;
+	margin-left: 30px;
+	text-decoration: none;
+}
+.consomodus2 input{
+	width:70px;
+	padding:5px;
+	margin:2px;
+	font-family: Poppins;
+	text-align: center;
+}
+.tabelblank td{
+	padding: 5px;
+	text-align: center;
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: bold;
+}
+.tabelinput input{
+	border:none;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#containermodus{
+	border:5px solid rgb(0,156,255, 0.5);
+	border-top: none;
+	padding-top: 15px;
+	width:102%;
+	height:85%;
+	margin-left: -10px;
+	margin-top: -30px;
+	overflow-y: auto;
+}
+.consonav img{
+	width:15%;
+	float: left;
+}
+.consonav img:hover{
+	width:14%;
+}
+.consonav{
+	padding-left: 30%;
+}
+.consonav1{
+	margin:15px;
+	float: left;
+	font-family: Muli;
+	font-size: 20px;
+	font-weight: bold;
+}
+#cm1{
+	border:5px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;
+}
+.frame{
+	padding:25px;
+	padding-bottom: 5%;
+	border:7px solid rgb(0,84,130);
+	border-radius: 15px;
+	margin:10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.median li{
+	font-family: Muli;
+	font-size: 18px;
+	margin:20px;
+	margin-left:10%;
+	text-align: justify;
+}
+.median button{
+	margin-top: 5px;
+}
+.petunjuk{
+	background-color: lightblue;
+	border-radius: 10px;
+	margin:2%;
+}
+.petunjuk p, .petunjuk li{
+	margin:0 !important;
+	font-size: 16px;
+	font-family: Muli;
+	text-align: justify;
+}
+.petunjuk a{
+	text-decoration: none;
+	color: black;
+}
+#petunjuka, #petunjuka2{
+	background-color: rgb(0,84,130);
+	color:white;
+	font-weight: bolder;
+	border-radius: 10px 10px 0px 0px;
+	padding:3% !important;
+}
+#petunjuk, #petunjuk2{
+	padding:5%;
+	display: block;
+}
+.dataj table tr td{
+	font-family: Muli;
+	font-weight: bold;
+	font-size: 20px;
+	padding:0px 10px 0px 10px;
+}
+.inpjangkauan input{
+	margin-left:5px;
+	text-align: center;
+	width:50px;
+	padding:5px;
+	font-family: Poppins;
+	font-size: 16px;
+}
+.greenbold{
+	color:green;
+	font-weight: bold;
+}
+.tabeltulisan table, .tabeltulisan td{
+	font-family: Muli;
+	font-size: 18px;
+	padding: 5px;
+}
+.bigpad td{
+	padding:0px 10px;
+}
+.rednote{
+	font-size: 14px;
+	color: red;
+}
+.langkah li{
+	margin-bottom: 25px;
+}
+.isian_median input{
+	width:35px;
+	padding: 5px;
+	font-family: poppins;
+	font-size:16px;
+	text-align: center;
+	border: none;
+	border-bottom:2px dotted black;
+}
+.noborder{
+	border:none;
+}
+
+.containerlat{
+	border:5px solid rgb(0,156,255, 0.5);
+	margin-top:-10px;
+	width:102%;
+	height:102%;
+	margin-left: -10px;
+}
+.soallat{
+	height:90%;
+	width:100%;
+	overflow-y: auto;
+}
+
+.judullat{
+	background-color: rgb(0,156,255,0.5);
+	padding:10px 0px;
+}
+.judullat h2{
+	text-align:center;
+	font-family: Muli;
+}
+.bigtabel th, .bigtabel td{
+	font-family: Muli;
+	font-size: 18px;
+	padding: 10px !important;
+}
+.bigtabel th{
+	text-align: left;
+}

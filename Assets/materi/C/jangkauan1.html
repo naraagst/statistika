@@ -1,0 +1,218 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				document.getElementById("cjang1b").disabled=true;
+				document.getElementById("cjang1c").disabled=true;
+				document.getElementById("cjang2b").disabled=true;
+				document.getElementById("cjang2c").disabled=true;
+				document.getElementById("consojangkauan1").hidden=true;
+				document.getElementById("consojangkauan2").hidden=true;
+				document.getElementById("hasilj1").hidden=true;
+				document.getElementById("resetj1").hidden=true;
+				document.getElementById("hasilj2").hidden=true;
+				document.getElementById("resetj2").hidden=true;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="../A/analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown" style="background-color: rgb(20,20,20);">
+				      <a href="../B/mean1.html" >1.  Mean</a>
+				      <a href="../B/median1.html">2.  Median</a>
+				      <a href="../B/modus1.html">3.  Modus</a>
+				      <a href="../B/evaluasiB.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="jangkauan1.html" style="border-bottom:3px solid rgb(0,156,255);">1. Jangkauan</a>
+				      <a href="kuartil1.html">2. Kuartil</a>
+				      <a href="interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="evaluasiC.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h2>Jangkauan</h2>
+				<p>Jangkauan adalah selisih datum terbesar dan terkecil. Jangkauan dinotasikan dengan <i>J</i>, sehingga :</p>
+				<center>
+				<div class="rumusmodus" style="width:50%">
+					<p>$J$ = $X_{maks} - X_{min}$</p>
+				</div>
+				</center>
+				<p>dengan:<br/>$J$ = Jangkauan<br/>$X_{maks}$ = Datum terbesar<br/>$X_{min}$ = Datum terkecil</p>
+				<p>Agar lebih memahami jangkauan, kerjakanlah beberapa contoh berikut ini:</p>
+				<center>
+					<button class="cek" onclick="contoh1()">Contoh 1</button>
+					<button class="cek" onclick="contoh2()">Contoh 2</button>
+				</center>
+			</div>
+			<div class="conso" id="conso" style="overflow: auto;">
+				<div id="consojangkauan1">
+				<h3>Contoh Soal Jangkauan 1</h3>
+				<p>Perhatikan data berat 10 buah Palipisan di bawah ini (dalam gram):</p>
+				<center>
+				<div class="dataj">
+				<table>
+					<tr>
+						<td>57</td>
+						<td>58</td>
+						<td>54</td>
+						<td>68</td>
+						<td>48</td>
+					</tr>
+					<tr>
+						<td>53</td>
+						<td>65</td>
+						<td>61</td>
+						<td>60</td>
+						<td>59</td>
+					</tr>
+				</table>
+				</div>
+				</center>
+				<div class="inpjangkauan">
+				<p>Berdasarkan data tersebut, jawablah beberapa pertanyaan berikut ini:</p>
+				<p>Berapakah berat terbesar dari data tersebut?<input type="text" id="cjang1a" placeholder=".  .  ." onkeyup="cjang1a()" autofocus></p>
+				<p>Berapakah berat terkecil dari data tersebut?<input type="text" id="cjang1b" placeholder=".  .  ." onkeyup="cjang1b()"></p>
+					<div class="tabeltulisan" style="margin-left: 2%">
+					<table>
+						<tr>
+							<td>Selisih berat terbesar dan terkecil</td>
+							<td>= <span id="sel1"> .  .  . </span> - <span id="sel2"> .  .  . </span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>= <input type="text" id="cjang1c" placeholder=".  .  ." onkeyup="cjang1c()"></td>
+						</tr>
+					</table>
+					</div>
+				<p id="hasilj1" class="greenbold">Jadi, jangkauan dari data tersebut adalah 20 gram.</p>
+				<center><button class="cek" style="margin:10px;" id="resetj1" onclick="resetj1()">Reset</button></center>
+				</div>
+				</div>
+				<div id="consojangkauan2">
+					<h3>Contoh Soal Jangkauan 2</h3>
+					<p>Perhatikan data berikut ini!</p>
+					<center>
+						<div class="tabel font2">
+							<table>
+								<tr>
+									<th>Nilai</th>
+									<td>55</td>
+									<td>60</td>
+									<td>65</td>
+									<td>70</td>
+									<td>75</td>
+									<td>80</td>
+									<td>85</td>
+								</tr>
+								<tr>
+									<th>Frekuensi</th>
+									<td id="tbl1">5</td>
+									<td id="tbl2">7</td>
+									<td id="tbl3">6</td>
+									<td id="tbl4">6</td>
+									<td id="tbl5">5</td>
+									<td id="tbl6">9</td>
+									<td id="tbl7">7</td>
+								</tr>
+							</table>
+						</div>
+						</center>
+						<p>Isilah titik-titik di bawah ini berdasarkan data tersebut</p>
+						<div class="tabeltulisan inpjangkauan" style="margin-left: 2%">
+							<table>
+								<tr>
+									<td>Datum terbesar</td>
+									<td>=</td>
+									<td><input type="text" placeholder=".  .  ." id="cjang2a" onkeyup="cjang2a()"></td>
+								</tr>
+								<tr>
+									<td>Datum terkecil</td>
+									<td>=</td>
+									<td><input type="text" placeholder=".  .  ." id="cjang2b" onkeyup="cjang2b()"></td>
+								</tr>
+								<tr>
+									<td rowspan="3" style="vertical-align: top;">Jangkauan</td>
+									<td> =</td>
+									<td> X<sub>maks</sub> - X<sub>min</sub></td>
+								</tr>
+								<tr>
+									<td> =</td>
+									<td> <span id="sel2a"> .  .  . </span> - <span id="sel2b"> .  .  . </span></td>
+								</tr>
+								<tr>
+									<td> =</td>
+									<td> <input type="text" placeholder=".  .  ." id="cjang2c" onkeyup="cjang2c()"></td>
+								</tr>
+							</table>
+							<p id="hasilj2" class="greenbold">Jadi, jangkauan dari data tersebut adalah 30.</p>
+							<center><button class="cek" style="margin:10px;" id="resetj2" onclick="resetj2()">Reset</button></center>
+						</div>
+				</div>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="#" style="cursor: not-allowed;"><< Sebelumnya</a>
+					<a href=javascript:void(0)  class="active">1</a>
+					<a href="jangkauan2.html" >2</a>
+<!-- 					<a href="modus3.html">3</a>
+					<a href="modus4.html">4</a>
+					<a href="modus5.html">5</a> -->
+ 					<a href="jangkauan2.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../../js/style.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="../../js/jangkauan.js"></script>
+	</body>
+	
+</html>

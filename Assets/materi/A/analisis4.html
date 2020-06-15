@@ -1,0 +1,236 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script>
+
+			window.onload = function d() {
+				document.getElementById("ulangi").hidden = true;
+            	document.getElementById("lihat").hidden = true;
+            	document.getElementById("jwb_analisis4").hidden = true;
+			var chart4 = new CanvasJS.Chart("chartContainer4", {
+				animationEnabled: true,
+				theme: "light2",
+				axisY: {
+					title: "Banyak Bayi Lahir"
+				},
+				data: [{        
+					type: "line",  
+					showInLegend: true, 
+					legendText: "Tahun",     
+					dataPoints: [      
+						{ y: 7, label: "2001" },
+						{ y: 10,  label: "2002" },
+						{ y: 13,  label: "2003" },
+						{ y: 17,  label: "2004" },
+						{ y: 20,  label: "2005" },
+						{ y: 22, label: "2006" },
+						{ y: 24, label: "2007" },
+						{ y: 25, label: "2008" },
+					]
+				}]
+			});
+			chart4.render();
+
+			}
+
+	</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:30px;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6" style="background-color: rgb(20,20,20);">
+					  <a href="analisis1.html" style="border-bottom:3px solid rgb(0,156,255);">Materi</a>
+				      <a href="evaluasiA">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:50px;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown">
+				      <a href="../B/mean1.html" >1.  Mean</a>
+				      <a href="../B/median1.html">2.  Median</a>
+				      <a href="../B/modus1.html">3.  Modus</a>
+				      <a href="../B/evaluasiB">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:50px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="../C/jangkauan1.html">1. Jangkauan</a>
+				      <a href="../C/kuartil1.html">2. Kuartil</a>
+				      <a href="../C/interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="../C/simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="../C/evaluasiC">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi">
+				<h2>Menganalisis Data</h2>
+				<div class="submateri" id="submateri">
+					<p>Bagaimana kita membaca data dalam grafik?</p>
+					<p>Perhatikan gambar diagram garis yang terdapat di Puskesmas Desa Suka Makmur di samping.</p>
+					<p>
+						Diagram di samping menunjukkan bahwa pada tahun 2001 terdapat 7 kelahiran, tahun 2002 sebanyak 10 kelahiran, dan seterusnya. Temukan juga keterangan-keterangan lain yang dapat kalian peroleh dari diagram di samping.
+					</p>
+					<div class="isian">
+					<form name="form">
+					<ol>
+						<li>
+							Tentukan banyak kelahiran pada tahun 2003, 2004, dan seterusnya dengan mengisi tabel di bawah ini.
+							<center>
+							<div class="tabel">
+							<table style="margin-top:10px;margin-bottom: 10px;">
+								<tr>
+									<th>Tahun</th>
+									<th>Banyak Bayi Lahir</th>
+								</tr>
+								<tr>
+									<td>2003</td>
+									<td>
+										<input type="text" name="jwb1">
+										<font class="hsl" id="jwb1a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl" id="jwb1b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>2004</td>
+									<td>
+										<input type="text" name="jwb2">
+										<font class="hsl" id="jwb2a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl" id="jwb2b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>2005</td>
+									<td>
+										<input type="text" name="jwb3">
+										<font class="hsl" id="jwb3a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl" id="jwb3b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>2006</td>
+									<td>
+										<input type="text" name="jwb4">
+										<font class="hsl" id="jwb4a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl" id="jwb4b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>2007</td>
+									<td>
+										<input type="text" name="jwb5">
+										<font class="hsl" id="jwb5a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl" id="jwb5b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>2008</td>
+									<td>
+										<input type="text" name="jwb6">
+										<font class="hsl" id="jwb6a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl" id="jwb6b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+							</table>
+							</div>
+							</center>
+						</li>
+						<li>
+							Pada tahun berapakah jumlah kelahiran paling tinggi? 
+							<input type="text" name="jwb7">
+							<font class="hsl" id="jwb7a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl" id="jwb7b"><i class="fas fa-times" style="color:red;"></i></font>
+						</li>
+						 <li>
+						 	Pada tahun berapakah jumlah kelahiran paling rendah? 
+						 	<input type="text" name="jwb8">
+						 	<font class="hsl" id="jwb8a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl" id="jwb8b"><i class="fas fa-times" style="color:red;"></i></font>
+						 </li>
+						<li>Pada tahun 2008 terdapat 25 kelahiran. Dapatkah kita simpulkan bahwa pada tahun 2008 penduduk Desa Suka Makmur bertambah 25 orang dibandingkan tahun 2007?
+							<font class="hsl" id="jwb9a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl" id="jwb9b"><i class="fas fa-times" style="color:red;"></i></font></br>
+							<input type="radio" name="jwb9" value="1" style="margin-right:-15px">Ya</br>
+							<input type="radio" name="jwb9" value="2" style="margin-right:-15px">Tidak
+						</li>
+					</ol>
+					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek" style="margin-left:30px;">
+					<div id="isi" style="float: right; font-size: 24px; font-weight:bold; color:red;"></div>
+					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek" id="ulangi">
+					<input type="button" name="submit" onclick="lihatjwb()" value="Lihat Jawaban" class="cek" id="lihat">
+					</form>
+						<div id="jwb_analisis4" style="width:100%;">
+							<ol>
+								<li>
+									Banyak kelahiran di Desa Suka Makmur adalah sebagai berikut<br/>
+									2003 : 13<br/>
+									2004 : 17<br/>
+									2005 : 20<br/>
+									2006 : 22<br/>
+									2007 : 24<br/>
+									2008 : 25<br/>
+								</li>
+								<li>
+									Jumlah kelahiran paling tinggi terdapat pada tahun 2008
+								</li>
+								<li>
+									Jumlah kelahiran paling rendah terdapat pada tahun 2001
+								</li>
+								<li>
+									Jumlah kelahiran paling tinggi terdapat pada tahun 2008
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="conso">
+				<h3>Diagram Garis Jumlah Kelahiran di Desa Suka Makmur</h3>
+				<div id="chartContainer4" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
+				<p style="color: red; font-size: 14;">*catatan: arahkan kursor ke setiap titik pada diagram untuk mengetahui jumlah data</p>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="analisis2.html"><< Sebelumnya</a>
+					<a href="analisis1.html">1</a>
+					<a href="analisis2.html">2</a>
+					<a href="#" class="active">3</a>
+					<a href="analisis5.html">4</a>
+					<a href="analisis5.html">Selanjutnya >></a>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/analisis4.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="../../js/style.js"></script>
+		<script src="../../js/canvasjs.min.js"></script>
+
+	</body>
+	
+</html>

@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="../../../css/statistik.css" rel="stylesheet">	
+		<link href="../../../css/materi2.css" rel="stylesheet">	
+		<link rel="stylesheet" href="style.css">
+		<link href="../../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
+		<link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript" async src="../../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<script>
+			window.onload = function awal(){
+				
+
+			};
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+			<ul>
+				<li><a href="../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown6()" style="height:40px !important;">
+						<div class="teksmenu">A. Menganalisis Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown6">
+					  <a href="../A/analisis1.html">Materi</a>
+				      <a href="evaluasiA.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown()" style="height:70px !important;">
+						<div class="teksmenu">B. Ukuran Pemusatan Data </div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown"  style="background-color: rgb(20,20,20);">
+				      <a href="mean1.html" style="border-bottom:3px solid rgb(0,156,255);">1.  Mean</a>
+				      <a href="median1.html">2.  Median</a>
+				      <a href="modus1.html">3.  Modus</a>
+				      <a href="evaluasiB.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+				<li class="dropdown1">
+					<a href=javascript:void(0) class="dropbtn" onclick="dropdown2()" style="height:70px;">
+						<div class="teksmenu">C. Ukuran Penyebaran Data</div>
+						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
+					</a>
+					<div class="dropdown" id="myDropdown2">
+				      <a href="../C/jangkauan1.html">1. Jangkauan</a>
+				      <a href="../C/kuartil1.html">2. Kuartil</a>
+				      <a href="../C/interkuartil1.html">3. Jangkauan Interkuartil</a>
+				      <a href="../C/simpangan1.html">4. Simpangan Kuartil</a>
+				      <a href="../C/evaluasiC.html">Uji Kompetensi</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="konten">
+			<div class="ujikompetensi">
+				<div class="submateri2">
+					<h2>Hasil Uji Kompetensi</h2>
+					<div class="card">
+			            <div class="card-body">
+			                <div class="score text-center">
+			                    <h1 id="new-score"></h1>
+			                    <p id="wrong-correct"></p>
+			                    <p id="ket"></p>
+				                <button class="btn btn-md btn-primary" id="try-again">Ulang Uji Kompetensi</button>
+			       		        <button class="btn btn-md btn-success" id="next">Materi Selanjutnya</button>
+			       		        <button class="btn btn-md btn-success" id="ulangi">Pelajari Ulang Materi</button>
+			                </div>
+			                <br/>
+			                <h4 class="text-center">Riwayat Nilai</h4>
+			                <div class="table-responsive">
+			                    <table class="table table-bordered">
+			                        <thead>
+			                            <tr>
+			                                <th>No. </th>
+			                                <th>Nama</th>
+			                                <th>Jawaban Benar</th>
+			                                <th>Jawaban Salah</th>
+			                                <th>Nilai</th>
+			                                <th>Keterangan</th>
+			                            </tr>
+			                        </thead>
+			                        <tbody class="resultsContainer">
+
+			                        </tbody>
+			                    </table>
+			                </div>
+			            </div>
+			        </div>
+				</div>
+				
+			</div>
+		</div>
+
+		<script src="../../../js/style.js"></script>
+		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
+		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+		<script src="script.js"></script>
+		<script src="hasil.js"></script>
+	</body>
+	
+</html>
