@@ -4,9 +4,18 @@
 	
 		<link href="../../css/statistik.css" rel="stylesheet">	
 		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="../../css/latihanfix.css" rel="stylesheet">
 		<link href="../../fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet">	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+        .tabcontent {
+            display: none;
+        }
 
+        .tabcontent .active {
+            display: block;
+        }        
+   		</style>
 		<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({
 		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
@@ -103,27 +112,108 @@
 								</ul></a>
 							</div>
 						</div>
-						<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
-							<p id="soal"></p>
-							<div id="gbr">			
+						<center>
+								<div class="progress">
+								    <div id="progress-bar" class="progress-bar" style="width:0%">
+									      0%
+								    </div>
+								</div>
+						</center>
+						<div class="tabcontent" id="content1">
+							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
+							<p id="soal1"></p>
+							<div id="gbr1">			
 							</div>
 							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
-								<span style="display:none;" id="jwbsoal"></span>
-								<span style="display:none;" id="jwbsoal2"></span>
-								<span style="display:none;" id="jwbsoal3"></span>
 								Jawab : &nbsp;&nbsp;
-								Q<sub>1</sub> = <input type="text" id="jwbsiswa"/> &nbsp;&nbsp;&nbsp;
-								Q<sub>2</sub> = <input type="text" id="jwbsiswa2"/> &nbsp;&nbsp;&nbsp;
-								Q<sub>3</sub> = <input type="text" id="jwbsiswa3"/> &nbsp;
-								<span id="hasilbenar" style="color:green"></span>
-								<span id="hasilsalah" style="color:red"></span>
+								Q<sub>1</sub> = <input type="text" class="jwbsiswa1"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>2</sub> = <input type="text" class="jwbsiswa1"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>3</sub> = <input type="text" class="jwbsiswa1"/> &nbsp;
+								<span id="hasil1"></span>
 							</div>
-						<center>
-						<div class="menulat" style="margin-bottom: 10px;">
-							<button id="cekjwb" class="cek">Cek Jawaban</button>
-							<button id="acaksoal" class="cek">Soal Lain</button>
+							<center>
+							<div class="menulat" style="margin-bottom: 10px;">
+								<button id="cekjwb1" class="cek">Cek Jawaban</button>
+								<button id="acaksoal" class="cekdisabled nextSoal">Soal Lain</button>
+							</div>
+							</center>
 						</div>
-						</center>
+						<div class="tabcontent" id="content2">
+							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
+							<p id="soal2"></p>
+							<div id="gbr2">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab : &nbsp;&nbsp;
+								Q<sub>1</sub> = <input type="text" class="jwbsiswa2"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>2</sub> = <input type="text" class="jwbsiswa2"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>3</sub> = <input type="text" class="jwbsiswa2"/> &nbsp;
+								<span id="hasil2"></span>
+							</div>
+							<center>
+							<div class="menulat" style="margin-bottom: 10px;">
+								<button id="cekjwb2" class="cek">Cek Jawaban</button>
+								<button id="acaksoal" class="cekdisabled nextSoal">Soal Lain</button>
+							</div>
+							</center>
+						</div>
+						<div class="tabcontent" id="content3">
+							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
+							<p id="soal3"></p>
+							<div id="gbr3">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab : &nbsp;&nbsp;
+								Q<sub>1</sub> = <input type="text" class="jwbsiswa3"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>2</sub> = <input type="text" class="jwbsiswa3"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>3</sub> = <input type="text" class="jwbsiswa3"/> &nbsp;
+								<span id="hasil3"></span>
+							</div>
+							<center>
+							<div class="menulat" style="margin-bottom: 10px;">
+								<button id="cekjwb3" class="cek">Cek Jawaban</button>
+								<button id="acaksoal" class="cekdisabled nextSoal">Soal Lain</button>
+							</div>
+							</center>
+						</div>
+						<div class="tabcontent" id="content4">
+							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
+							<p id="soal4"></p>
+							<div id="gbr4">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab : &nbsp;&nbsp;
+								Q<sub>1</sub> = <input type="text" class="jwbsiswa4"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>2</sub> = <input type="text" class="jwbsiswa4"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>3</sub> = <input type="text" class="jwbsiswa4"/> &nbsp;
+								<span id="hasil4"></span>
+							</div>
+							<center>
+							<div class="menulat" style="margin-bottom: 10px;">
+								<button id="cekjwb4" class="cek">Cek Jawaban</button>
+								<button id="acaksoal" class="cekdisabled nextSoal">Soal Lain</button>
+							</div>
+							</center>
+						</div>
+						<div class="tabcontent" id="content5">
+							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
+							<p id="soal5"></p>
+							<div id="gbr5">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab : &nbsp;&nbsp;
+								Q<sub>1</sub> = <input type="text" class="jwbsiswa5"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>2</sub> = <input type="text" class="jwbsiswa5"/> &nbsp;&nbsp;&nbsp;
+								Q<sub>3</sub> = <input type="text" class="jwbsiswa5"/> &nbsp;
+								<span id="hasil5"></span>
+							</div>
+							<center>
+							<div class="menulat" style="margin-bottom: 10px;">
+								<button id="cekjwb5" class="cek">Cek Jawaban</button>
+								<button id="ulangLat" class="cekdisabled" style="width: 150px !important;">Ulangi Latihan</button>
+							</div>
+							</center>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -145,7 +235,7 @@
 		<script src="../../js/style.js"></script>
 <!-- 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 		<script src="../../js/jquery-2.2.4.min.js"></script>
-		<script src="../../js/kuartil2.js"></script>
+		<script src="../../js/latihan_kuartil.js"></script>
 
 	</body>
 	

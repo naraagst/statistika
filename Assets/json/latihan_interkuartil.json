@@ -2,7 +2,7 @@
 	"soal1":[
 		{
 			"soal":"Tekanan darah seorang pasien di rumah sakit dicatat seperti berikut (dalam mmHg).",
-			"gbr":"<center><div class='tabeltulisan'><table><tr><td>180</td><td>160</td><td>175</td><td>150</td><td>176</td><td>130</td><td>174</td><td>125</td><td>178</td></tr><tr><td>124</td><td>120</td><td>180</td><td>165</td><td>120</td><td>166</td><td>120</td><td>126</td><td>180</td></tr></table></div></center><p>Berapakah jangkauan interkuartil dan simpangan kuartil interkuartil dan simpangan kuartil dari data tersebut?</p>",
+			"gbr":"<center><div class='tabeltulisan'><table><tr><td>180</td><td>160</td><td>175</td><td>150</td><td>176</td><td>130</td><td>174</td><td>125</td><td>178</td></tr><tr><td>124</td><td>120</td><td>180</td><td>165</td><td>120</td><td>166</td><td>120</td><td>126</td><td>180</td></tr></table></div></center><p>Berapakah jangkauan interkuartil dan simpangan kuartil dari data tersebut?</p>",
 			"jwb":51,
 			"jwb2":25.5
 		},

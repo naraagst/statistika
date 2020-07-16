@@ -40,46 +40,6 @@ $(document).ready(function(){
 	})
 })
 
-$(document).ready(function(){
-	function tampil2(){
-        let url = "../../json/latihan_median.json";
-        $.getJSON(url, function(data2){
-            console.log(data2);
-            let random = Math.floor(Math.random() * data2.soal1.length);
-            $("#soal").html(data2.soal1[random].soal);
-            $("#gbr").html(data2.soal1[random].gbr);
-            $("#jwbsoal").html(data2.soal1[random].jwb);
-            $("#jwbsiswa").val("");
-            $("#hasilbenar").html("");
-            $("#hasilsalah").html("");
-        })
-    }
-
-    tampil2();
-
-     $("#acaksoal").click(function(){
-        tampil2();
-    })
-
-    function cekjwb(){
-        let jwb = parseInt($('#jwbsiswa').val());
-        let jwbsoal = parseInt($('#jwbsoal').html());
-
-        if(jwb===jwbsoal){
-            $("#hasilbenar").html("Selamat! Jawaban benar");
-            $("#hasilsalah").html("");
-        }
-        else{
-            $("#hasilbenar").html("");
-            $("#hasilsalah").html("Jawaban masih salah");
-        }
-    }
-
-    $("#cekjwb").click(function(){
-        cekjwb();
-    })
-})
-
 
 function consomean(){
 	document.getElementById("containermodus").hidden = false;

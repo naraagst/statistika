@@ -30,7 +30,7 @@ const myQuestions = [
 		correctAnswer:"d"
 	},
 	{
-		question:"Perhatikan tabel berikut. <div class='tabel' style='margin-top:10px;'><center><table><tr><th>Berat Badan (kg)</th><th>Frekuensi</th></tr><tr><td>40</td><td>5</td></tr><tr><td>43</td><td>7</td></tr><tr><td>46</td><td>14</td></tr><tr><td>49</td><td>5</td></tr><tr><td>52</td><td>6</td></tr><tr><td>54</td><td>3</td></tr></table></center></div><p>Dari tabel diperoleh.</p><ol type='i' style='margin-left:40px;'><li>Median = 47</li><li>Modus = 46</li><li>Mean = 46.6</li></ol><p>Pertanyaan yang benar adalah ...</p>",
+		question:"Perhatikan tabel berikut. <div class='tabel' style='margin-top:10px;'><center><table><tr><th>Berat Badan (kg)</th><th>Frekuensi</th></tr><tr><td>40</td><td>5</td></tr><tr><td>43</td><td>7</td></tr><tr><td>46</td><td>14</td></tr><tr><td>49</td><td>5</td></tr><tr><td>52</td><td>6</td></tr><tr><td>54</td><td>3</td></tr></table></center></div><p>Dari tabel diperoleh.</p><ol type='i' style='margin-left:40px;'><li>Median = 47</li><li>Modus = 46</li><li>Mean = 46.6</li></ol><p>Pernyataan yang benar adalah ...</p>",
 		answers:{
 			"a": "(i) dan (ii)",
 	        "b": "(i) dan (iii)",

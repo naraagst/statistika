@@ -8,7 +8,7 @@
 		},
 		{
 			"soal":"<b>Soal :</b><br/>Berikut ini adalah data tinggi badan siswa kelas VI SDN Nusa Indah.",
-			"data":"<center><img src='../../gambar/consomean5.png'></center>",
+			"data":"<center><img src='../../gambar/consomean5.png'></center><p>Berapakah rata-rata dari data tersebut?",
 			"soal2":"",
 			"pembahasan":"<p><b>Pembahasan :</b><br/><img src='../../gambar/consomean7.png' style='width:100%'><br/>Jadi, rata-rata tinggi badan siswa kelas VI SDN Nusa Indah adalah <b>150,08 cm</b>.</p>"
 		}
