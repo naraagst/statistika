@@ -1,31 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
   let content1 = document.querySelector("#content1");
   let nextSoal = document.querySelectorAll(".nextSoal");
-  let progress = document.querySelector(".progress-bar");
+  let prevSoal = document.querySelectorAll(".prevSoal");
+  let progress = document.querySelectorAll(".progress-bar");
   let tabContent = document.querySelectorAll(".tabcontent");
-  let retryButton = document.querySelector("#ulangLat");
-  retryButton.addEventListener("click", retryQuiz);
-  retryButton.setAttribute('disabled', true);
+  let retryButton = document.querySelectorAll(".ulangLat");
+  let cekJwb = document.querySelectorAll(".cekjwb");
+  let benarSemua = document.querySelectorAll(".benarSemua");
+  let progressContainer = document.querySelector(".progress");
+  let jlhBenar=0;
+  progress[4].innerHTML="5";
+  retryButton[4].style.display = "none";
   let currentTab = 1;
   content1.style.display = "block";
+  progress[0].classList.add('progress-ongoing')
 
-  for (let f = 0; f < nextSoal.length; f++) {
-    nextSoal[f].addEventListener("click", nextSlide);
-    nextSoal[f].setAttribute('disabled', true)
+  for (let n = 0; n < nextSoal.length; n++) {
+    nextSoal[n].addEventListener("click", nextSlide);
+    progress[n].innerHTML=n+1;
+    prevSoal[n].addEventListener("click", prevSlide);
+    retryButton[n].style.display = "none";
+    retryButton[n].addEventListener("click", retryQuiz);
   }
 
   function nextSlide() {
     tabContent[currentTab - 1].style.display = "none";
+    progress[currentTab].classList.add('progress-ongoing')
+    progress[currentTab - 1].classList.remove('progress-ongoing')
     currentTab++;
     let tab = document.querySelector("#content" + currentTab);
     tab.style.display = "block";
+    progressContainer.scrollIntoView();
+  }
+
+  function prevSlide(){
+    tabContent[currentTab - 1].style.display = "none";
+    currentTab--;
+    progress[currentTab].classList.remove('progress-ongoing')
+    progress[currentTab - 1].classList.add('progress-ongoing')
+    let tab = document.querySelector("#content" + currentTab);
+    tab.style.display = "block";
+    progressContainer.scrollIntoView();
   }
 
   // Soal 1
   let tampilSoalSatu = document.querySelector("#soal");
   let tampilGbrSatu = document.querySelector("#gbr");
   let answerSatu = document.querySelector("#jwbsiswa");
-  let cekSatu = document.querySelector("#cekjwb");
+  let cekSatu = document.querySelector("#cekjwb1");
   // let ulangSatu = document.querySelector("#ulang-1");
   let benarSatu = document.querySelector("#hasilbenar");
   // let hintSatu = document.querySelector("#hint-1");
@@ -42,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
     xhttp.onreadystatechange = function () {
       if (xhttp.readyState === 4 && xhttp.status === 200) {
         let soalSatu = JSON.parse(this.responseText);
+        let soalArray = [];
+        let gbrArray = [];
+        let jwbArray = [];
 
         let randQuestion = soalSatu.soal_median.sort((a,b) => {return 0.5 - Math.random()})
         let sliceQuestion = randQuestion.slice(0, 5)
@@ -68,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
         tampilSoalLima.innerHTML = sliceQuestion[4].soal;
         tampilGbrLima.innerHTML = sliceQuestion[4].gbr;
         jawabanLima = sliceQuestion[4].jwb;
-
       }
     };
     xhttp.open("GET", "../../json/latihan_median2.json", true);
@@ -88,15 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   cekSatu.addEventListener("click", function () {
-    // let salah = 0;
-    // for (let i = 0; i < answerSatu.length; i++) {
-    //   if (answerSatu[i].value != jawaban[i]) {
-    //     answerSatu[i].style.border = "2px solid red";
-    //     salah++;
-    //   }
-    //   answerSatu[i].setAttribute("disabled", "");
-    // }
-
     if (answerSatu.value != jawaban) {
       answerSatu.style.border = "2px solid red"
       benarSatu.style = "color:red;font-weight:bold"
@@ -107,6 +122,9 @@ document.addEventListener("DOMContentLoaded", function () {
             : "Tidak Boleh Kosong"
         }
         `;
+      if (answerSatu.value != "") {
+        progress[0].classList.add('progress-salah')
+      }
       // hintSatu.style.display = "";
       // ulangSatu.classList.remove("disabled");
       // hintSatu.addEventListener("click", function () {
@@ -119,16 +137,24 @@ document.addEventListener("DOMContentLoaded", function () {
       //   answerSatu[i].style.border = "2px solid green";
       //   answerSatu[i].setAttribute("disabled", "");
       // }
+      jlhBenar++;
+      if(jlhBenar==5){
+        for (let n = 0; n < 5; n++) {
+          cekJwb[n].style.display = "none";
+          retryButton[n].style.display = "inline-block";
+          benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
+        } 
+      }
       answerSatu.style.border = "2px solid green" 
       benarSatu.style = "color:green;font-weight:bold"
       benarSatu.innerHTML = `
           Benar! Jawabannya adalah <strong>${jawaban}</strong>.
       `;
-      progress.style.width = "20%";
-      progress.innerHTML = "20%";
-      nextSoal[0].removeAttribute('disabled');
-      nextSoal[0].classList.remove('cekdisabled')
-      nextSoal[0].classList.add('cek')
+      cekJwb[0].setAttribute('disabled', true);
+      cekJwb[0].classList.remove('cek')
+      cekJwb[0].classList.add('cekdisabled')
+      progress[0].classList.remove('progress-salah')
+      progress[0].classList.add('progress-benar')
     }
   });
 
@@ -187,6 +213,9 @@ document.addEventListener("DOMContentLoaded", function () {
             : "Tidak Boleh Kosong"
         }
         `;
+      if (answerDua.value != "") {
+        progress[1].classList.add('progress-salah')
+      }
       // hintDua.style.display = "";
       // ulangDua.classList.remove("disabled");
       // hintDua.addEventListener("click", function () {
@@ -204,11 +233,19 @@ document.addEventListener("DOMContentLoaded", function () {
       benarDua.innerHTML = `
           Benar! Jawabannya adalah <strong>${jawabanDua}</strong>.
       `;
-      progress.style.width = "40%";
-      progress.innerHTML = "40%";
-      nextSoal[1].removeAttribute('disabled');
-      nextSoal[1].classList.remove('cekdisabled')
-      nextSoal[1].classList.add('cek')
+      jlhBenar++;
+      if(jlhBenar==5){
+        for (let n = 0; n < 5; n++) {
+          cekJwb[n].style.display = "none";
+          retryButton[n].style.display = "inline-block";
+          benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
+        } 
+      }
+      cekJwb[1].setAttribute('disabled', true);
+      cekJwb[1].classList.remove('cek')
+      cekJwb[1].classList.add('cekdisabled')
+      progress[1].classList.remove('progress-salah')
+      progress[1].classList.add('progress-benar')
     }
   });
 
@@ -267,6 +304,9 @@ document.addEventListener("DOMContentLoaded", function () {
             : "Tidak Boleh Kosong"
         }
         `;
+      if (answerTiga.value != "") {
+        progress[2].classList.add('progress-salah')
+      }
       // hintTiga.style.display = "";
       // ulangTiga.classList.remove("disabled");
       // hintTiga.addEventListener("click", function () {
@@ -284,11 +324,19 @@ document.addEventListener("DOMContentLoaded", function () {
       benarTiga.innerHTML = `
           Benar! Jawabannya adalah <strong>${jawabanTiga}</strong>.
       `;
-      progress.style.width = "60%";
-      progress.innerHTML = "60%";
-      nextSoal[2].removeAttribute('disabled');
-      nextSoal[2].classList.remove('cekdisabled')
-      nextSoal[2].classList.add('cek')
+      jlhBenar++;
+      if(jlhBenar==5){
+        for (let n = 0; n < 5; n++) {
+          cekJwb[n].style.display = "none";
+          retryButton[n].style.display = "inline-block";
+          benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
+        } 
+      }
+      cekJwb[2].setAttribute('disabled', true);
+      cekJwb[2].classList.remove('cek')
+      cekJwb[2].classList.add('cekdisabled')
+      progress[2].classList.remove('progress-salah')
+      progress[2].classList.add('progress-benar')
     }
   });
 
@@ -347,6 +395,9 @@ document.addEventListener("DOMContentLoaded", function () {
             : "Tidak Boleh Kosong"
         }
         `;
+      if (answerEmpat.value != "") {
+        progress[3].classList.add('progress-salah')
+      }
       // hintEmpat.style.display = "";
       // ulangEmpat.classList.remove("disabled");
       // hintEmpat.addEventListener("click", function () {
@@ -364,11 +415,19 @@ document.addEventListener("DOMContentLoaded", function () {
       benarEmpat.innerHTML = `
           Benar! Jawabannya adalah <strong>${jawabanEmpat}</strong>.
       `;
-      progress.style.width = "80%";
-      progress.innerHTML = "80%";
-      nextSoal[3].removeAttribute('disabled');
-      nextSoal[3].classList.remove('cekdisabled')
-      nextSoal[3].classList.add('cek')
+      jlhBenar++;
+      if(jlhBenar==5){
+        for (let n = 0; n < 5; n++) {
+          cekJwb[n].style.display = "none";
+          retryButton[n].style.display = "inline-block";
+          benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
+        } 
+      }
+      cekJwb[3].setAttribute('disabled', true);
+      cekJwb[3].classList.remove('cek')
+      cekJwb[3].classList.add('cekdisabled')
+      progress[3].classList.remove('progress-salah')
+      progress[3].classList.add('progress-benar')
     }
   });
 
@@ -427,6 +486,10 @@ document.addEventListener("DOMContentLoaded", function () {
             : "Tidak Boleh Kosong"
         }
         `;
+      if (answerLima.value != "") {
+        progress[4].classList.add('progress-salah')
+      }
+
       // hintLima.style.display = "";
       // ulangLima.classList.remove("disabled");
       // hintLima.addEventListener("click", function () {
@@ -444,11 +507,19 @@ document.addEventListener("DOMContentLoaded", function () {
       benarLima.innerHTML = `
           Benar! Jawabannya adalah <strong>${jawabanLima}</strong>.
       `;
-      progress.style.width = "100%";
-      progress.innerHTML = "100%";
-      retryButton.removeAttribute('disabled');
-      retryButton.classList.remove('cekdisabled')
-      retryButton.classList.add('cek')
+      jlhBenar++;
+      if(jlhBenar==5){
+        for (let n = 0; n < 5; n++) {
+          cekJwb[n].style.display = "none";
+          retryButton[n].style.display = "inline-block";
+          benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
+        } 
+      }
+      cekJwb[4].setAttribute('disabled', true);
+      cekJwb[4].classList.remove('cek')
+      cekJwb[4].classList.add('cekdisabled')
+      progress[4].classList.remove('progress-salah')
+      progress[4].classList.add('progress-benar')
     }
   });
 

@@ -307,10 +307,10 @@ function normal14(){
 
 function normal15(){
 	let x = document.getElementById("inp15");
-	if(x.value==56.8){
+	if(x.value==56.83){
 		document.getElementById("inp15").style="border: 4px solid green;width:50%;padding:5px;text-align:center"
 		document.getElementById("lanjut3").hidden = false;
-    document.getElementById("jadi").innerHTML = "Jadi, rata-rata usia presiden dan wakil presiden saat pertama kali menjabat adalah 56.8 tahun.";
+    document.getElementById("jadi").innerHTML = "Jadi, rata-rata usia presiden dan wakil presiden saat pertama kali menjabat adalah 56.83 tahun.";
     let con=document.getElementById("conso");
     con.scrollTop=con.scrollHeight;
 	}
