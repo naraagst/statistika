@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   retryButton[4].addEventListener("click", retryQuiz);
   let jlhBenar=0;
   progress[4].innerHTML="5";
-  ulangSoal[4].style.display = "none";
   retryButton[4].style.display = "none";
+  ulangSoal[4].style.display = "none";
   let currentTab = 1;
   content1.style.display = "block";
   progress[0].classList.add('progress-ongoing')
@@ -49,13 +49,20 @@ document.addEventListener("DOMContentLoaded", function () {
     progressContainer.scrollIntoView();
   }
 
+
   // Soal 1
-  let tampilSoalSatu = document.querySelector("#soal");
-  let tampilGbrSatu = document.querySelector("#gbr");
-  let answerSatu = document.querySelector("#jwbsiswa");
+  let tampilSoalSatu = document.querySelector("#soal1");
+  let tampilGbrSatu = document.querySelector("#gbr1");
+  let answerSatu = document.querySelectorAll(".jwbsiswa1");
   let cekSatu = document.querySelector("#cekjwb1");
   let benarSatu = document.querySelector("#hasilbenar");
+  let jawabanSatu = [];
+  let jawabanDua = [];
+  let jawabanTiga = [];
+  let jawabanEmpat = [];
+  let jawabanLima = [];
   let jawaban = "";
+
 
   function loadSoalSatu() {
     let xhttp = new XMLHttpRequest();
@@ -63,11 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
     xhttp.onreadystatechange = function () {
       if (xhttp.readyState === 4 && xhttp.status === 200) {
         let soalSatu = JSON.parse(this.responseText);
-        let soalArray = [];
-        let gbrArray = [];
-        let jwbArray = [];
+        
 
-        let randQuestion = soalSatu.soal_mean.sort((a,b) => {return 0.5 - Math.random()})
+        let randQuestion = soalSatu.soal_interkuartil.sort((a,b) => {return 0.5 - Math.random()})
         let sliceQuestion = randQuestion.slice(0, 5)
 
 
@@ -75,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tampilSoalSatu.innerHTML = sliceQuestion[0].soal;
         tampilGbrSatu.innerHTML = sliceQuestion[0].gbr;
-        jawaban = sliceQuestion[0].jwb;
+        jawabanSatu = sliceQuestion[0].jwb;
 
         tampilSoalDua.innerHTML = sliceQuestion[1].soal;
         tampilGbrDua.innerHTML = sliceQuestion[1].gbr;
@@ -95,37 +100,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
       }
     };
-    xhttp.open("GET", "../../json/latihan_mean2.json", true);
+    xhttp.open("GET", "../../json/latihan_interkuartil.json", true);
     xhttp.send();
   } 
 
-  loadSoalSatu()
-
-  answerSatu.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-
-      cekSatu.click();
-    }
-  });
+  loadSoalSatu();
 
   cekSatu.addEventListener("click", function () {
-    answerSatu.setAttribute("disabled", "");
-    if (answerSatu.value != jawaban) {
-      answerSatu.style.border = "2px solid red"
-      benarSatu.style = "color:red;font-weight:bold"
-      benarSatu.innerHTML = `
-        ${
-          answerSatu.value !== ""
-            ? `Kurang Tepat! Jawabannya bukan <strong>${answerSatu.value}</strong>.`
-            : "Tidak Boleh Kosong"
-        }
-        `;
-      if (answerSatu.value != "") {
+    let salah = 0;
+    for (let i = 0; i < answerSatu.length; i++) {
+      if (answerSatu[i].value != jawabanSatu[i]) {
+        answerSatu[i].style.border = "2px solid red";
+        salah++;
+        if (answerSatu[i].value != "") {
         progress[0].classList.add('progress-salah')
+        }
+      } else {
+        answerSatu[i].style.border = "2px solid green";
       }
+      answerSatu[i].setAttribute("disabled", "");
+    }
+    if (salah > 0) {
+      hasil1.style = "color:red;font-weight:bold"
+      hasil1.innerHTML = `
+        ${
+          answerSatu[0].value !== "" &&
+          answerSatu[1].value !== "" 
+            ? `<br/>Kurang Tepat! jawaban masih ada yang <strong>Salah</strong>.`
+            : "<br/>Inputan tidak boleh ada yang kosong."
+        }
+      `;
       ulangSoal[0].style.display = "inline-block";
       cekJwb[0].style.display = "none";
+
     } else {
       jlhBenar++;
       if(jlhBenar==5){
@@ -135,59 +142,54 @@ document.addEventListener("DOMContentLoaded", function () {
           benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
         } 
       }
-      answerSatu.style.border = "2px solid green" 
-      benarSatu.style = "color:green;font-weight:bold"
-      benarSatu.innerHTML = `
-          Benar! Jawabannya adalah <strong>${jawaban}</strong>.
-      `;
+      hasil1.style = "color:green;font-weight:bold"
+      hasil1.innerHTML = `
+      <br/>Jawaban Benar`;
       cekJwb[0].setAttribute('disabled', true);
       cekJwb[0].classList.remove('cek')
       cekJwb[0].classList.add('cekdisabled')
       progress[0].classList.remove('progress-salah')
       progress[0].classList.add('progress-benar')
     }
+    
   });
+
 
   // Soal 2
   let tampilSoalDua = document.querySelector("#soal2");
   let tampilGbrDua = document.querySelector("#gbr2");
-  let answerDua = document.querySelector("#jwbsiswa2");
+  let answerDua = document.querySelectorAll(".jwbsiswa2");
   let cekDua = document.querySelector("#cekjwb2");
-  let benarDua = document.querySelector("#hasilbenar2");
-  let jawabanDua = "";
-
-  answerDua.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-
-      cekDua.click();
-    }
-  });
+  let benarDua = document.querySelector("#hasilbenar2")
 
   cekDua.addEventListener("click", function () {
-    answerDua.setAttribute("disabled", "");
-    if (answerDua.value != jawabanDua) {
-      answerDua.style.border = "2px solid red"
-      benarDua.style = "color:red;font-weight:bold"
-      benarDua.innerHTML = `
-        ${
-          answerDua.value !== ""
-            ? `Kurang Tepat! Jawabannya bukan <strong>${answerDua.value}</strong>.`
-            : "Tidak Boleh Kosong"
-        }
-        `;
-      if (answerDua.value != "") {
+    let salah = 0;
+    for (let i = 0; i < answerDua.length; i++) {
+      if (answerDua[i].value != jawabanDua[i]) {
+        answerDua[i].style.border = "2px solid red";
+        salah++;
+        if (answerDua[i].value != "") {
         progress[1].classList.add('progress-salah')
+        }
+      } else {
+        answerDua[i].style.border = "2px solid green";
       }
+      answerDua[i].setAttribute("disabled", "");
+    }
+    if (salah > 0) {
+      hasil2.style = "color:red;font-weight:bold"
+      hasil2.innerHTML = `
+        ${
+          answerDua[0].value !== "" &&
+          answerDua[1].value !== "" 
+            ? `<br/>Kurang Tepat! jawaban masih ada yang <strong>Salah</strong>.`
+            : "<br/>Inputan tidak boleh ada yang kosong."
+        }
+      `;
       ulangSoal[1].style.display = "inline-block";
       cekJwb[1].style.display = "none";
-    } else {
 
-      answerDua.style.border = "2px solid green" 
-      benarDua.style = "color:green;font-weight:bold"
-      benarDua.innerHTML = `
-          Benar! Jawabannya adalah <strong>${jawabanDua}</strong>.
-      `;
+    } else {
       jlhBenar++;
       if(jlhBenar==5){
         for (let n = 0; n < 5; n++) {
@@ -196,52 +198,55 @@ document.addEventListener("DOMContentLoaded", function () {
           benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
         } 
       }
+      hasil2.style = "color:green;font-weight:bold"
+      hasil2.innerHTML = `
+      <br/>Jawaban Benar`;
       cekJwb[1].setAttribute('disabled', true);
       cekJwb[1].classList.remove('cek')
       cekJwb[1].classList.add('cekdisabled')
       progress[1].classList.remove('progress-salah')
       progress[1].classList.add('progress-benar')
     }
+    
   });
+
 
   //Soal 3
   let tampilSoalTiga = document.querySelector("#soal3");
   let tampilGbrTiga = document.querySelector("#gbr3");
-  let answerTiga = document.querySelector("#jwbsiswa3");
+  let answerTiga = document.querySelectorAll(".jwbsiswa3");
   let cekTiga = document.querySelector("#cekjwb3");
   let benarTiga = document.querySelector("#hasilbenar3");
-  let jawabanTiga = "";
-  answerTiga.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
 
-      cekTiga.click();
-    }
-  });
-
+ 
   cekTiga.addEventListener("click", function () {
-    answerTiga.setAttribute("disabled", "");
-    if (answerTiga.value != jawabanTiga) {
-      answerTiga.style.border = "2px solid red"
-      benarTiga.style = "color:red;font-weight:bold"
-      benarTiga.innerHTML = `
-        ${
-          answerTiga.value !== ""
-            ? `Kurang Tepat! Jawabannya bukan <strong>${answerTiga.value}</strong>.`
-            : "Tidak Boleh Kosong"
-        }
-        `;
-      if (answerTiga.value != "") {
+    let salah = 0;
+    for (let i = 0; i < answerTiga.length; i++) {
+      if (answerTiga[i].value != jawabanTiga[i]) {
+        answerTiga[i].style.border = "2px solid red";
+        salah++;
+        if (answerTiga[i].value != "") {
         progress[2].classList.add('progress-salah')
+        }
+      } else {
+        answerTiga[i].style.border = "2px solid green";
       }
+      answerTiga[i].setAttribute("disabled", "");
+    }
+    if (salah > 0) {
+      hasil3.style = "color:red;font-weight:bold"
+      hasil3.innerHTML = `
+        ${
+          answerTiga[0].value !== "" &&
+          answerTiga[1].value !== "" 
+            ? `<br/>Kurang Tepat! jawaban masih ada yang <strong>Salah</strong>.`
+            : "<br/>Inputan tidak boleh ada yang kosong."
+        }
+      `;
       ulangSoal[2].style.display = "inline-block";
       cekJwb[2].style.display = "none";
+
     } else {
-      answerTiga.style.border = "2px solid green" 
-      benarTiga.style = "color:green;font-weight:bold"
-      benarTiga.innerHTML = `
-          Benar! Jawabannya adalah <strong>${jawabanTiga}</strong>.
-      `;
       jlhBenar++;
       if(jlhBenar==5){
         for (let n = 0; n < 5; n++) {
@@ -250,53 +255,54 @@ document.addEventListener("DOMContentLoaded", function () {
           benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
         } 
       }
+      hasil3.style = "color:green;font-weight:bold"
+      hasil3.innerHTML = `
+      <br/>Jawaban Benar`;
       cekJwb[2].setAttribute('disabled', true);
       cekJwb[2].classList.remove('cek')
       cekJwb[2].classList.add('cekdisabled')
       progress[2].classList.remove('progress-salah')
       progress[2].classList.add('progress-benar')
     }
+    
   });
+
 
   //Soal Empat
   let tampilSoalEmpat = document.querySelector("#soal4");
   let tampilGbrEmpat = document.querySelector("#gbr4");
-  let answerEmpat = document.querySelector("#jwbsiswa4");
+  let answerEmpat = document.querySelectorAll(".jwbsiswa4");
   let cekEmpat = document.querySelector("#cekjwb4");
   let benarEmpat = document.querySelector("#hasilbenar4");
-  let jawabanEmpat = "";
-
-  answerEmpat.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-
-      cekEmpat.click();
-    }
-  });
 
   cekEmpat.addEventListener("click", function () {
-    answerEmpat.setAttribute("disabled", "");
-    if (answerEmpat.value != jawabanEmpat) {
-      answerEmpat.style.border = "2px solid red"
-      benarEmpat.style = "color:red;font-weight:bold"
-      benarEmpat.innerHTML = `
-        ${
-          answerEmpat.value !== ""
-            ? `Kurang Tepat! Jawabannya bukan <strong>${answerEmpat.value}</strong>.`
-            : "Tidak Boleh Kosong"
-        }
-        `;
-      if (answerEmpat.value != "") {
+    let salah = 0;
+    for (let i = 0; i < answerEmpat.length; i++) {
+      if (answerEmpat[i].value != jawabanEmpat[i]) {
+        answerEmpat[i].style.border = "2px solid red";
+        salah++;
+        if (answerEmpat[i].value != "") {
         progress[3].classList.add('progress-salah')
+        }
+      } else {
+        answerEmpat[i].style.border = "2px solid green";
       }
+    answerEmpat[i].setAttribute("disabled", "");
+    }
+    if (salah > 0) {
+      hasil4.style = "color:red;font-weight:bold"
+      hasil4.innerHTML = `
+        ${
+          answerEmpat[0].value !== "" &&
+          answerEmpat[1].value !== "" 
+            ? `<br/>Kurang Tepat! jawaban masih ada yang <strong>Salah</strong>.`
+            : "<br/>Inputan tidak boleh ada yang kosong."
+        }
+      `;
       ulangSoal[3].style.display = "inline-block";
       cekJwb[3].style.display = "none";
+
     } else {
-      answerEmpat.style.border = "2px solid green" 
-      benarEmpat.style = "color:green;font-weight:bold"
-      benarEmpat.innerHTML = `
-          Benar! Jawabannya adalah <strong>${jawabanEmpat}</strong>.
-      `;
       jlhBenar++;
       if(jlhBenar==5){
         for (let n = 0; n < 5; n++) {
@@ -305,52 +311,56 @@ document.addEventListener("DOMContentLoaded", function () {
           benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
         } 
       }
+      hasil4.style = "color:green;font-weight:bold"
+      hasil4.innerHTML = `
+      <br/>Jawaban Benar`;
       cekJwb[3].setAttribute('disabled', true);
       cekJwb[3].classList.remove('cek')
       cekJwb[3].classList.add('cekdisabled')
       progress[3].classList.remove('progress-salah')
       progress[3].classList.add('progress-benar')
     }
+    
   });
+
 
   //Soal Lima
   let tampilSoalLima = document.querySelector("#soal5");
   let tampilGbrLima = document.querySelector("#gbr5");
-  let answerLima = document.querySelector("#jwbsiswa5");
+  let answerLima = document.querySelectorAll(".jwbsiswa5");
   let cekLima = document.querySelector("#cekjwb5");
   let benarLima = document.querySelector("#hasilbenar5");
-  let jawabanLima = "";
 
-  answerLima.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
 
-      cekLima.click();
-    }
-  });
 
-  cekLima.addEventListener("click", function () {
-    if (answerLima.value != jawabanLima) {
-      answerLima.style.border = "2px solid red"
-      benarLima.style = "color:red;font-weight:bold"
-      benarLima.innerHTML = `
-        ${
-          answerLima.value !== ""
-            ? `Kurang Tepat! Jawabannya bukan <strong>${answerLima.value}</strong>.`
-            : "Tidak Boleh Kosong"
+    cekLima.addEventListener("click", function () {
+    let salah = 0;
+    for (let i = 0; i < answerLima.length; i++) {
+      if (answerLima[i].value != jawabanLima[i]) {
+        answerLima[i].style.border = "2px solid red";
+        salah++;
+        if (answerLima[i].value != "") {
+        progress[4].classList.add('progress-salah')
         }
-        `;
+      } else {
+        answerLima[i].style.border = "2px solid green";
+      }
+      answerLima[i].setAttribute("disabled", "");
+    }
+    if (salah > 0) {
+      hasil5.style = "color:red;font-weight:bold"
+      hasil5.innerHTML = `
+        ${
+          answerLima[0].value !== "" &&
+          answerLima[1].value !== "" 
+            ? `<br/>Kurang Tepat! jawaban masih ada yang <strong>Salah</strong>.`
+            : "<br/>Inputan tidak boleh ada yang kosong."
+        }
+      `;
       ulangSoal[4].style.display = "inline-block";
       cekJwb[4].style.display = "none";
-      if (answerLima.value != "") {
-        progress[4].classList.add('progress-salah')
-      }
+
     } else {
-      answerLima.style.border = "2px solid green" 
-      benarLima.style = "color:green;font-weight:bold"
-      benarLima.innerHTML = `
-          Benar! Jawabannya adalah <strong>${jawabanLima}</strong>.
-      `;
       jlhBenar++;
       if(jlhBenar==5){
         for (let n = 0; n < 5; n++) {
@@ -359,51 +369,65 @@ document.addEventListener("DOMContentLoaded", function () {
           benarSemua[n].innerHTML = "Selamat! Semua soal sudah benar."
         } 
       }
+      hasil5.style = "color:green;font-weight:bold"
+      hasil5.innerHTML = `
+      <br/>Jawaban Benar`;
       cekJwb[4].setAttribute('disabled', true);
       cekJwb[4].classList.remove('cek')
       cekJwb[4].classList.add('cekdisabled')
       progress[4].classList.remove('progress-salah')
       progress[4].classList.add('progress-benar')
-      answerLima.setAttribute("disabled", "");
     }
+    
   });
 
   function retryQuiz(){
         window.location.reload()
       }
+  
 
   function ulang(){
     if (currentTab==1){
-      answerSatu.value="";
-      answerSatu.style.border="1px solid grey";
-      answerSatu.removeAttribute("disabled", "");
-      benarSatu.innerHTML="";
+      for (let i = 0; i < 2; i++) {
+          answerSatu[i].value="";
+          answerSatu[i].style.border="1px solid grey";
+          answerSatu[i].removeAttribute("disabled", "");
+        }
+    hasil1.innerHTML="";
     }
     if (currentTab==2){
-      answerDua.value="";
-      answerDua.style.border="1px solid grey";
-      answerDua.removeAttribute("disabled", "");
-      benarDua.innerHTML="";
+      for (let i = 0; i < 2; i++) {
+          answerDua[i].value="";
+          answerDua[i].style.border="1px solid grey";
+          answerDua[i].removeAttribute("disabled", "");
+        }
+    hasil2.innerHTML="";
     }
     if (currentTab==3){
-      answerTiga.value="";
-      answerTiga.style.border="1px solid grey";
-      answerTiga.removeAttribute("disabled", "");
-      benarTiga.innerHTML="";
+      for (let i = 0; i < 2; i++) {
+          answerTiga[i].value="";
+          answerTiga[i].style.border="1px solid grey";
+          answerTiga[i].removeAttribute("disabled", "");
+        }
+    hasil3.innerHTML="";
     }
     if (currentTab==4){
-      answerEmpat.value="";
-      answerEmpat.style.border="1px solid grey";
-      answerEmpat.removeAttribute("disabled", "");
-      benarEmpat.innerHTML="";
+      for (let i = 0; i < 2; i++) {
+          answerEmpat[i].value="";
+          answerEmpat[i].style.border="1px solid grey";
+          answerEmpat[i].removeAttribute("disabled", "");
+        }
+    hasil4.innerHTML="";
     }
     if (currentTab==5){
-      answerLima.value="";
-      answerLima.style.border="1px solid grey";
-      answerLima.removeAttribute("disabled", "");
-      benarLima.innerHTML="";
+      for (let i = 0; i < 2; i++) {
+          answerLima[i].value="";
+          answerLima[i].style.border="1px solid grey";
+          answerLima[i].removeAttribute("disabled", "");
+        }
+    hasil5.innerHTML="";
     }
-    cekJwb[currentTab - 1].style.display="inline-block";
+    cekJwb[currentTab - 1].style.display="inline-block"
     ulangSoal[currentTab - 1].style.display="none";
   }
 });
