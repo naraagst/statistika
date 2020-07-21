@@ -109,7 +109,7 @@
 								<tr>
 									<td>2003</td>
 									<td>
-										<input type="text" name="jwb1">
+										<input type="text" class="jawabanSiswa" name="jwb1">
 										<font class="hsl" id="jwb1a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl" id="jwb1b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -117,7 +117,7 @@
 								<tr>
 									<td>2004</td>
 									<td>
-										<input type="text" name="jwb2">
+										<input type="text" class="jawabanSiswa" name="jwb2">
 										<font class="hsl" id="jwb2a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl" id="jwb2b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -125,7 +125,7 @@
 								<tr>
 									<td>2005</td>
 									<td>
-										<input type="text" name="jwb3">
+										<input type="text" class="jawabanSiswa" name="jwb3">
 										<font class="hsl" id="jwb3a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl" id="jwb3b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -133,7 +133,7 @@
 								<tr>
 									<td>2006</td>
 									<td>
-										<input type="text" name="jwb4">
+										<input type="text" class="jawabanSiswa" name="jwb4">
 										<font class="hsl" id="jwb4a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl" id="jwb4b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -141,7 +141,7 @@
 								<tr>
 									<td>2007</td>
 									<td>
-										<input type="text" name="jwb5">
+										<input type="text" class="jawabanSiswa" name="jwb5">
 										<font class="hsl" id="jwb5a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl" id="jwb5b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -149,7 +149,7 @@
 								<tr>
 									<td>2008</td>
 									<td>
-										<input type="text" name="jwb6">
+										<input type="text" class="jawabanSiswa" name="jwb6">
 										<font class="hsl" id="jwb6a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl" id="jwb6b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -160,23 +160,25 @@
 						</li>
 						<li>
 							Pada tahun berapakah jumlah kelahiran paling tinggi? 
-							<input type="text" name="jwb7">
+							<input type="text" class="jawabanSiswa" name="jwb7">
 							<font class="hsl" id="jwb7a"><i class="fas fa-check" style="color:green;"></i></font>
 							<font class="hsl" id="jwb7b"><i class="fas fa-times" style="color:red;"></i></font>
 						</li>
 						 <li>
 						 	Pada tahun berapakah jumlah kelahiran paling rendah? 
-						 	<input type="text" name="jwb8">
+						 	<input type="text" class="jawabanSiswa" name="jwb8">
 						 	<font class="hsl" id="jwb8a"><i class="fas fa-check" style="color:green;"></i></font>
 							<font class="hsl" id="jwb8b"><i class="fas fa-times" style="color:red;"></i></font>
 						 </li>
 						<li>Pada tahun 2008 terdapat 25 kelahiran. Dapatkah kita simpulkan bahwa pada tahun 2008 penduduk Desa Suka Makmur bertambah 25 orang dibandingkan tahun 2007?
 							<font class="hsl" id="jwb9a"><i class="fas fa-check" style="color:green;"></i></font>
 							<font class="hsl" id="jwb9b"><i class="fas fa-times" style="color:red;"></i></font></br>
-							<input type="radio" name="jwb9" value="1" style="margin-right:-15px">Ya</br>
-							<input type="radio" name="jwb9" value="2" style="margin-right:-15px">Tidak
+							<input type="radio" name="jwb9" class="jawabanSiswa" value="1" style="margin-right:-15px">Ya</br>
+							<input type="radio" name="jwb9" class="jawabanSiswa" value="2" style="margin-right:-15px">Tidak
 						</li>
 					</ol>
+					<p id="hasilbenar" style="color: green; font-weight: bold;"></p>
+					<p id="hasilsalah" style="color: red; font-weight: bold;margin-top: -15px"></p>
 					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek" style="margin-left:30px;">
 					<div id="isi" style="float: right; font-size: 24px; font-weight:bold; color:red;"></div>
 					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek" id="ulangi">

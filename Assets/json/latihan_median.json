@@ -1,29 +1,29 @@
 {
 	"soal_median":[
 		{
-			"soal":"<p>Nilai ujian matematika dari sepuluh orang siswa adalah sebagai berikut :</p><p style='text-align:center;font-weight:bold'>5, 6, 6, 7, 7, 8, 8, 8, 9, 9</p><p>Median dari data di atas adalah...</p>",
+			"soal":"<p>Nilai ujian matematika dari sepuluh orang siswa adalah sebagai berikut :</p><p style='text-align:center;font-weight:bold'>5, 6, 6, 7, 7, 8, 8, 8, 9, 9</p><p>Berapakah median dari data tersebut?</p>",
 			"gbr":"",
 			"jwb":7.5
 		},
 		{
-			"soal":"<p>Berikut ini adalah data berat beberapa buah kasturi (dalam gram):</p><p style='text-align:center;font-weight:bold'>56, 63, 64, 67, 57, 60, 65, 53, 60</p><p>Median dari data di atas adalah...</p>",
+			"soal":"<p>Berikut ini adalah data berat beberapa buah kasturi (dalam gram):</p><p style='text-align:center;font-weight:bold'>56, 63, 64, 67, 57, 60, 65, 53, 60</p><p>Berapakah median dari data di atas?</p>",
 			"gbr":"",
 			"jwb":60
 		},
 		{
-			"soal":"<p>Berikut ini adalah data ukuran lebar 17 ekor ikan toman:</p><img src='../../gambar/lmedian1.png' style='width:90%;margin-left:20px;'><p>Median data tersebut adalah ...",
+			"soal":"<p>Berikut ini adalah data ukuran lebar 17 ekor ikan toman:</p><img src='../../gambar/lmedian1.png' style='width:90%;margin-left:20px;'><p>Berapakah median dari data tersebut?",
 			"gbr":"",
 			"jwb":5
 		},
 		{
-			"soal":"<p>Berikut ini adalah data ukuran lebar 17 ekor ikan toman:</p><img src='../../gambar/lmedian1.png' style='width:90%;margin-left:20px;'><p>Median data tersebut adalah ...",
+			"soal":"<p>Berikut ini adalah data ukuran sepatu 15 siswa kelas VIIIA.</p><p style='text-align:center;font-weight:bold'>37, 37, 38, 39, 39, 38, 37, 36, 40, 39, 38, 39, 36, 39, 40</p><p>Berapakah median dari data tersebut?</p>",
 			"gbr":"",
-			"jwb":5
+			"jwb":38
 		},
 		{
-			"soal":"<p>Berikut ini adalah data ukuran lebar 17 ekor ikan toman:</p><img src='../../gambar/lmedian1.png' style='width:90%;margin-left:20px;'><p>Median data tersebut adalah ...",
+			"soal":"<p>Diketahui data nilai ulangan Matematika dari 15 orang siswa sebagai berikut.</p><p style='text-align:center;font-weight:bold'>7, 5, 4, 6, 5, 7, 8, 6, 4, 4, 5, 9, 5, 6, 4</p><p>Berapakah median dari data tersebut?</p>",
 			"gbr":"",
-			"jwb":5
+			"jwb":8
 		}
 	]
 }

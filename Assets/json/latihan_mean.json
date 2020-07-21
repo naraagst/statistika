@@ -2,12 +2,12 @@
 	"soal_mean":[
 		{
 			"soal":"Data kunjungan pasien yang berobat ke sebuah poliklinik selama 6 minggu sebagai berikut.",
-			"gbr":"<center><img src='../../gambar/latmean1.jpg' style='width:70%'/></center><p>Rata-rata kunjungan pasien yang berobat setiap minggu selama 6 minggu ...</p>",
+			"gbr":"<center><img src='../../gambar/latmean1.jpg' style='width:70%'/></center><p>Berapakah rata-rata kunjungan pasien yang berobat setiap minggu selama 6 minggu?</p>",
 			"jwb":60
 		},
 		{
 			"soal":"Data penjualan sepeda motor sebuah dealer selama 6 bulan sebagai berikut.",
-			"gbr":"<center><img src='../../gambar/latmean2.jpg' style='width:70%'/></center><p>Rata-rata banyak sepeda motor yang terjual setiap bulan adalah ... unit.</p>",
+			"gbr":"<center><img src='../../gambar/latmean2.jpg' style='width:70%'/></center><p>Berapakah rata-rata banyak sepeda motor yang terjual setiap bulan adalah?</p>",
 			"jwb":12
 		},
 		{
@@ -22,7 +22,7 @@
 		},
 		{
 			"soal":"Berdasarkan hasil survei oleh penjaga stan celana di suatu mall selama satu bulan, diperoleh data nomor celana yang terjual selama satu bulan",
-			"gbr":"<center><div class='tabeltulisan'><table><tr><td>27</td><td>35</td><td>32</td><td>30</td><td>30</td><td>32</td><td>28</td><td>32</td></tr><tr><td>30</td><td>32</td><td>30</td><td>29</td><td>29</td><td>28</td><td>27</td><td>27</td></tr><tr><td>27</td><td>28</td><td>28</td><td>29</td><td>29</td><td>27</td><td>30</td><td>32</td></tr></table></div></center><p>Tentukan rata-rata nomor celana yang dibeli selama satu bulan.</p>",
+			"gbr":"<center><div class='tabeltulisan'><table><tr><td>27</td><td>35</td><td>32</td><td>30</td><td>30</td><td>32</td><td>28</td><td>32</td></tr><tr><td>30</td><td>32</td><td>30</td><td>29</td><td>29</td><td>28</td><td>27</td><td>27</td></tr><tr><td>27</td><td>28</td><td>28</td><td>29</td><td>29</td><td>27</td><td>30</td><td>32</td></tr></table></div></center><p>Berapakah rata-rata nomor celana yang dibeli selama satu bulan?</p>",
 			"jwb":30.7
 		}
 	]

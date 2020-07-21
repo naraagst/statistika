@@ -11,7 +11,8 @@
 			window.onload = function e() {
 				document.getElementById("ulangi").hidden = true;
             	document.getElementById("lihat").hidden = true;
-
+            	// document.getElementById("hasilbenar").hidden=true;
+            	// document.getElementById("hasilsalah").hidden=true;
             	document.getElementById("jwb1a").hidden = true;
 				document.getElementById("jwb1b").hidden = true;
 				document.getElementById("jwb2a").hidden = true;
@@ -28,6 +29,7 @@
 				document.getElementById("jwb7b").hidden = true;
 				document.getElementById("jwb8a").hidden = true;
 				document.getElementById("jwb8b").hidden = true;
+				document.getElementById("jwb_analisis5").hidden = true;
 				
 			var chart5 = new CanvasJS.Chart("chartContainer5", {
 				animationEnabled: true,
@@ -106,9 +108,9 @@
 		</div>
 		<div class="konten">
 			<div class="subkonten">
-			<div class="materi">
+			<div class="materi" >
 				<h2>Menganalisis Data</h2>
-				<div class="submateri">
+				<div class="submateri" id="submateri">
 				<p>Perhatikan grafik disamping!</p>
 				<p>
 					Grafik di samping menyajikan penggunaan bahan bakar terhadap waktu (dalam jam) pada perjalanan sebuah mobil dari kota <i>M</i> ke kota <i>N</i>. Gunakan informasi pada grafik di bawah ini untuk menjawab pertanyaan.
@@ -124,7 +126,7 @@
 									<td>a.</td>
 									<td>Dari titik <i>A</i> ke titik <i>B</i> ?</td>
 									<td>
-										<input type="text" name="jwb1">liter
+										<input type="text" class="jawabanSiswa" name="jwb1">liter
 										<font class="hsl1" id="jwb1a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl1" id="jwb1b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -133,7 +135,7 @@
 									<td>b.</td>
 									<td>Dari titik <i>C</i> ke titik <i>D</i> ?</td>
 									<td>
-										<input type="text" name="jwb2">liter
+										<input type="text" class="jawabanSiswa" name="jwb2">liter
 										<font class="hsl1" id="jwb2a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl1" id="jwb2b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -142,7 +144,7 @@
 									<td>c.</td>
 									<td>Dari titik <i>D</i> ke titik <i>E</i> ?</td>
 									<td>
-										<input type="text" name="jwb3">liter
+										<input type="text" class="jawabanSiswa" name="jwb3">liter
 										<font class="hsl1" id="jwb3a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl1" id="jwb3b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -151,7 +153,7 @@
 									<td>d.</td>
 									<td>Dari titik <i>E</i> ke titik <i>F</i> ?</td>
 									<td>
-										<input type="text" name="jwb4">liter
+										<input type="text" class="jawabanSiswa" name="jwb4">liter
 										<font class="hsl1" id="jwb4a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl1" id="jwb4b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -160,7 +162,7 @@
 									<td>e.</td>
 									<td>Dari titik <i>F</i> ke titik <i>G</i> ?</td>
 									<td>
-										<input type="text" name="jwb5">liter
+										<input type="text" class="jawabanSiswa" name="jwb5">liter
 										<font class="hsl1" id="jwb5a"><i class="fas fa-check" style="color:green;"></i></font>
 										<font class="hsl1" id="jwb5b"><i class="fas fa-times" style="color:red;"></i></font>
 									</td>
@@ -170,29 +172,54 @@
 						</li>
 						<li>
 							Berapa liter bahan bakar total yang dihabiskan dalam perjalanan tersebut ?
-							<input type="text" name="jwb6">liter
+							<input type="text" class="jawabanSiswa" name="jwb6">liter
 							<font class="hsl1" id="jwb6a"><i class="fas fa-check" style="color:green;"></i></font>
 							<font class="hsl1" id="jwb6b"><i class="fas fa-times" style="color:red;"></i></font>
 						</li>
 						<li>
 							Berapa lama perjalanan dari kota <i>M</i> ke kota <i>N</i> ?
-							<input type="text" name="jwb7">jam
+							<input type="text" class="jawabanSiswa" name="jwb7">jam
 							<font class="hsl1" id="jwb7a"><i class="fas fa-check" style="color:green;"></i></font>
 							<font class="hsl1" id="jwb7b"><i class="fas fa-times" style="color:red;"></i></font>
 						</li>
 						<li>
 							Berapa banyak bahan bakar yang dihabiskan dari titik <i>B</i> ke titik <i>C</i> ?
-							<input type="text" name="jwb8">liter
+							<input type="text" class="jawabanSiswa" name="jwb8">liter
 							<font class="hsl1" id="jwb8a"><i class="fas fa-check" style="color:green;"></i></font>
 							<font class="hsl1" id="jwb8b"><i class="fas fa-times" style="color:red;"></i></font>
 						</li>
 					</ol>
+					<p id="hasilbenar" style="color: green; font-weight: bold;"></p>
+					<p id="hasilsalah" style="color: red; font-weight: bold;margin-top: -15px"></p>
 					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek" style="margin-left:25px;">
 					<div id="isi" style="float: right; font-size: 24px; font-weight:bold; color:red;"></div>
 					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek" id="ulangi">
-					<input type="button" name="submit" onclick="ulaang()" value="Lihat Jawaban" class="cek" id="lihat">
+					<input type="button" name="submit" onclick="lihatJawaban()" value="Lihat Jawaban" class="cek" id="lihat">
 					</div>
 				</form>
+					<div id="jwb_analisis5" style="width:100%;">
+							<ol>
+								<li>
+									Bahan bakar yang dihabiskan dalam perjalanan :
+									<ol type="a">
+										<li>Dari titik <i>A</i> ke titik <i>B</i> (20 liter)</li>
+										<li>Dari titik <i>C</i> ke titik <i>D</i> (10 liter)</li>
+										<li>Dari titik <i>D</i> ke titik <i>E</i> (10 liter)</li>
+										<li>Dari titik <i>E</i> ke titik <i>F</i> (10 liter)</li>
+										<li>Dari titik <i>F</i> ke titik <i>G</i> (30 liter)</li>
+									</ol>
+								</li>
+								<li style="margin-bottom:10px;"> 
+									Jumlah liter bahan bakar total yang dihabiskan dalam perjalanan tersebut adalah 80 liter.
+								</li>
+								<li style="margin-bottom:10px;">
+									Lama perjalanan dari kota <i>M</i> ke kota <i>N</i> adalah 12 jam.
+								</li>
+								<li style="margin-bottom:10px;">
+									Tidak ada bahan bakar yang terpakai diantara kedua titik. Kemungkinan pengendara mobil sedang istirahat atau tidak dalam keadaan berkendara, hal ini terlihat dari tidak ada perubahan pada grafik dari kedua titik.
+								</li>
+							</ol>
+						</div>
 				</div>
 				
 			</div>

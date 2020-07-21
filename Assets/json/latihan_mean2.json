@@ -2,12 +2,12 @@
 	"soal_mean":[
 		{
 			"soal":"Data banyak beras dalam karung di sebuah gudang sebagai berikut.",
-			"gbr":"<center><img src='../../gambar/latmean4.jpg' style='width:70%'/></center><p>Rata-rata berat beras dalam karung di gudang tersebut adalah ...</p>",
+			"gbr":"<center><img src='../../gambar/latmean4.jpg' style='width:70%'/></center><p>Berapakah rata-rata berat beras dalam karung di gudang tersebut?</p>",
 			"jwb":17.75
 		},
 		{
 			"soal":"Data nilai ulangan IPA kelas VIII disajikan dalam diagram berikut.",
-			"gbr":"<center><img src='../../gambar/latmean3.jpg' style='width:70%'/></center><p>Rata-rata nilai siswa perempuan adalah ...</p>",
+			"gbr":"<center><img src='../../gambar/latmean3.jpg' style='width:70%'/></center><p>Berapakah rata-rata nilai siswa perempuan?</p>",
 			"jwb":7.93
 		},
 		{
@@ -17,12 +17,12 @@
 		},
 		{
 			"soal":"Berikut ini adalah data panjang potongan sekumpulan pipa.<br/>",
-			"gbr":"<div class='tabel' style='margin-top:10px;'><center><table><tr><th>Potongan Pipa (cm)</th><th>Banyak Potongan Pipa</th></tr><tr><td>5</td><td>5</td></tr><tr><td>5.5</td><td>4</td></tr><tr><td>6</td><td>8</td></tr><tr><td>6.5</td><td>6</td></tr><tr><td>7</td><td>7</td></tr><tr><td>7.5</td><td>9</td></tr></table></center></div><p>Rata-rata panjang sekumpulan potongan pipa tersebut adalah ...</p>",
+			"gbr":"<div class='tabel' style='margin-top:10px;'><center><table><tr><th>Potongan Pipa (cm)</th><th>Banyak Potongan Pipa</th></tr><tr><td>5</td><td>5</td></tr><tr><td>5.5</td><td>4</td></tr><tr><td>6</td><td>8</td></tr><tr><td>6.5</td><td>6</td></tr><tr><td>7</td><td>7</td></tr><tr><td>7.5</td><td>9</td></tr></table></center></div><p>Berapakah rata-rata panjang sekumpulan potongan pipa tersebut?</p>",
 			"jwb":6.42
 		},
 		{
 			"soal":"Data nilai ulangan IPA kelas VIII disajikan dalam diagram berikut.",
-			"gbr":"<center><img src='../../gambar/latmean3.jpg' style='width:70%'/></center><p>Rata-rata nilai siswa laki-laki adalah ...</p>",
+			"gbr":"<center><img src='../../gambar/latmean3.jpg' style='width:70%'/></center><p>Berapakah rata-rata nilai siswa laki-laki?</p>",
 			"jwb":7.76
 		}
 	]

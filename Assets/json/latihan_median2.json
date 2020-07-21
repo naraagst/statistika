@@ -6,24 +6,24 @@
 			"jwb":7
 		},
 		{
-			"soal":"Tentukanlah median dari data berikut ini.",
+			"soal":"Berapakah median dari data berikut ini?",
 			"gbr":"<center><img src='../../gambar/consomean6.png' style='width:80%'><br/><br/></center>",
 			"jwb":7
 		},
 		{
-			"soal":"Tentukanlah median dari data berikut ini.",
-			"gbr":"<center><img src='../../gambar/consomean6.png' style='width:80%'><br/><br/></center>",
-			"jwb":7
+			"soal":"Perhatikan data nomor sepatu siswa kelas 8B berikut ini.",
+			"gbr":"<div class='tabel tabel2'><center><table><tr><th>Nomor Sepatu</th><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td><td>41</td><td>42</td></tr><tr><th>Frekuensi</th><td>4</td><td>4</td><td>6</td><td>9</td><td>5</td><td>2</td><td>1</td></tr></table></center></div><p>Berapakah median dari data tersebut?</p>",
+			"jwb":39
 		},
 		{
-			"soal":"Tentukanlah median dari data berikut ini.",
-			"gbr":"<center><img src='../../gambar/consomean6.png' style='width:80%'><br/><br/></center>",
-			"jwb":7
+			"soal":"Data nilai ulangan Fisika kelas VIIIA disajikan dalam tabel berikut.",
+			"gbr":"<center><img src='../../gambar/latmedian1.JPG' style='width:70%'><br/><br/></center><p>Berapakah median dari data tersebut?</p>",
+			"jwb":8
 		},
 		{
-			"soal":"Tentukanlah median dari data berikut ini.",
-			"gbr":"<center><img src='../../gambar/consomean6.png' style='width:80%'><br/><br/></center>",
-			"jwb":7
+			"soal":"Data tinggi badan siswa kelas IXB diukur sampai cm terdekat sebagai berikut.",
+			"gbr":"<center><img src='../../gambar/latmedian2.JPG' style='width:50%'><br/><br/></center><p>Berapakah median dari data tersebut?</p>",
+			"jwb":150
 		}
 	]
 }
