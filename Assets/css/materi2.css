@@ -1,14 +1,14 @@
 .materi2{
 	width:95%;
-	height: 73.5%;
+	height: 87%;
 	background-color: white;
 	margin: 10px;
 	margin-left: 27px;
 	float:left;
 }
 .ujikompetensi{
-	width:95%;
-	height: 80%;
+	width:96%;
+	height: 95%;
 	background-color: white;
 	margin: 10px;
 	margin-left: 27px;
@@ -139,7 +139,7 @@
 }
 #ddrumusmean{
 	width:55%;
-	height:60%;
+	height:265px;
 }
 #ddrumusmean table{
 	margin-left: -5px;
@@ -640,7 +640,7 @@
 	margin-left: -10px;
 }
 .soallat{
-	height:90%;
+	height:89%;
 	width:100%;
 	overflow-y: auto;
 }

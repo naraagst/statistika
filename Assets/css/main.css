@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+*{
+  margin:0;
+  padding:0;
+}
 .overlay {
   position: absolute;
   left: 0;
@@ -16,14 +20,14 @@
 .background {
   background: url(../gambar/bg.jpg) center;
   background-size: cover;
-  height:1000px;
+  height:100%;
   width:100%;
 ?}
 
 
 .background .overlay-bg {
   background-color: rgba(0, 0, 0, 0.8);
-  height: 1000px;
+  height: 100%;
   width:100%;
 }
 
@@ -31,21 +35,20 @@
   position:absolute;
   height: 60%;
   width: 60%;
-  top:10%;
+  top:7%;
   left:20%;
   color:white;
 }
 
 
 .logo1 img{
-  width:100%;
+  width:95%;
 }
 
 .wadah{
-  width:30%;
+  width:25%;
   float:left;
   margin-top: 5%;
-  
 }
 
 .wadah img{
@@ -64,11 +67,11 @@
 .tulisan{
   visibility: hidden;
   color: rgb(0,156,255);
-  padding: 1%;
+  padding: 5%;
   margin-top: -3%;
   text-align: center;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 16px;
   background-color:black;
   font-weight: bold;
   border-top: 2px dashed rgb(0,156,255);
@@ -82,6 +85,24 @@
   opacity: 1;
 }
 
+.teks {
+    display: none;
+}
+
+@media only screen and (max-width: 1212px) {
+    .menu {
+        display: none;
+    }
+
+    .teks {
+        display: block;
+        margin: 15% 0 0 0%;
+        width: 550px;
+        color:white;
+        text-align: center;
+        font-family: "Muli", sans-serif;
+    }
+}
 /*
 .menu{
   margin-top: 50px;

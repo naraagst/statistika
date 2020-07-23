@@ -11,7 +11,7 @@ html {
 body {
   height: 100%;
   width:100%;
-  overflow: hidden;
+  overflow-y: auto;
   position: fixed;
 }
 
@@ -127,7 +127,7 @@ body {
 
 #logo{
 	height:100%;
-	width:35%;
+	width:30%;
 }
 
 .sidebar a{
@@ -217,17 +217,17 @@ body {
 */
 .konten{
 	width:83%;
-	height:100%;
+	height:85%;
 	background-color: rgb(0,156,255,0.2);
 	float:left;
 }
 
 .materi{
-	width:42%;
+	width:44%;
 	height: 98%;
 	background-color: white;
 	margin: 10px;
-	margin-left: 27px;
+	margin-left: 21px;
 	float:left;
 }
 
@@ -348,7 +348,7 @@ body {
 	width:48%;
 	height:90% !important;
 	background-color: white;
-	margin: 10px;
+	margin: 10px 10px 10px 0px;
 	padding:20px;
 	float:left;
 	overflow-y: auto;
@@ -356,10 +356,10 @@ body {
 }
 .subkonten{
 	width:100%;
-	height:75%;
+	height:89%;
 }
 .halaman{
-	height:25%;
+	height:10%;
 	width:100%;
 }
 .conso h3{
@@ -444,6 +444,39 @@ body {
 
 #piechart{
 	margin-top: -20;
+}
+
+.tujuan{
+	cursor: pointer;
+}
+#judulT{
+	margin:10px 0px 0px 35px;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 20px;
+	font-family: Muli;
+	color: rgb(0,84,130);
+}
+#isiT{
+	margin:0px 35px 0px 35px;
+	padding: 10px;
+	padding-left: 30px;
+	font-family: Muli;
+	text-align: justify;
+	border:3px solid rgb(0,84,130);
+	display: none;
+}
+
+.dropdown .active{
+	border-bottom:3px solid rgb(0,156,255);
+}
+
+.sidebar .active{
+	background-color: rgb(20,20,20);
+}
+
+.linkdisable{
+	cursor:not-allowed;
 }
 
 ::-webkit-scrollbar{

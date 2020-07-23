@@ -1,5 +1,6 @@
 let p=1;
 let q=1;
+let tujuan=1;
 function dropdown() {
 				document.getElementById("myDropdown").classList.toggle("show");
 			}
@@ -50,3 +51,16 @@ function petunjuk2(){
 		q=1;
 	}
 }
+let tujuanP = document.querySelector(".tujuan");
+tujuanP.addEventListener("click", function () {
+	if(tujuan==1){
+		document.getElementById("isiT").style.display="block";
+		document.getElementById("judulT").style="text-decoration:none";
+		tujuan=0;
+	}
+	else{
+		document.getElementById("isiT").style.display="none";
+		document.getElementById("judulT").style="text-decoration:underline";
+		tujuan=1;
+	}
+})

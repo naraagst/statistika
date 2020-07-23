@@ -33,7 +33,7 @@ body{
 .kikdmenu .active:hover{
 	color:black;
 }
-.kikdisi{
+.kikdisi, .info{
 	width:70%;
 	height:70%;
 	background-color: white;
@@ -43,7 +43,7 @@ body{
 	overflow-y: auto;
 	overflow-x: hidden;
 }
-.kikdisi h1{
+.kikdisi h1, .info h1{
 	color: rgb(0,106,150);
 	border-bottom: 3px dashed rgb(0,156,255,0.5);
 	font-family:Poppins-Bold;
@@ -61,20 +61,34 @@ body{
 	padding:5px;
 }
 
-p{
+.kikdisi p{
 	margin-left:40px;
 	margin-right:40px;
 	text-indent: 2em;
 	line-height: 35px;
 }
 
+.info p{
+	margin-left:40px;
+	margin-right:40px;
+}
+
 .kikdisi ul{
 	margin:8%;
 	margin-top: 0;
 }
-table, tr, td{
+.kikdisi table,.kikdisi tr,.kikdisi td{
 	margin:4%;
 	padding:15px;
+	margin-top: 0;
+	font-family: Muli;
+	font-size:20px;
+	text-align: justify;
+}
+
+table, tr, td{
+	margin:4%;
+	padding:3px;
 	margin-top: 0;
 	font-family: Muli;
 	font-size:20px;
