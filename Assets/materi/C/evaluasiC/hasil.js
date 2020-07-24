@@ -18,13 +18,13 @@ if(score >= 65) {
     nextt.style.display='inline-block'
     ulangi.style.display='none'
     kett.style.color='green'
-    kett.innerHTML = 'Selamat! Anda bisa melanjutkan ke materi selanjutnya.'
+    kett.innerHTML = 'Selamat! Anda bisa melanjutkan ke Latihan.'
 } else {
     note = "Tidak Lulus"
     nextt.style.display='none'
     ulangi.style.display='inline-block'
     kett.style.color='red'
-    kett.innerHTML = 'Sayang sekali skor anda belum memenuhi untuk dapat lanjut ke materi selanjutnya'
+    kett.innerHTML = 'Sayang sekali skor anda belum memenuhi untuk dapat lanjut'
 }
 score = score < 100 ? score.toFixed(2) : score
 
@@ -80,7 +80,7 @@ function newResults(numCorrect, numWrong, score) {
     let newScore = document.querySelector("#new-score")
     let wrongCorrect = document.querySelector("#wrong-correct")
 
-    newScore.innerHTML = `Score yang anda peroleh<br/>${score}`
+    newScore.innerHTML = `Skor yang anda peroleh<br/>${score}`
     wrongCorrect.innerHTML =`Jawaban Benar: <b>${numCorrect}</b>, Jawaban Salah: <b>${numWrong}</b><hr>`
 }
 

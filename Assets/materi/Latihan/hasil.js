@@ -18,13 +18,13 @@ if(score >= 65) {
     nextt.style.display='inline-block'
     ulangi.style.display='none'
     kett.style.color='green'
-    kett.innerHTML = 'Selamat! Anda bisa melanjutkan ke materi selanjutnya.'
+    kett.innerHTML = 'Selamat! Anda Telah Menyelesaikan Seluruh Materi pada Bab Statistika.'
 } else {
     note = "Tidak Lulus"
     nextt.style.display='none'
     ulangi.style.display='inline-block'
     kett.style.color='red'
-    kett.innerHTML = 'Sayang sekali skor anda belum memenuhi untuk dapat lanjut ke materi selanjutnya'
+    kett.innerHTML = 'Sayang Sekali Skor Anda Belum Memenuhi Kriteria Ketuntasan Minimal'
 }
 score = score < 100 ? score.toFixed(2) : score
 

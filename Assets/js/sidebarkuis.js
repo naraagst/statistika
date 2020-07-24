@@ -20,8 +20,8 @@ document.querySelector(".sidebar").innerHTML = `
 						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
 					</a>
 					<div class="dropdown ${getShowClass("a")}" id="myDropdown6">
-					  <a href="../../A/analisis1.html" class="${getNavLinkClass("/Assets/materi/A/analisis1.html")}">Materi</a>
-				      <a href="../../A/evaluasiA" class="${getChapClass("a")}">Kuis</a>
+					  <a href="../../a/analisis1.html" class="${getNavLinkClass("/Assets/materi/a/analisis1.html")}">Materi</a>
+				      <a href="../../a/evaluasiA" class="${getChapClass("a")}">Kuis</a>
 				    </div>
 				</li>
 				<li class="dropdown1 ${getChapClass("b")}">
@@ -30,10 +30,10 @@ document.querySelector(".sidebar").innerHTML = `
 						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
 					</a>
 					<div class="dropdown ${getShowClass("b")}" id="myDropdown">
-				      <a href="../../B/mean1.html" class="${getNavLinkClass("/Assets/materi/B/mean1.html")}">1.  Mean</a>
-				      <a href="../../B/median1.html" class="${getNavLinkClass("/Assets/materi/B/median1.html")}">2.  Median</a>
-				      <a href="../../B/modus1.html" class="${getNavLinkClass("/Assets/materi/B/modus1.html")}">3.  Modus</a>
-				      <a href="../../B/evaluasiB" class="${getChapClass("b")}">Kuis</a>
+				      <a href="../../b/mean1.html" class="${getNavLinkClass("/Assets/materi/b/mean1.html")}">1.  Mean</a>
+				      <a href="../../b/median1.html" class="${getNavLinkClass("/Assets/materi/b/median1.html")}">2.  Median</a>
+				      <a href="../../b/modus1.html" class="${getNavLinkClass("/Assets/materi/b/modus1.html")}">3.  Modus</a>
+				      <a href="../../b/evaluasiB" class="${getChapClass("b")}">Kuis</a>
 				    </div>
 				</li>
 				<li class="dropdown1 ${getChapClass("c")}">
@@ -42,14 +42,14 @@ document.querySelector(".sidebar").innerHTML = `
 						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
 					</a>
 					<div class="dropdown ${getShowClass("c")}" id="myDropdown2">
-				      <a href="../../C/jangkauan1.html" class="${getNavLinkClass("/Assets/materi/C/jangkauan1.html")}">1. Jangkauan</a>
-				      <a href="../../C/kuartil1.html" class="${getNavLinkClass("/Assets/materi/C/kuartil1.html")}">2. Kuartil</a>
-				      <a href="../../C/interkuartil1.html" class="${getNavLinkClass("/Assets/materi/C/interkuartil1.html")}">3. Jangkauan Interkuartil</a>
-				      <a href="../../C/simpangan1.html" class="${getNavLinkClass("/Assets/materi/C/simpangan1.html")}">4. Simpangan Kuartil</a>
-				      <a href="../../C/evaluasiC" class="${getChapClass("c")}">Kuis</a>
+				      <a href="../../c/jangkauan1.html" class="${getNavLinkClass("/Assets/materi/c/jangkauan1.html")}">1. Jangkauan</a>
+				      <a href="../../c/kuartil1.html" class="${getNavLinkClass("/Assets/materi/c/kuartil1.html")}">2. Kuartil</a>
+				      <a href="../../c/interkuartil1.html" class="${getNavLinkClass("/Assets/materi/c/interkuartil1.html")}">3. Jangkauan Interkuartil</a>
+				      <a href="../../c/simpangan1.html" class="${getNavLinkClass("/Assets/materi/c/simpangan1.html")}">4. Simpangan Kuartil</a>
+				      <a href="../../c/evaluasiC" class="${getChapClass("c")}">Kuis</a>
 				    </div>
 				</li>
-				<li><a href="../../Latihan" class="${getChapClass("l")}" id="latihan"><i class="fas fa-edit" style="font-size:21px;color:white;margin-right:10px;margin-top: -14px;"></i>Latihan</a>
+				<li><a href="../../latihan" class="${getChapClass("l")}" id="latihan"><i class="fas fa-edit" style="font-size:21px;color:white;margin-right:10px;margin-top: -14px;"></i>Latihan</a>
 				</li>
 				<li><a target="_blank" rel="noopener noreferrer" href="https://shorturl.at/hjJLM"><i class="fas fa-download" style="font-size:22px;color:white;margin-right:10px;margin-top: -14px;"></i>Unduh Materi</a>
 				</li>

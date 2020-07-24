@@ -80,7 +80,7 @@ function newResults(numCorrect, numWrong, score) {
     let newScore = document.querySelector("#new-score")
     let wrongCorrect = document.querySelector("#wrong-correct")
 
-    newScore.innerHTML = `Score yang anda peroleh<br/>${score}`
+    newScore.innerHTML = `Skor yang anda peroleh<br/>${score}`
     wrongCorrect.innerHTML =`Jawaban Benar: <b>${numCorrect}</b>, Jawaban Salah: <b>${numWrong}</b><hr>`
 }
 
