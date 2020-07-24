@@ -17,7 +17,7 @@
 							</div>
 							<center><span class="teks"></span></center>
 							<div class="menu">
-								<div class="wadah" style="margin-left:10%;">
+								<div class="wadah" style="margin-left:10%;" id="btnMateri">
 									<div class="gambar" style="border-radius: 12px 0px 0px 12px;">
 										<a href="Assets/materi/A/analisis1.html"><img src="Assets/gambar/analytics.png" alt="Gambar Hilang"/></a>
 									</div>
@@ -50,7 +50,13 @@
       teks.innerHTML=`
         <h1>Mohon maaf, media hanya bisa di akses di ukuran layar yang lebih dari 1212px (desktop/laptop).</h1>
       `;
+
+      document.querySelector("#btnMateri").addEventListener("click", function(){
+      	localStorage.setItem("materiA","materiA");
+      	location.href = 'Assets/Materi/A/analisis1.html'
+      })
  	 </script>
+ 	 
 	</body>
 	
 </html>

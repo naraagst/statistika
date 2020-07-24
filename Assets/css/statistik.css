@@ -39,6 +39,9 @@ body {
 	font-weight: normal;    
 	font-style: normal;
 }
+a{
+	text-decoration: none !important;
+}
 .header{
 	width:100%;
 	height: 15%;
@@ -477,6 +480,15 @@ body {
 
 .linkdisable{
 	cursor:not-allowed;
+}
+
+.disabled, .disabled a, .disabled i{
+	pointer-events: none;
+	color:grey !important;
+}
+.disabledlat{
+	pointer-events: none;
+	color:white !important;
 }
 
 ::-webkit-scrollbar{
