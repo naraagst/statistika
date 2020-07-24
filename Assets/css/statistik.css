@@ -477,7 +477,11 @@ a{
 .sidebar .active{
 	background-color: rgb(20,20,20);
 }
-
+.activelat{
+	background-color: rgb(20,20,20);
+	border-bottom:3px solid rgb(0,156,255) !important;
+	pointer-events: none;
+}
 .linkdisable{
 	cursor:not-allowed;
 }

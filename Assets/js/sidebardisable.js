@@ -10,6 +10,10 @@ const getChapClasses = (path) => {
   return this.location.pathname.substr(15, 1) === path ? " active disabledlat" : " disabled";
 };
 
+const getLatClass = (path) => {
+  return this.location.pathname.substr(15, 1) === path ? " activelat" : " disabled";
+};
+
 const getShowClass = (path) => {
   return this.location.pathname.substr(15, 1) === path ? " show" : "";
 };
@@ -53,7 +57,7 @@ document.querySelector(".sidebar").innerHTML = `
 				      <a href="../../C/evaluasiC" class="${getChapClasses("C")}">Kuis</a>
 				    </div>
 				</li>
-				<li><a href="../../Latihan" class="${getChapClass("L")}" id="latihan"><i class="fas fa-edit" style="font-size:21px;color:white;margin-right:10px;margin-top: -14px;"></i>Latihan</a>
+				<li><a href="../../Latihan" class="${getLatClass("l")}" id="latihan"><i class="fas fa-edit" style="font-size:21px;color:white;margin-right:10px;margin-top: -14px;"></i>Latihan</a>
 				</li>
 				<li><a target="_blank" rel="noopener noreferrer" href="https://shorturl.at/hjJLM"><i class="fas fa-download" style="font-size:22px;color:white;margin-right:10px;margin-top: -14px;"></i>Unduh Materi</a>
 				</li>
