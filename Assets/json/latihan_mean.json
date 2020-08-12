@@ -22,7 +22,7 @@
 		},
 		{
 			"soal":"Berdasarkan hasil survei oleh penjaga stan celana di suatu mall selama satu bulan, diperoleh data nomor celana yang terjual selama satu bulan",
-			"gbr":"<center><div class='tabeltulisan'><table><tr><td>27</td><td>35</td><td>32</td><td>30</td><td>30</td><td>32</td><td>28</td><td>32</td></tr><tr><td>30</td><td>32</td><td>30</td><td>29</td><td>29</td><td>28</td><td>27</td><td>27</td></tr><tr><td>27</td><td>28</td><td>28</td><td>29</td><td>29</td><td>27</td><td>30</td><td>32</td></tr></table></div></center><p>Berapakah rata-rata nomor celana yang dibeli selama satu bulan?</p>",
+			"gbr":"<center><div class='tabeltulisan'><table><tr><td>27</td><td>35</td><td>32</td><td>30</td><td>30</td><td>32</td><td>28</td><td>32</td></tr><tr><td>30</td><td>32</td><td>30</td><td>29</td><td>29</td><td>28</td><td>27</td><td>27</td></tr><tr><td>27</td><td>28</td><td>28</td><td>29</td><td>29</td><td>27</td><td>30</td><td>32</td></tr></table></div></center><p>Berapakah rata-rata nomor celana yang terjual selama satu bulan?</p>",
 			"jwb":30.7
 		}
 	]

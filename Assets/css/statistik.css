@@ -494,6 +494,12 @@ a{
 	pointer-events: none;
 	color:white !important;
 }
+.caption{
+	font-family: Poppins;
+	font-size: 12px !important;
+	text-align: center !important;
+	font-style: italic;
+}
 
 ::-webkit-scrollbar{
 	width:11px;

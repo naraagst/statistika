@@ -1,0 +1,29 @@
+{
+	"soal_mean":[
+		{
+			"soal":"Rata-rata 8 buah bilangan adalah 72 dan rata-rata 12 buah bilangan lain adalah 84. Berapakah rata-rata 20 bilangan tersebut?",
+			"gbr":"",
+			"jwb":79.2
+		},
+		{
+			"soal":"Rata-rata nilai Matematika dalam suatu kelas 75, sedangkan rata-rata nilai siswa laki-laki 78 dan rata-rata nilai siswa perempuan 73. Jika banyak siswa dalam kelas 30 orang, berapakah banyak siswa laki-laki dalam kelas tersebut?",
+			"gbr":"",
+			"jwb":12
+		},
+		{
+			"soal":"Rata-rata nilai siswa kelas VIIIA adalah 75. Rata-rata nilai 20 siswa kelas VIIIB adalah 84. Jika nilai siswa kelas VIIIA dan VIIIB digabungkan rata-ratanya menjadi 80. Berapakah banyak siswa kelas VIIIA?.",
+			"gbr":"",
+			"jwb":16
+		},
+		{
+			"soal":"Rata-rata tinggi badan sekelompok anak yang terdiri atas 9 anak 155 cm. Jika enam anak yang mempunyai tinggi badan sama masuk dalam kelompok tersebut, rata-rata tingginya berkurang 2cm. Berapakah rata-rata tinggi enam anak yang baru masuk tersebut?",
+			"gbr":"",
+			"jwb":150
+		},
+		{
+			"soal":"Kelas VIIIA terdiri atas 38 siswa. Sebanyak 36 siswa mengikuti ulangan Matematika dengan rata-rata nilai 7,2. Dua siswa mengikuti ulangan susulan sehingga rata-rata nilai ulangan seluruh siswa turun 0,1. Berapakah rata-rata nilai dua siswa yang mengikuti ulangan susulan?",
+			"gbr":"",
+			"jwb":5.3
+		}
+	]
+}

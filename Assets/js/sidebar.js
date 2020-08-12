@@ -1,3 +1,8 @@
+let key = this.location.pathname.substr(17,3);
+let tambah;
+let kurang;
+let nextMateri;
+
 const getNavLinkClass = (path) => {
   return this.location.pathname === path ? " active" : "";
 };
@@ -12,6 +17,10 @@ const getChapClass = (path) => {
 
 const getShowClass = (path) => {
   return this.location.pathname.substr(15, 1) === path ? " show" : "";
+};
+
+const getPagesClass = (path) => {
+  return this.location.pathname.substr(17) === path ? " active" : "";
 };
 
 document.querySelector(".sidebar").innerHTML = `
@@ -58,3 +67,24 @@ document.querySelector(".sidebar").innerHTML = `
 				</li>
 			</ul>
 `;
+
+if (key === "mea"){
+	tambah = Number(this.location.pathname.substr(21, 1))+1;
+	kurang = Number(this.location.pathname.substr(21, 1))-1;
+
+	if (tambah==6){ nextMateri = "median1.html" } 
+	else {nextMateri = "mean"+tambah+".html";}
+
+	console.log(tambah)
+	document.querySelector(".halaman").innerHTML=`
+				<div class="btn-group">
+					<a href="mean${kurang}.html"><< Sebelumnya</a>
+					<a href="mean1.html" class="${getPagesClass("mean1.html")}" id="mean1">1</a>
+					<a href="mean2.html" class="${getPagesClass("mean2.html")}" id="mean2">2</a>
+					<a href="mean3.html" class="${getPagesClass("mean3.html")}" id="mean3">3</a>
+					<a href="mean4.html" class="${getPagesClass("mean4.html")}" id="mean4">4</a>
+					<a href="mean5.html" class="${getPagesClass("mean5.html")}" id="mean5">5</a>
+					<a href="${nextMateri}">Selanjutnya >></a>
+				</div>
+`
+}
