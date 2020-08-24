@@ -13,19 +13,19 @@
 				animationEnabled: true,
 				theme: "light1", // "light1", "light2", "dark1", "dark2"
 				axisY: {
-					title: "Jumlah (ribuan ton)"
+					title: "Jumlah Pasien Sembuh"
 				},
 				data: [{        
 					type: "column",  
 					showInLegend: true, 
-					legendText: "Tahun",
+					legendText: "Tanggal",
 					dataPoints: [      
-						{ y: 3, label: "2003" },
-						{ y: 2,  label: "2004", indexLabel: "Terendah" },
-						{ y: 4,  label: "2005" },
-						{ y: 2.5,  label: "2006" },
-						{ y: 5,  label: "2007", indexLabel: "Tertinggi" },
-						{ y: 4, label: "2008" }
+						{ y: 2088, label: "12 Ags" , indexLabel: "Tertinggi" },
+						{ y: 1760,  label: "13 Ags"},
+						{ y: 2060,  label: "14 Ags" },
+						{ y: 1703,  label: "15 Ags" },
+						{ y: 1783,  label: "16 Ags"},
+						{ y: 1355, label: "17 Ags", indexLabel: "Terendah" }
 					]
 				}]
 			});
@@ -44,27 +44,28 @@
 			<div class="materi">
 				<h2>Menganalisis Data</h2>
 				<div class="submateri">
-				<p>Perhatikan diagram batang hasil perikanan disamping!</p>
+				<p>Perhatikan diagram batang di samping!</p>
 				<p>
-					Dari Diagram 1 disamping dapat diketahui bahwa data hasil perikanan pada tahun 2003-2008 adalah sebagai berikut.
+					Dari diagram batang di samping dapat diketahui bahwa data pasien covid-19 yang sembuh di Indonesia pada tanggal 12-17 Agustus 2020 adalah sebagai berikut.
 				</p>
 				<p>
-					Pada tahun 2003 sebanyak 3000 ton<br/>
-					Pada tahun 2004 sebanyak 2000 ton<br/>
-					Pada tahun 2005 sebanyak 4000 ton<br/>
-					Pada tahun 2006 sebanyak 2500 ton<br/>
-					Pada tahun 2007 sebanyak 5000 ton<br/>
-					Pada tahun 2008 sebanyak 4000 ton
+					Pada tanggal 12 Agustus 2020 sebanyak 2088 orang.<br/>
+					Pada tanggal 13 Agustus 2020 sebanyak 1760 orang.<br/>
+					Pada tanggal 14 Agustus 2020 sebanyak 2060 orang.<br/>
+					Pada tanggal 15 Agustus 2020 sebanyak 1703 orang.<br/>
+					Pada tanggal 16 Agustus 2020 sebanyak 1783 orang.<br/>
+					Pada tanggal 17 Agustus 2020 sebanyak 1355 orang.
 				</p>
 				<p>
-					Dari Diagram 1 tersebut dapat dilihat pula bahwa hasil perikanan terendah dicapai pada tahun 2004 yaitu sebanyak 2000 ton. Sebaliknya hasil perikanan tertinggi dicapai pada tahun 2007 yaitu sebanyak 5000 ton. Kenaikan tertinggi pada tahun 2006-2007 yaitu mencapai 2500 ton.
+					Dari diagram tersebut dapat terlihat pula bahwa jumlah pasien sembuh terendah terdapat pada tangggal 17 Agustus yaitu sebanyak 1355 orang. Sebaliknya jumlah pasien sembuh tertinggi terdapat pada tangggal 12 Agustus yaitu sebanyak 2088 orang.
 				</p>
 				</div>
 			</div>
 			<div class="conso">
-				<h3>Jumlah Hasil Perikanan</h3>
+				<h3>Jumlah Pasien Covid-19 Sembuh</h3>
 				<div id="chartContainer3" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
-				<p class="caption">Diagram 1. Data hasil perikanan</p>
+				<p class="caption">Diagram 1. Data pasien covid-19 sembuh</p>
+				<p class="caption">Sumber : covid19.go.id</p>
 				<p style="color: red; font-size: 14;">*catatan: arahkan kursor ke setiap batang pada diagram untuk mengetahui jumlah data</p>
 			</div>
 			</div>

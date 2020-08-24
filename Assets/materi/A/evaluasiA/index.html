@@ -11,30 +11,57 @@
 	<body>
 		<div class="header">
 			<img src="../../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="ujikompetensi">
 				<div class="submateri2">
 					<h2>KUIS</h2>
 					<div class="row justify-content-center">
-						<div class="col-8">
-						<div class="card mt-5">
+						<div class="col-9 petunjuk-kuis">
+						<div class="card mt-2">
 							<div class="card-body" >
 								<div style="padding-left:20px; font-family: Muli">
-								<h4 class="text-center">Petunjuk Pengerjaan Soal</h4>
+								<h4 class="text-center"><b>Petunjuk Pengerjaan Kuis</b></h4>
 								<ol>
-									<li>Terdapat 10 soal pada kuis ini</li>
-									<li>Untuk memulai mengerjakan soal, isi nama pada kolom yang tersedia kemudian tekan "Mulai"</li>
+									<li>Terdapat 10 soal pilihan ganda pada kuis ini</li>
+									<li>Untuk memulai mengerjakan soal, isi nama, kelas dan token pada kolom yang tersedia kemudian tekan "Mulai"</li>
 									<li>Waktu pengerjaan soal adalah 45 menit, timer terdapat pada bagian kanan atas soal</li>
+									<li>Pada bagian kiri soal terdapat navigasi nomor soal yang apabila di klik akan menampilkan soal berdasarkan nomor soal yang di pilih.</li>
+									<li>Klik atau tekan salah satu pilihan jawaban yang dianggap benar.</li>
 									<li>Jika seluruh soal sudah dikerjakan, klik tombol selesai pada soal terakhir. Jika waktu pengerjaan soal habis maka laman soal akan otomatis tertutup dan siswa akan diarahkan ke laman hasil</li>
 								</ol>
 								</div>
-								<hr/>
-								<input type="text" id="name" placeholder="Masukkan Nama" class="form-control">
-								<button class="btn btn-md btn-primary btn-block mt-2" id="submit">Mulai</button>
 							</div>
+						</div>
+						</div>
+						<div class="col-6 identitas-kuis">
+							<div class="card mt-2">
+								<div class="card-body" >
+								<div class="table-responsive">
+									<table width="100%">
+										<tr>
+											<td>Nama :</td>
+											<td><input type="text" id="name" placeholder="Masukkan Nama" class="form-control"></td>
+										</tr>
+										<tr>
+											<td>Kelas :</td>
+											<td><input type="text" id="class" placeholder="Masukkan Kelas" class="form-control"></td>
+										</tr>
+										<tr>
+											<td>Token :</td>
+											<td><input type="text" id="token" placeholder="Masukkan Token" class="form-control"></td>
+										</tr>
+									</table>
+								</div>
+								<button class="btn btn-md btn-primary btn-block mt-2" id="submit">Mulai</button>
+								</div>
+							</div>
+						</div>
+						</div>
 						</div>
 						</div>
 					</div>
@@ -43,6 +70,7 @@
 			</div>
 
 		<script src="../../../js/sidebarkuis.js"></script>
+		<script src="../../../js/unlock-pages.js"></script>
 		<script src="../../../js/style.js"></script>
 		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
 		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
