@@ -63,7 +63,7 @@ document.querySelector(".sidebar").innerHTML = `
 				</li>
 				<li><a href="../latihan" class="${getNavLinkClass("/Assets/materi/Latihan/index.html")}" id="latihan"><i class="fas fa-edit" style="font-size:21px;color:white;margin-right:10px;margin-top: -14px;"></i>Latihan</a>
 				</li>
-				<li><a target="_blank" rel="noopener noreferrer" href="https://shorturl.at/hjJLM"><i class="fas fa-download" style="font-size:22px;color:white;margin-right:10px;margin-top: -14px;"></i>Unduh Materi</a>
+				<li><a target="_blank" rel="noopener noreferrer" href="https://shorturl.at/zF357"><i class="fas fa-download" style="font-size:22px;color:white;margin-right:10px;margin-top: -14px;"></i>Unduh Materi</a>
 				</li>
 			</ul>
 `;
