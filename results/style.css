@@ -1,0 +1,49 @@
+.content{
+	width:100%;
+	height:85%;
+	font-family: Poppins;
+	padding-top: 20px;
+	background-color: rgb(204,235,255);
+}
+.index{
+	width: 100% !important;
+}
+.index2 .card-header{
+	font-family: Poppins;
+	font-weight: bolder;
+}
+.active{
+	background-color: rgb(127,205,255) !important;
+	color: black !important;
+}
+.content h1{
+	font-family: Muli;
+}
+
+.content .tabel table{
+	width: 50%;
+	margin-top: 20px;
+	background-color: white;
+}
+
+.content .tabel th, .content .tabel td{
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 500px) {
+	.content .tabel th, .content .tabel td{
+	font-size: 14px;
+	}
+	.content .tabel table{
+	width: 100%;
+	}
+	.content h1{
+	font-size:22px;
+	}
+	.content {
+		height: auto !important;
+	}
+	.index{
+		height: auto !important;
+	}
+}

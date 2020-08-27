@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+	
+		<link href="/assets/css/statistik.css" rel="stylesheet">	
+		<link href="style.css" rel="stylesheet">	
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+	</head>
+	<body>
+		<div class="header">
+			<img src="/assets/gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
+		</div>
+		<div class="sidebar" id="sidebar">
+		</div>
+		<div class="content">
+			<center>
+			<h1>Hasil Kuis A</h1>
+			<h1>Menganalisis Data</h1>
+			<div class="tabel">
+				<table>
+					<thead>
+						<tr>
+							<th>No. </th>
+							<th>Nama</th>
+							<th>Kelas</th>
+							<th>Nilai</th>
+							<th>Waktu Selesai</th>
+						</tr>
+					</thead>
+					<tbody id="data">
+					</tbody>
+				</table>
+			</div>
+			</center>
+		</div>
+		<script src="sidebar.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+		<script>
+		// Your web app's Firebase configuration
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyA0bSfBNKA4Y3oDbiorSA8dYrI6X7thQpI",
+		    authDomain: "statistika-smp.firebaseapp.com",
+		    databaseURL: "https://statistika-smp.firebaseio.com",
+		    projectId: "statistika-smp",
+		    storageBucket: "statistika-smp.appspot.com",
+		    messagingSenderId: "221055005685",
+		    appId: "1:221055005685:web:6704d25858af96560426bc",
+		    measurementId: "G-SD240GBRWE"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+
+		var database = firebase.database();
+		var data = database.ref('kuis-a');
+		var index = 0;
+		data.on('value', function(snapshot) {
+		  snapshot.forEach(function(childSnapshot) {
+		    index+=1;
+		    var hasil = childSnapshot.val();
+		    var tblData = document.getElementById("data");
+		    tblData.innerHTML += `
+		      <tr>
+		        <td>${index}.</td>
+		        <td>${hasil.nama}</td>
+		        <td>${hasil.kelas}</td>
+		        <td>${hasil.nilai}</td>      
+		        <td>${hasil.tanggal}<br/>${hasil.waktu}</td>      
+		      </tr>
+		    `
+		  })
+		});
+
+
+		</script>
+	</body>
+	
+</html>

@@ -118,7 +118,7 @@
 #hasil{
 	text-align: center;
 	padding:15px;
-	background-color:rgb(0,255,0,0.3);
+	background-color:rgb(178,255,178);
 	border-radius:5px;
 	font-weight: bold;
 	font-size: 18px;
@@ -324,7 +324,7 @@
 	font-size: 16px;
 }
 .menulat{
-	border-top: 3px solid rgb(0,84,130,0.2);
+	border-top: 3px solid rgb(204,221,230);
 	width:80%;
 	padding-top: 5px;
 }
@@ -366,7 +366,7 @@
 #pilihan_a, #pilihan_b, #pilihan_c, #pilihan_d{
 	width:48%;
 	height:50px;
-	border: 0.1rem solid rgb(86, 165, 235, 0.5);
+	border: 0.1rem solid rgb(170,210,245);
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
     font-family: Poppins;
@@ -431,13 +431,13 @@
 }
 .rumusmodus{
 	width:93%;
-	background-color: rgb(0,156,255, 0.5);
+	background-color: rgb(127,205,255);
 	padding: 0.5%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 	line-height: 30px;
 }
 .btn-group2 a {
-	background-color:rgb(0,156,255, 0.5);
+	background-color:rgb(127,205,255);
 	-webkit-border-bottom-right-radius:0px;
 	-moz-border-radius-bottomright:0px;
 	border-bottom-right-radius:0px;
@@ -483,7 +483,7 @@
 	margin-top: -10px;
 }
 .btn-group3 a {
-	background-color:rgb(0,156,255, 0.5);
+	background-color:rgb(127,205,255);
 	-webkit-border-bottom-right-radius:0px;
 	-moz-border-radius-bottomright:0px;
 	border-bottom-right-radius:0px;
@@ -516,7 +516,7 @@
 	color: black;
 	background-color: white;
 	border-width: 3px 3px 0px 3px;
-	border-color: rgb(0,156,255, 0.5);
+	border-color: rgb(127,205,255);
 	border-style: solid;
 	pointer-events: none;
 }
@@ -570,7 +570,7 @@
 }
 
 #containermodus{
-	border:5px solid rgb(0,156,255, 0.5);
+	border:5px solid rgb(127,205,255);
 	border-top: none;
 	padding-top: 15px;
 	width:102%;
@@ -596,7 +596,7 @@
 	font-weight: bold;
 }
 #cm1{
-	border:5px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;
+	border:5px solid rgb(127,205,255);border-bottom: none;background-color: white;
 }
 .frame{
 	padding:25px;
@@ -689,7 +689,7 @@
 }
 
 .containerlat{
-	border:5px solid rgb(0,156,255, 0.5);
+	border:5px solid rgb(127,205,255);
 	margin-top:-10px;
 	width:102%;
 	height:102%;
@@ -702,7 +702,7 @@
 }
 
 .judullat{
-	background-color: rgb(0,156,255,0.5);
+	background-color: rgb(127,205,255);
 	padding:10px 0px;
 }
 .judullat h2{
