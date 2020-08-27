@@ -17,7 +17,7 @@ let f1=0;
 let g1=0;
 let h1=0;
 let i1=0;
-
+let consoContainer = document.querySelector("#conso");
 function urut1(){
 	x1=parseInt(document.getElementById("input_median1").value);
 	if (x1==90){
@@ -486,11 +486,13 @@ function t9(){
 function ganjil(){
 	document.getElementById("contoh1").hidden = false;
 	document.getElementById("contoh2").hidden = true;
+	consoContainer.scrollIntoView();
 }
 
 function genap(){
 	document.getElementById("contoh1").hidden = true;
 	document.getElementById("contoh2").hidden = false;
+	consoContainer.scrollIntoView();
 }
 
 function reset1(){

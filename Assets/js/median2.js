@@ -13,6 +13,7 @@ let d1=0;
 let e1=0;
 let f1=0;
 let g1=0;
+let consoContainer = document.querySelector("#conso");
 
 function in1() {
   document.getElementById("tbl1").style="border: 5px solid orange;"
@@ -320,8 +321,10 @@ function out15() {
 function consomdn2a(){
   document.getElementById("mdn_ganjil").hidden = false;
   document.getElementById("mdn_genap").hidden = true;
+  consoContainer.scrollIntoView();
 }
 function consomdn2b(){
   document.getElementById("mdn_ganjil").hidden = true;
   document.getElementById("mdn_genap").hidden = false;
+  consoContainer.scrollIntoView();
 }

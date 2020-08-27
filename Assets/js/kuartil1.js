@@ -401,12 +401,15 @@ function resetk1(){
 var html;
   html = document.getElementById('consokuartil1').innerHTML; 
 
-
+let consoContainer = document.querySelector("#conso");
 function contoh1(){
 	document.getElementById("consokuartil1").hidden = false;
 	document.getElementById("consokuartil2").hidden = true;
+	consoContainer.scrollIntoView();
+
 }
 function contoh2(){
 	document.getElementById("consokuartil1").hidden = true;
 	document.getElementById("consokuartil2").hidden = false;
+	consoContainer.scrollIntoView();
 }
