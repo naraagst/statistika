@@ -965,7 +965,7 @@ a{
 		font-size: 18px;
 	}
 	.m-min15{
-	margin-right:0px !important;
+		margin-right:0px !important;
 	}
 
 	/*MEAN*/
@@ -994,6 +994,9 @@ a{
 	}
 	#letak img{
 	width:90% !important;
+	}
+	#satu, #dua, #tiga{
+		margin-left:20px !important;
 	}
 
 	/*MEDIAN*/
