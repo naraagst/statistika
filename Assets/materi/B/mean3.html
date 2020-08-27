@@ -28,10 +28,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Mean (Rata-Rata)</h2>
@@ -40,9 +42,9 @@
 						<a href=javascript:void(0) onclick="petunjuk()"><p id="petunjuka">Klik untuk menyembunyikan petunjuk</p>
 						<div id="petunjuk">
 							<ul>
-							<li>Susunlah poin-poin dibawah dengan cara men<i>drag</i> setiap poin ke kotak yang tersedia hingga membentuk rumus umum rata-rata(mean) yang benar. </li>
+							<li>Susunlah poin-poin dibawah dengan cara <span class="laptop">men<i>drag</i></span><span class="hp">tap dan tahan kemudian pindahkan</span> setiap poin ke kotak yang tersedia hingga membentuk rumus umum rata-rata(mean) yang benar. </li>
 							<li>Klik tombol <b>Cek Jawaban</b> untuk memeriksa apakah jawaban sudah benar.</li>
-							<li>Jika seluruh poin telah tersusun dengan benar, maka contoh soal dan latihan disamping dapat diakses</li>
+							<li>Jika seluruh poin telah tersusun dengan benar, maka contoh soal dan latihan <span class="laptop">disamping</span> <span class="hp">dibawah</span> dapat diakses</li>
 							</ul>
 						</div>
 						</a>
@@ -75,20 +77,26 @@
 						<div draggable="true" ondragstart="drag(event)" id="drag2" class="grab" height="50px">Jumlah Seluruh Data</div>
 						<div draggable="true" ondragstart="drag(event)" id="drag3" class="grab" height="50px">Banyak Data</div>
 						<span id="note"></span>
-						<p id="hasildd"><p>
 					</div>
 					</div>
+					<p id="hasilddbenar">Jawabanmu benar. Silahkan pelajari contoh soal dan latihan <span class="laptop">di samping</span><span class="hp">di bawah</span>.<p>
+						<p id="hasilddsalah">Jawaban masih salah. Silahkan tekan tombol reset dan coba lagi.<p>
 					<center>
 					<button class="cek" onclick="cek()" id="cekdd">Cek Jawaban</button>
 					<button class="cek" onclick="reset1()" id="resetdd">Reset</button>
 					</center>
 					</div>
+					<p class="hp" style="color:red; font-size:12">*Jika drag and drop di atas tidak berfungsi, silahkan langsung pelajari contoh soal dan latihan di bawah</p>
 				</div>
 			</div>
 			<div class="conso" id="conso">
-				<div class="btn-group2">
+				<div class="btn-group2 laptop">
 					<a onclick="consomean()" id="cmean1">Contoh Soal</a>
 					<a onclick="cobamean()" id="cmean2">Pertanyaan</a>
+				</div>
+				<div class="btn-group2 hp">
+					<a onclick="consomean()" id="cmean1a">Contoh Soal</a>
+					<a onclick="cobamean()" id="cmean2a">Pertanyaan</a>
 				</div>
 				<div id="containermodus">
 					<div id="consomodus">
@@ -248,9 +256,8 @@
 					<a href="mean1.html">1</a>
 					<a href="mean2.html">2</a>
 					<a href="#"  class="active">3</a>
-					<a href="mean4.html">4</a>
-					<!-- <a href="mean5.html">5</a> -->
-					<a href="mean4.html">Selanjutnya >></a>
+					<a href="" class="lanjut">4</a>
+					<a href="" class="lanjut">Selanjutnya >></a>
 				</div>
 			</div>
 		</div>
@@ -262,6 +269,22 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/mean3.js"></script>
 		<script src="../../js/latihan_mean1.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('mean4','mean4');
+				if(localStorage.getItem("progress") <=8){
+		      		localStorage.setItem("progress",8)
+		      	}
+
+		      	location.href = 'mean4.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

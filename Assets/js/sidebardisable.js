@@ -21,7 +21,7 @@ const getShowClass = (path) => {
 
 document.querySelector(".sidebar").innerHTML = `
 			<ul>
-				<li><a href="../../../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
+				<li class="disabled"><a href="../../../../index.html"><i class="fas fa-home" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i>Beranda</a></li>
 				<li class="dropdown1${getChapClass("a")}">
 					<a href=javascript:void(0) class="dropbtn" id="materiA" onclick="dropdown6()" style="height:50px;">
 						<div class="teksmenu">A. Menganalisis Data</div>
@@ -57,9 +57,10 @@ document.querySelector(".sidebar").innerHTML = `
 				      <a href="../../c/evaluasiC" class="${getChapClasses("c")}">Kuis</a>
 				    </div>
 				</li>
-				<li><a href="../../latihan" class="${getLatClass("l")}" id="latihan"><i class="fas fa-edit" style="font-size:21px;color:white;margin-right:10px;margin-top: -14px;"></i>Latihan</a>
+				<li><a href="../../Latihan" class="${getLatClass("l")}" id="latihan"><i class="fas fa-edit" style="font-size:21px;color:white;margin-right:10px;margin-top: -14px;"></i>Latihan</a>
 				</li>
-				<li><a target="_blank" rel="noopener noreferrer" href="https://shorturl.at/hjJLM"><i class="fas fa-download" style="font-size:22px;color:white;margin-right:10px;margin-top: -14px;"></i>Unduh Materi</a>
+				<li class="disabled"><a target="_blank" rel="noopener noreferrer" href="https://shorturl.at/hjJLM"><i class="fas fa-download" style="font-size:22px;color:white;margin-right:10px;margin-top: -14px;"></i>Unduh Materi</a>
 				</li>
 			</ul>
 `;
+

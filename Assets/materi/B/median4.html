@@ -26,6 +26,7 @@
 		<script>
 			window.onload = function awal(){
 				document.getElementById("cmean1").style="border:5px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;";
+				document.getElementById("cmean1a").style="border:2px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;";
 				document.getElementById("cobamodus").hidden=true;
 
 			};
@@ -34,19 +35,21 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h3>Menentukan Median dari Tabel Distribusi Frekuensi</h3>
 				<div class="submateri" style="height:430px">
 					<p>Lalu bagaimana menentuan median dari data yang dikelompokkan berdasarkan frekuensinya? Median untuk data seperti itu ditentukan dengan cara sebagai berikut:</p>
-					<ol type="a" style="margin-left: 40px;margin-top: -10px; line-height: 28px">
+					<ol type="a" style="margin-left: 40px;margin-top: -5px; line-height: 25px">
 						<li>Menentukan banyak data dengan menjumlahkan seluruh frekuensi, kemudian disimbolkan dengan  <i>n</i>.</li>
 						<li>Sama seperti sebelumnya, median ditentukan sesuai banyak data sebagai berikut:
-							<ul type="disc" style="margin-left: 20px;line-height: 33px;">
+							<ul type="disc" style="margin-left: 20px;line-height: 30px;">
 								<li>Jika <i>n</i> ganjil, maka median adalah nilai data </br>ke-$\frac{n+1}{2}$ </br>
 								</li>
 								<li style="margin-top: 15px;">Jika <i>n</i> genap, maka median adalah <img src="../../gambar/rumusmedian.png"></br>
@@ -57,9 +60,13 @@
 				</div>
 			</div>
 			<div class="conso" id="conso">
-				<div class="btn-group2">
+				<div class="btn-group2 laptop">
 					<a onclick="consomean()" id="cmean1">Contoh Soal</a>
 					<a onclick="cobamean()" id="cmean2">Pertanyaan</a>
+				</div>
+				<div class="btn-group2 hp">
+					<a onclick="consomean()" id="cmean1a">Contoh Soal</a>
+					<a onclick="cobamean()" id="cmean2a">Pertanyaan</a>
 				</div>
 				<div id="containermodus">
 					<div id="consomodus">
@@ -212,16 +219,7 @@
 
 			</div>
 			</div>
-			<div class="halaman">
-				<div class="btn-group">
-					<a href="median3.html"><< Sebelumnya</a>
-					<a href="median1.html">1</a>
-					<a href="median2.html" >2</a>
-					<a href="median3.html">3</a>
-					<a href=javascript:void(0)  class="active">4</a>
-					<a href="modus1.html">Selanjutnya >></a>
-				</div>
-			</div>
+			<div class="halaman"></div>
 		</div>
 
 		<script src="../../js/sidebar.js"></script>
@@ -230,6 +228,22 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/consomedian4.js"></script>
 		<script src="../../js/latihan_median2.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('modus1','modus1');
+				if(localStorage.getItem("progress") <=14){
+		      		localStorage.setItem("progress",14)
+		      	}
+
+		      	location.href = 'modus1.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

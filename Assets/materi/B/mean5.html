@@ -22,13 +22,15 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
-			<div class="materi">
-				<h3 style="padding-left:20%;padding-right:20%">Rata-Rata Gabungan dari <br/>Dua Buah Data</h3>
+			<div class="materi mean4">
+				<h3>Rata-Rata Gabungan dari <br/>Dua Buah Data</h3>
 				<div class="submateri5">
 					<p>Misalkan terdapat dua kelompok data berikut.</p>
 					<p>
@@ -38,12 +40,17 @@
 					<p>Rata-rata gabungan kedua kelompok tersebut dapat dihitung menggunakan rumus berikut.</p>
 					<p><img src="../../gambar/xgab.jpg"  class="frame" style="width:60%;margin-left:15%"></p>
 					<p>dengan:<br/>$\bar{x}_{gab}$ = rata-rata gabungan<br/>$n_1$ = banyak data kelompok 1<br/>$\bar{x}_1$ = rata-rata nilai data kelompok 1<br/>$n_2$ = banyak data kelompok 2<br/>$\bar{x}_2$ = rata-rata nilai data kelompok 2</p>
+					<p><span class="hp"><b>Silahkan pelajari contoh soal dan jawab pertanyaan di bawah ini.</b></span></p>
 				</div>
 			</div>
-			<div class="conso" id="conso">
-				<div class="btn-group2">
+			<div class="conso mean5" id="conso">
+				<div class="btn-group2 laptop">
 					<a onclick="consomean()" id="cmean1">Contoh Soal</a>
 					<a onclick="cobamean()" id="cmean2">Pertanyaan</a>
+				</div>
+				<div class="btn-group2 hp">
+					<a onclick="consomean()" id="cmean1a">Contoh Soal</a>
+					<a onclick="cobamean()" id="cmean2a">Pertanyaan</a>
 				</div>
 				<div id="containermodus">
 					<div id="consomodus">
@@ -230,6 +237,22 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/mean5.js"></script>
 		<script src="../../js/latihan_mean3.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('median1','median1');
+				if(localStorage.getItem("progress") <=10){
+		      		localStorage.setItem("progress",10)
+		      	}
+
+		      	location.href = 'median1.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

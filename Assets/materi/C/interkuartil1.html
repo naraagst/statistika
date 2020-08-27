@@ -27,10 +27,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Jangkauan Interkuartil</h2>
@@ -39,7 +41,7 @@
 				<img src="../../gambar/jinterkuartil1.png" style="width:98%;margin-top:0px;">
 				<p>Jangkauan interkuartil dinotasikan dengan $Q_R$, sehingga </p>
 				<center>
-				<p  class="frame" style="width:50%">
+				<p  class="frame w-50">
 					<b style="margin-left:20%;font-size: 20px">$Q_R$ = $Q_3$ - $Q_1$</b><br/><br/><span style="font-size: 16px;">$Q_R$ = Jangkauan Interkuartil<br/>$Q_3$ = Kuartil Atas<br/>$Q_1$ = Kuartil Bawah</span>
 				</p>
 				</center>
@@ -96,6 +98,22 @@
 		<script src="../../js/style.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/interkuartil1.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('inter2','inter2');
+				if(localStorage.getItem("progress") <=23){
+		      		localStorage.setItem("progress",23)
+		      	}
+
+		      	location.href = 'interkuartil2.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html> 

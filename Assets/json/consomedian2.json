@@ -1,7 +1,7 @@
 {
 	"consomedian":[
 		{
-			"soal":"<b>Soal :</b><br/>Berapakah median dari data tinggi badan siswa kelas VII SMPN 2 Banjarmasin berikut?",
+			"soal":"<b>Soal :</b><br/>Berapakah median dari data tinggi badan siswa kelas VIII SMPN 13 Banjarmasin berikut?",
 			"data":"<center><img src='../../gambar/consomedian2.png' style='width:50%'></center>",
 			"soal2":"",
 			"pembahasan":"<p><b>Pembahasan :</b><br/>Banyak data (<i>n  </i>) = 25<br/><img src='../../gambar/consomedian3.png' style='width:40%'><br/><b>Jadi, median dari data tersebut adalah 150cm</b></p>"

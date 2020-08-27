@@ -19,14 +19,15 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
 			<div class="ujikompetensi">
 				<div class="submateri2">
 					<div style="width:100%;display: block">
-					<h2 class="text-left" style="width:80%;float:left;">Latihan</h2>
+					<h2 class="text-left" style="width:60%;float:left;">Latihan</h2>
 					<div class="btn btn-md btn-dark text-right" id="time" style="float:right;">00 : 00</div> 
 					</div>
 					<div class="row" style="float: left;width: 100%">
@@ -40,7 +41,7 @@
 						</div>
 						<div class="soal">
 							<!-- column u/ tampil soal -->
-							<div class="card">
+							<div class="card ml-3">
 								<div class="card-body">
 									<div class="quiz-container">
 										<div id="quiz"></div>
@@ -61,8 +62,10 @@
 		</div>
 
 		<script src="../../js/sidebardisable.js"></script>
+		<script src="../../js/style.js"></script>
 		<script src="../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
 		<script src="../../bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../js/tanggal.js"></script>
 		<script src="soal.js"></script>
 		<script>
 			let randomQuestion = myQuestions.sort((a,b) => {return 0.5 - Math.random()})
@@ -138,6 +141,13 @@
 				sessionStorage.setItem('questionLength', sliceQuestion.length)
 				sessionStorage.setItem('correct', numCorrect)
 				sessionStorage.setItem('wrong', numWrong)
+				sessionStorage.setItem('tanggal', tanggalHariIni)
+				sessionStorage.setItem('waktu', waktuSekarang)
+
+				localStorage.setItem('unduh','unduh');
+				if(localStorage.getItem("progress") <=27){
+		      		localStorage.setItem("progress",27)
+		      	}
 				location.href = './hasil.html'
 			}
 
@@ -197,6 +207,8 @@
 			submitButton.addEventListener("click", results)
 			nextButton.addEventListener("click", showNextSlide)
 			previousButton.addEventListener("click", showPreviousSlide)
+
+
 
 			let showTime = document.querySelector("#time")
 			let startMinute = 60

@@ -34,7 +34,30 @@
 					]
 				}]
 			});
+			var chart4a = new CanvasJS.Chart("chartContainer4a", {
+				animationEnabled: true,
+				theme: "light2",
+				axisY: {
+					title: "Banyak Bayi Lahir"
+				},
+				data: [{        
+					type: "line",  
+					showInLegend: true, 
+					legendText: "Tahun",     
+					dataPoints: [      
+						{ y: 7, label: "2001" },
+						{ y: 10,  label: "2002" },
+						{ y: 13,  label: "2003" },
+						{ y: 17,  label: "2004" },
+						{ y: 20,  label: "2005" },
+						{ y: 22, label: "2006" },
+						{ y: 24, label: "2007" },
+						{ y: 25, label: "2008" },
+					]
+				}]
+			});
 			chart4.render();
+			chart4a.render();
 
 			}
 
@@ -43,18 +66,27 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
+			<div class="conso hp">
+				<div class="hp"><h2>Menganalisis Data</h2></div>
+				<h3>Diagram Garis Jumlah Kelahiran di Desa Suka Makmur</h3>
+				<div id="chartContainer4a" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
+				<p class="caption">Diagram 2. Data kelahiran puskesmas Desa Suka Makmur</p>
+				<p style="color: red; font-size: 14;">*catatan: ketuk setiap titik pada diagram untuk mengetahui jumlah data</p>
+			</div>
 			<div class="materi">
-				<h2>Menganalisis Data</h2>
+				<div class="laptop"><h2>Menganalisis Data</h2></div>
 				<div class="submateri" id="submateri">
 					<p>Bagaimana kita membaca data dalam grafik?</p>
-					<p>Perhatikan gambar diagram garis yang terdapat di Puskesmas Desa Suka Makmur di samping.</p>
+					<p>Perhatikan gambar diagram garis yang terdapat di Puskesmas Desa Suka Makmur <span class="laptop">di samping</span><span class="hp">di atas</span>.</p>
 					<p>
-						Diagram di samping menunjukkan bahwa pada tahun 2001 terdapat 7 kelahiran, tahun 2002 sebanyak 10 kelahiran, dan seterusnya. Temukan juga keterangan-keterangan lain yang dapat kalian peroleh dari diagram di samping.
+						Diagram <span class="laptop">di samping</span><span class="hp">di atas</span> menunjukkan bahwa pada tahun 2001 terdapat 7 kelahiran, tahun 2002 sebanyak 10 kelahiran, dan seterusnya. Temukan juga keterangan-keterangan lain yang dapat kalian peroleh dari diagram di samping.
 					</p>
 					<div class="isian">
 					<form name="form">
@@ -141,12 +173,13 @@
 					</ol>
 					<p id="hasilbenar" style="color: green; font-weight: bold;"></p>
 					<p id="hasilsalah" style="color: red; font-weight: bold;margin-top: -15px"></p>
-					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek" style="margin-left:30px;">
-					<div id="isi" style="float: right; font-size: 24px; font-weight:bold; color:red;"></div>
-					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek" id="ulangi">
-					<input type="button" name="submit" onclick="lihatjwb()" value="Lihat Jawaban" class="cek" id="lihat">
+					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek tombolhp" style="margin-left:30px;">
+					<div id="isi"></div>
+					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek tombolhp" id="ulangi">
+					<input type="button" name="submit" onclick="lihatjwb()" value="Lihat Jawaban" class="cek tombolhp" id="lihat">
 					</form>
 						<div id="jwb_analisis4" style="width:100%;">
+							<h3>Pembahasan</h3>
 							<ol>
 								<li>
 									Banyak kelahiran di Desa Suka Makmur adalah sebagai berikut<br/>
@@ -172,7 +205,7 @@
 				</div>
 				
 			</div>
-			<div class="conso">
+			<div class="conso laptop">
 				<h3>Diagram Garis Jumlah Kelahiran di Desa Suka Makmur</h3>
 				<div id="chartContainer4" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
 				<p class="caption">Diagram 2. Data kelahiran puskesmas Desa Suka Makmur</p>
@@ -197,7 +230,22 @@
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script src="../../js/style.js"></script>
 		<script src="../../js/canvasjs.min.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
 
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('ana4','ana4');
+				if(localStorage.getItem("progress") <=3){
+		      		localStorage.setItem("progress",3)
+		      	}
+
+		      	location.href = 'analisis5.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

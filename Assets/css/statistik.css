@@ -73,7 +73,6 @@ a{
 	border: 3px solid white;
 }
 .header i{
-	margin-top:10px;
 	font-size:30px;
 }
 .tooltip {
@@ -118,7 +117,7 @@ a{
   opacity: 1;
 }
 
-.sidebar{
+.sidebar, .sidebar2{
 	width:17%;
 	height:85%;
 	background-color: rgb(40,40,40);
@@ -133,7 +132,7 @@ a{
 	width:30%;
 }
 
-.sidebar a{
+.sidebar a, .sidebar2 a{
 	list-style-type: none;
 	border-bottom: 1px dashed rgb(0,156,255);
 }
@@ -148,7 +147,7 @@ a{
 	margin-top: 15px;
 	margin-left: 5px;
 }
-.sidebar a, .dropbtn {
+.sidebar a, .sidebar2 a, .dropbtn {
 	padding:10px;
 	text-decoration: none;
 	color:white;
@@ -157,14 +156,14 @@ a{
 	display:block; 
 }
 
-.sidebar a:hover{
+.sidebar a:hover, .sidebar2 a:hover{
 	padding:10px;
 	background-color: rgb(0,156,255);
 	display:block; 
 	color:black;
 }
 
-.sidebar li:hover{
+.sidebar li:hover, .sidebar2 li:hover{
 	background-color: rgb(20,20,20);
 }
 
@@ -185,7 +184,11 @@ a{
 }
 
 .show{
-	display:block;
+	display:block !important;
+}
+
+.opa{
+	opacity: 10% !important;
 }
 
 .hide{
@@ -249,7 +252,7 @@ a{
 	margin:20px;
 }
 
-.materi h2, .materi2 h2, .ujikompetensi h2{
+.materi h2, .materi2 h2, .ujikompetensi h2, .hp h2{
 	padding:5px;
 	border-left:10px solid rgb(0,156,255);
 	color:rgb(0,106,150);
@@ -301,7 +304,9 @@ a{
 }
 .btn-group .active {
 	position:relative;
-	color: black;
+	color: black !important;
+	opacity:100%;
+	pointer-events: none;
 }
 .btn-group a:not(:last-child) {
   border-right: none; /* Prevent double borders */
@@ -315,6 +320,7 @@ a{
 	padding: 10px;
 	padding-left: 5px;
 	margin-left: 30%;
+	opacity: 100%;
 }
 
 .submateri{
@@ -361,7 +367,7 @@ a{
 	width:100%;
 	height:89%;
 }
-.halaman{
+.halaman, .halaman2, .halaman3{
 	height:10%;
 	width:100%;
 }
@@ -474,7 +480,7 @@ a{
 	border-bottom:3px solid rgb(0,156,255);
 }
 
-.sidebar .active{
+.sidebar .active, .sidebar2 .active{
 	background-color: rgb(20,20,20);
 }
 .activelat{
@@ -494,6 +500,44 @@ a{
 	pointer-events: none;
 	color:white !important;
 }
+
+.kemajuan{
+	width:85%;
+	background-color: lightgrey;
+	height:20px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	float: left;
+}
+
+#kemajuan-bar{
+	background-color: rgb(0,84,130);
+	float: left;
+	border-radius: 5px;
+	height: 20px;
+	color: white;
+	font-family: Muli;
+	font-weight: bold;
+	text-align: center;
+	transition-property: width;
+ 	transition-duration: 1s;
+	transition-timing-function: ease-in;
+}
+
+.progteks{
+	float: left;
+	font-family: Poppins;
+	font-weight: bold;
+	margin:2px 10px 0px 40px;
+}
+.btn-group .disabledhal{
+	opacity: 70% !important;
+	cursor:not-allowed !important;
+	color:white !important;
+	pointer-events: none !important;
+}
+
 .caption{
 	font-family: Poppins;
 	font-size: 12px !important;
@@ -501,7 +545,558 @@ a{
 	font-style: italic;
 }
 
-::-webkit-scrollbar{
+.iconmenu{
+	color: rgb(0,156,255);
+	float: right;
+	margin-right: 10%;
+	margin-top: 5px;
+	display: none;
+}
+.btn-group3{
+	display: none;
+}
+.laptop{
+	display: inline-block;
+}
+.hp{
+	display: none;
+}
+#hasilddbenar{
+	font-size: 18px;
+	color: green;
+	font-weight: bold;
+	display: none;
+}
+#hasilddsalah{
+	font-size: 18px;
+	color: red;
+	font-weight: bold;
+	display: none;
+}
+.identitas-kuis{
+	font-family: Muli;
+}
+.tabel-hasil{
+	width: 41% !important;
+}
+.tabelkuis td{
+	font-weight: bold;
+	font-family: Muli;
+}
+#hasilsalah{
+	color: red; font-weight: bold;margin-top: -15px;
+}
+#isi{
+	float: right; 
+	font-size: 24px; 
+	font-weight:bold; 
+	font-family: Poppins;
+	color:red;
+}
+.mb-10{
+	margin-bottom: 10px;
+}
+#letak img{
+	width:70%;
+}
+#hid_mdn2 img{
+	width: 80%;
+}
+.w-50{
+	width: 50%;
+}
+.w-60{
+	width: 60%;
+}
+#gbrk2, #gbrk3, #gbrk4{
+		width: 70%;
+	}
+.w-25{
+	width:25%;
+}
+@media only screen and (max-width: 1212px) and (min-width: 500px) {
+	body{
+		height: 100% !important;
+		overflow-y: scroll !important;
+	}
+	.konten{
+		width: 100% !important;
+		height: auto !important;
+		overflow-y: scroll !important;
+	}
+	.sidebar{
+		position: absolute;
+		width: 100%;
+		height: auto !important;
+		display: none;
+		z-index: 99;
+	}
+	.iconmenu{
+		display: block !important;
+	}
+	.subkonten{
+		width: 100% !important;
+		height: 80% !important;
+		margin-bottom: 0 !important;
+	}
+	.materi{
+		width:48% !important;
+		margin-left: 0.5% !important;
+		margin-right: 0 !important;
+		height: 100% !important;
+		padding-bottom: 10px;
+	}
+	.submateri{
+		height: 92% !important;
+	}
+	.conso{
+		width:48% !important;
+		margin-left: 1% !important;
+		padding: 0px 0px 10px 0px;
+		height: 100% !important;
+		margin-bottom: 5px !important;
+		overflow-x: auto !important;
+	}
+	#logo{
+		width: auto;
+	}
+	.header{
+		height: 60px;
+	}
+	.btn-group{
+		margin-top: 0 !important
+	}
+}
+@media only screen and (max-width: 500px) {
+	body{
+		height: auto;
+		width: 100% !important;
+		overflow-y: scroll !important;
+		overflow-x: hidden !important;
+		position: relative;
+		background-color: rgb(0,156,255,0.2);
+	}
+	.header{
+		height: 40px;
+		position: sticky;
+	}
+	.sidebar{
+		position: absolute;
+		width: 100%;
+		height: auto !important;
+		display: none;
+		z-index: 99;
+	}
+	.konten{
+		width: 100% !important;
+		height: auto !important;
+		background-color: rgb(255,255,255,0);
+	}
+	.materi2{
+		margin-left:2% !important;
+		height: auto !important;
+	}
+	.submateri2{
+		height: auto !important;
+	}
+	.btn-group{
+		margin-left: 7%;
+		margin-top:10px !important;
+	}
+	.tabel{
+		width: 100% !important;
+	}
+	.isian_median table{
+		width: 100% !important;
+	}
+	.isian_median td,.isian_median tr{
+		font-size: 14px !important;
+		width: auto !important;
+	}
+	.btn-group a{
+		font-size:10px;
+	}
+	.materi p, .materi ol, .conso p, .materi2 p, .conso ol, .soal p{
+	font-size: 15px;
+	margin:20px;
+	}
+	.progressbar{
+		width: 100%;
+	}
+	.kemajuan{
+		width:78%;
+	}
+	.progteks{
+		font-size: 12px;
+		margin:2px 10px 0px 3px;
+	}
+	#logo{
+		width:auto;
+	}
+	#judulT, #isiT li{
+		font-size: 15px !important;
+	}
+	.materi{
+		width:97%;
+		margin-left: 2%;
+		height: auto !important;
+		padding-bottom: 10px;
+	}
+	.iconmenu{
+		display: block !important;
+	}
+	.conso{
+		width:95% !important;
+		margin-left: 2%;
+		padding: 0px 0px 10px 0px;
+		height: auto !important;
+		margin-bottom: 5px !important;
+		overflow-x: auto !important;
+	}
+	.petunjuk{
+		margin:0 !important;
+		padding: 2px;
+	}
+	.petunjuk a, .petunjuk li{
+		font-size: 12px !important;
+	}
+	.btn-group3{
+		display: block;
+	}
+	.subkonten{
+		height: auto !important;
+	}
+	#petunjuka{
+		font-size: 14px !important;
+	}
+	.isian{
+		margin:5px;
+	}
+	.angka, .angka td{
+		line-height: 15px !important;
+	}
+	.langkahmean2{
+		font-size: 3vw !important;
+	}
+	.tiga td, .tiga input{
+	font-size: 3vw !important;
+	}
+	.langkahmean3{
+		width:60px !important;
+	}
+	#div1,#div2,#div3 {
+  		width: 130px !important;
+  		padding: 0px !important;
+	}
+	#drag1,#drag2,#drag3{
+		font-size:13px !important;
+		width:130px !important;
+	}
+	.cek{
+		font-size: 12px;
+	}
+	.btn-group2 a{
+		width:40% !important;
+		font-size: 16px !important;
+	}
+	.materi{
+		margin-bottom: 5px;
+	}
+	.laptop{
+	display: none;
+	}
+	.hp{
+		display: inline-block;
+	}
+	#rumusmean td, #rumusmean table{
+	font-size:3vw !important;
+	}
+	.rataratamean{
+		width: auto !important;
+	}
+	#hasilddsalah, #hasilddbenar{
+		font-size: 15px;
+	}
+	.nextSoal, .prevSoal, .cekdisabled{
+		width:auto !important;
+	}
+	#rumus{
+		height: auto !important;
+	}
+	.mean4 h3{
+		width: 100%;
+		text-align: center;
+		padding: 0 !important;
+	}
+	.rumusmeanfrek{
+		margin-left: 0 !important;
+	}
+	.rumusmeanfrek img{
+		width:90% !important;
+	}
+	.frame{
+		margin:5px !important;
+		padding: 5px !important;
+	}
+	.consonav1{
+		font-size: 14px !important;
+	}
+	.mean5{
+		height: auto !important;
+	}
+	.fontt{
+		font-size: 13px !important;
+	}
+	.boldd{
+		font-weight: bold !important;
+	}
+	.submateri p{
+		margin-bottom: 5px !important;
+	}
+	.median li{
+		font-size: 15px !important;
+	}
+	.isian_median input{
+		width:30px !important;
+		padding: 1px !important;
+		font-size:13px !important;
+	}
+	#tengah button, #tengah2 button, #tengah3 button{
+		font-size:14px !important;
+		padding:3px !important;
+	}
+	#ddrumusmean{
+		height: auto !important;
+	}
+	.submateri{
+		height: auto !important;
+	}
+	.ujikompetensi{
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.nomor{
+		width:100% !important;
+		margin:0 2%;
+	}
+	.soal{
+		width:100% !important;
+		padding: 0 !important;
+		margin:0 0 0 2% !important;
+
+	}
+	.quiz-container{
+		height: 490px !important;
+
+	}
+	#quiz img{
+		width: 100% !important;
+	}
+	#quiz, #quiz p, .answers{
+		font-size: 16px !important;
+		text-align: justify;
+	}
+	.nosoal{
+		width: 18% !important;
+		padding:2px !important;
+	}
+	.tabel-hasil{
+	width: 30% !important;
+	}
+
+	/*HALAMAN KI KD INFO*/
+	.kikdmenu{
+		width:95% !important;
+		height: auto !important;
+	}
+	.kikdmenu li{
+		float:left !important;
+		font-size: 15px !important;
+		width: 30% !important;
+
+	}
+	.kikdmenu a{
+		border-radius: 5px !important;
+		font-size: 12px !important;
+		height: 70px !important;
+		text-align: center !important; 
+	}
+	.menuBeranda{
+		margin: 0 !important;
+		margin-top: 5px !important;
+	}
+	.kikdisi, .info{
+		width: 95% !important;
+		height:75% !important;
+	}
+	.kikdisi td{
+		font-size: 15px !important;
+		width: auto !important;
+	}
+	.kikdisi table, .info td{
+		font-size: 15px !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	.info td{
+		border-bottom: 1px solid lightgrey;
+	}
+	.kikdisi h1, .info h1{
+		font-size: 20px !important;
+	}
+	.info p{
+		font-size: 15px !important;
+		margin: 10px !important;
+	}
+
+	/*ANALISIS*/
+	.subisi td{
+		font-size: 15px !important;
+	}
+	#hasilsalah{
+		margin-top:0 !important;
+	}
+	.tombolhp{
+		width:auto !important;
+	}
+	#isi{
+		font-size: 18px;
+	}
+
+	/*MEAN*/
+	.isian input{
+		width:40px;
+	}
+	#petunjuka2{
+		font-size: 15px !important;
+	}
+	.tabcontent #soal, .tabcontent p{
+		font-size: 15px !important;
+		font-family: Muli !important;
+	}
+	 .tabcontent td, .tabcontent th{
+	 	font-size: 12px !important;
+		font-family: Muli !important;
+	 }
+	#petunjuk2, #petunjuk{
+		padding-left: 25px !important;
+	}
+	#consomodus p{
+		font-size: 15px !important;
+	}
+	.mean4, .submateri5{
+		height: auto !important;
+	}
+	#letak img{
+	width:90% !important;
+	}
+
+	/*MEDIAN*/
+	.font2 table tr td, .font2 th{
+		padding:5px !important;
+		font-size:12px !important;
+	}
+	.isian_median td{
+		padding:5px !important;
+	}
+	.isian_median input{
+		width:20px !important;
+	}
+	.isian_median .rumuskiri{
+		width: 70px !important;
+	}
+	.isian_median{
+		margin-left:-5% !important;
+	}
+	.tabelkecil table{
+		margin: 5px !important;
+	}
+	#hid_mdn2 img{
+	width: 100%;
+	}
+	#pembahasanmean img, #datamodus img{
+		width:70% !important;
+	}
+	.w-50{
+		width: 80%;
+	}
+	.w-25{
+		width:100px !important;
+	}
+	.rumusmodus{
+		background-color: lightblue !important;
+		padding: 5px !important;
+		line-height: 25px !important;
+		font-size: 14px !important;
+	}
+	.consomodus2 input, .tabelinput input{
+		width:50px !important;
+	}
+
+	/*JANGKAUAN*/
+	.jangtab{
+		width:150px !important;
+		font-size: 15px !important;
+	}
+	.inpjangkauan td{
+		font-size: 15px !important;
+	}
+	.w-60{
+		width: 80% !important;
+	}
+
+	/*KUARTIL*/
+	#gbrk2, #gbrk3, #gbrk4{
+		width: 90% !important;
+	}
+	.kuartil2 input{
+		padding: 5px !important;
+		width: 30px !important;
+	}
+	.kuartil2{
+		margin-left:10px !important;
+	}
+	.bigtabel td, .bigtabel th{
+		font-size:14px !important;
+	}
+}
+
+@media only screen and (max-width: 372px) {
+	.btn-group3 a{
+		width: 38% !important;
+	}
+	.btn-group2{
+		width: 103% !important;
+	}
+	.btn-group{
+		margin-left: 1%;
+	}
+
+}
+
+@media only screen and (max-width: 340px) {
+
+	/*MEAN*/
+	.btn-group3 a{
+		width: 38% !important;
+	}
+	.btn-group2{
+		width: 115% !important;
+	}
+	.btn-group{
+		margin-left: 1%;
+	}
+	#div1,#div2,#div3 {
+  		width: 115px !important;
+  		padding: 0px !important;
+	}
+	#drag1,#drag2,#drag3{
+		font-size:12px !important;
+		width:115px !important;
+	}
+
+}
+/*::-webkit-scrollbar{
 	width:11px;
 	background: #ffffff;
 }
@@ -514,7 +1109,7 @@ a{
 
 ::-webkit-scrollbar-track {      
     background: lightgrey;    
-}
+}*/
 
 
 

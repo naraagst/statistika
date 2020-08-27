@@ -35,10 +35,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Kuartil</h2>
@@ -125,7 +127,7 @@
 								<button onclick="t11()" id="tgh10">9</button>
 							</div>
 							</center>
-							<center><img src="../../gambar/langkah2kuartil.png" width="70%" id="gbrk2"></center>
+							<center><img src="../../gambar/langkah2kuartil.png" id="gbrk2"></center>
 							<p id="ket"></p>
 						</li>
 						<li id="k3">Tentukan kuartil bawah (Q<sub>1</sub>) yang terletak di antara nilai terendah dan Q<sub>1</sub>.<br/>
@@ -145,7 +147,7 @@
 								<button class="noborder" disabled>9</button>
 							</div>
 							</center>
-							<center><img src="../../gambar/langkah3kuartil.png" width="70%" id="gbrk3"></center>
+							<center><img src="../../gambar/langkah3kuartil.png" id="gbrk3"></center>
 							<p id="ket2"></p>
 						</li>
 						<li  id="k4">Tentukan kuartil atas (Q<sub>3</sub>) yang terletak di antara Q<sub>2</sub> dan nilai tertinggi.<br/><span class="rednote">*Klik salah satu angka dibawah ini untuk menentukan Q<sub>3</sub>.</span>
@@ -164,7 +166,7 @@
 								<button onclick="qa5()" id="qa4" >9</button>
 							</div>
 							</center>
-							<center><img src="../../gambar/langkah4kuartil.png" width="70%" id="gbrk4"></center>
+							<center><img src="../../gambar/langkah4kuartil.png" id="gbrk4"></center>
 							<p id="ket3">Benar, kuartil atas (Q<sub>3</sub>) dari data tersebut adalah <b>7</b>.</p>
 						</li>
 					</ol>
@@ -243,6 +245,22 @@
 		<script src="../../js/style.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/kuartil1.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('kuartil2','kuartil2');
+				if(localStorage.getItem("progress") <=21){
+		      		localStorage.setItem("progress",21)
+		      	}
+
+		      	location.href = 'kuartil2.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

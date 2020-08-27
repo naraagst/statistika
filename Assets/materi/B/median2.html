@@ -26,6 +26,7 @@
 		<script>
 			window.onload = function awal(){
 				document.getElementById("cmean1").style="border:5px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;";
+				document.getElementById("cmean1a").style="border:2px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;";
 				document.getElementById("cobamodus").hidden=true;
 
 			};
@@ -34,10 +35,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Nilai Tengah (Median)</h2>
@@ -53,12 +56,17 @@
 						Jika banyak data yang sudah terurut <b>genap</b>, maka mediannya adalah nilai rata-rata (mean) dari dua nilai data yang di tengah. Median pada data genap dapat dirumuskan sebagai berikut: <br/><center><img src="../../gambar/rumusmedian.png"></center>
 						</li>
 					</ul>
+					<p class="hp"><b>Silahkan pelajari contoh soal dan jawab pertanyaan di bawah.</b></p>
 				</div>
 			</div>
 			<div class="conso" id="conso"  style="overflow-y: hidden;">
-				<div class="btn-group2">
+				<div class="btn-group2 laptop">
 					<a onclick="consomean()" id="cmean1">Contoh Soal</a>
 					<a onclick="cobamean()" id="cmean2">Pertanyaan</a>
+				</div>
+				<div class="btn-group2 hp">
+					<a onclick="consomean()" id="cmean1a">Contoh Soal</a>
+					<a onclick="cobamean()" id="cmean2a">Pertanyaan</a>
 				</div>
 				<div id="containermodus">
 					<div id="consomodus">
@@ -212,17 +220,7 @@
 
 			</div>
 			</div>
-			<div class="halaman">
-				<div class="btn-group">
-					<a href="median1.html"><< Sebelumnya</a>
-					<a href="median1.html">1</a>
-					<a href=javascript:void(0)  class="active">2</a>
-					<a href="median3.html">3</a>
-					<a href="median4.html">4</a>
-					<!-- <a href="median5.html">5</a> -->
-					<a href="median3.html">Selanjutnya >></a>
-				</div>
-			</div>
+			<div class="halaman"></div>
 		</div>
 
 		<script src="../../js/sidebar.js"></script>
@@ -231,6 +229,22 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/consomedian2.js"></script>
 		<script src="../../js/latihan_median1.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('median3','median3');
+				if(localStorage.getItem("progress") <=12){
+		      		localStorage.setItem("progress",12)
+		      	}
+
+		      	location.href = 'median3.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

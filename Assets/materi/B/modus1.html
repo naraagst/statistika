@@ -10,10 +10,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="materi2">
 				<div class="submateri2">
 					<h2>Modus</h2>
@@ -27,21 +29,29 @@
 				
 			</div>
 			<div class="halaman">
-				<div class="btn-group">
-					<a href="median4.html"><< Sebelumnya</a>
-					<a href="#" class="active">1</a>
-					<a href="modus2.html">2</a>
-					<a href="modus3.html">3</a>
-<!-- 					<a href="modus4.html">4</a>
-					<a href="modus5.html">5</a> -->
-					<a href="modus2.html">Selanjutnya >></a>
-				</div>
+				
 			</div>
 		</div>
 
 		<script src="../../js/sidebar.js"></script>
 		<script src="../../js/unlock-pages.js"></script>
 		<script src="../../js/style.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('modus2','modus2');
+				if(localStorage.getItem("progress") <=15){
+		      		localStorage.setItem("progress",15)
+		      	}
+
+		      	location.href = 'modus2.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

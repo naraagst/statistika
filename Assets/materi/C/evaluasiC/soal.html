@@ -25,14 +25,15 @@
 	<body>
 		<div class="header">
 			<img src="../../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
 			<div class="ujikompetensi">
 				<div class="submateri2">
 					<div style="width:100%;display: block">
-					<h2 class="text-left" style="width:80%;float:left;">Uji Kompetensi</h2>
+					<h2 class="text-left" style="width:60%;float:left;">Kuis</h2>
 					<div class="btn btn-md btn-dark text-right" id="time" style="float:right;">00 : 00</div> 
 					</div>
 					<div class="row" style="float: left;width: 100%">
@@ -68,6 +69,7 @@
 
 		<script src="../../../js/sidebardisable.js"></script>
 		<script src="../../../js/style.js"></script>
+		<script src="../../../js/tanggal.js"></script>
 		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
 		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
 		<script src="script.js"></script>
@@ -145,6 +147,8 @@
 				sessionStorage.setItem('questionLength', sliceQuestion.length)
 				sessionStorage.setItem('correct', numCorrect)
 				sessionStorage.setItem('wrong', numWrong)
+				sessionStorage.setItem('tanggal', tanggalHariIni)
+				sessionStorage.setItem('waktu', waktuSekarang)
 				location.href = './hasil.html'
 			}
 

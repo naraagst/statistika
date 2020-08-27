@@ -5,7 +5,7 @@
 		<link href="../../css/statistik.css" rel="stylesheet">	
 		<link href="../../css/materi2.css" rel="stylesheet">	
 		<link href="../../css/latihanfix.css" rel="stylesheet">
-		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>	
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
         .tabcontent {
@@ -25,7 +25,7 @@
 		</script>
 		<script>
 			window.onload = function awal(){
-				document.getElementById("containermodus").hidden=true;
+			
 			};
 		</script>
 	</head>
@@ -39,46 +39,38 @@
 		<div class="konten">
 			<div class="progressbar"></div>
 			<div class="subkonten">
-			<div class="materi">
-				<h2>Jangkauan</h2>
-				<p>Jangkauan adalah selisih datum terbesar dan terkecil. Jangkauan dinotasikan dengan <i>J</i>, sehingga :</p>
+			<div class="materi" style="overflow-y: auto;overflow-x: hidden;">
+				<h2>Jangkauan Interkuartil</h2>
+				<p><b>Jangkauan interkuartil</b> adalah selisih antara kuartil atas ($Q_3$) dan kuartil bawah ($Q_1$).</p>
+				<p>Jangkauan interkuartil dinotasikan dengan $Q_R$, sehingga </p>
 				<center>
-				<div class="rumusmodus" style="width:50%">
-					<p>$J$ = $X_{maks} - X_{min}$</p>
+				<p  class="frame w-50">
+					<b style="margin-left:20%;font-size: 20px">$Q_R$ = $Q_3$ - $Q_1$</b><br/><br/><span style="font-size: 16px;">$Q_R$ = Jangkauan Interkuartil<br/>$Q_3$ = Kuartil Atas<br/>$Q_1$ = Kuartil Bawah</span>
+				</p>
+				</center>
+				<h2>Simpangan Kuartil</h2>
+				<p><b>Simpangan kuartil</b> atau jangkauan semi interkuartil adalah setengah dari jangkauan interkuartil. </p>
+				<p>Simpangan kuartil dinotasikan dengan Q<sub>d</sub>, sehingga</p>
+				<center>
+				<div class="frame w-60" style="padding:0px;">
+
+					<p style="font-size: 20px; text-align: center;"><b>$Q_d$ = $\frac{1}{2}Q_R$ <br/>atau<br/> $Q_d$ = $\frac{1}{2}(Q_3-Q_1)$</b></p>
+
+					<p style="font-size: 16px;">$Q_d$ = Simpangan kuartil <br/>$Q_R$ = Jangkauan Interkuartil<br/>$Q_3$ = Kuartil Atas<br/>$Q_1$ = Kuartil Bawah</p>
 				</div>
 				</center>
-				<p>dengan:<br/>$J$ = Jangkauan<br/>$X_{maks}$ = Datum terbesar<br/>$X_{min}$ = Datum terkecil</p>
-				<p><span class="hp">Silahkan pelajari contoh soal dan jawab pertanyaan di bawah ini.</span></p>
 			</div>
-			<div class="conso" id="conso" style="overflow: auto;">
-				<div class="btn-group2 laptop">
-					<a onclick="consomean()" id="cmean1">Contoh Soal</a>
-					<a onclick="cobamean()" id="cmean2">Pertanyaan</a>
-				</div>
-				<div class="btn-group2 hp">
-					<a onclick="consomean()" id="cmean1a">Contoh Soal</a>
-					<a onclick="cobamean()" id="cmean2a">Pertanyaan</a>
-				</div>
-				<div id="containermodus">
-					<div id="consomodus">
-						<p id="soalmodus"></p>
-						<div id="datamodus" class="soalmodus"></div>
-						<p id="soalmodus2"></p>
-						<div id="pembahasanmean">
-							
-						</div>              
-						<div class="consonav">
-							<a id="prev"><img src="../../gambar/prev.png"/></a>
-							<div class="consonav1"><span id="noconso"></span> dari <span id="jlhsoal"></span></div>
-							<a id="next"><img src="../../gambar/next.png"/></a>
-						</div>
+			<div class="conso" id="conso" style="overflow: hidden;">
+				<div class="containerlat">
+					<div class="judullat">
+						<h2>Pertanyaan</h2>
 					</div>
-					<div id="cobamodus">
+					<div class="soallat">
 						<div class="petunjuk">
 							<a href=javascript:void(0) onclick="petunjuk()"><p id="petunjuka"><b>Klik untuk menyembunyikan petunjuk</b></p>
 							<div id="petunjuk">
 							<ul>
-									<li>Hitunglah jangkauan dari setiap soal berikut, kemudian isi jawabannya pada kolom input yang telah disediakan. </li> 
+									<li>Hitunglah jangkauan interkuartil dan simpangan kuartil dari setiap soal berikut, kemudian isi jawabannya pada kolom input yang telah disediakan. </li> 
 									<li>Klik tombol "Cek Jawaban" untuk memeriksa apakah jawaban benar atau salah. Jika jawaban benar maka bar pada bagian atas soal akan berwarna <font style="color:green;font-weight: bold">Hijau</font>, jika salah maka bar akan berwarna <font style="color:red;font-weight: bold">Merah</font></li> 
 									<li>Klik tombol "Ulang" untuk menjawab ulang soal.</li>
 									<li>Klik tombol ">>" untuk beralih ke soal selanjutnya dan tombol "<<" untuk beralih ke soal sebelumnya.</li>
@@ -97,16 +89,24 @@
 						</center>
 						<div class="tabcontent" id="content1">
 							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
-								<p id="soal"></p>
-								<div id="gbr">			
-								</div>
-								<div id="jwb" class="fontt" style="margin-bottom: 10px;">
-									<span style="display:none;" id="jwbsoal"></span>
-									Jawab :
-									<input type="text" id="jwbsiswa"/>
-									<span id="hasilbenar"></span>
-								</div>
-								<center><span class="fontt benarSemua" style="color:green"></span></center>
+							<p id="soal1"></p>
+							<div id="gbr1">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab :<br/>
+								<table>
+									<tr>
+										<td>Jangkauan interkuartil</td>
+										<td> = <input type="text" class="jwbsiswa1"/></td>
+									</tr>
+									<tr>
+										<td>Simpangan kuartil</td>
+										<td> = <input type="text" class="jwbsiswa1"/></td>
+									</tr>
+								</table>
+								<span id="hasil1"></span>
+							</div>
+							<center><span class="fontt benarSemua" style="color:green"></span></center>
 							<center>
 							<div class="menulat" style="margin-bottom: 10px;">
 								<button class="cekdisabled"><<</button>
@@ -119,16 +119,24 @@
 						</div>
 						<div class="tabcontent" id="content2">
 							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
-								<p id="soal2"></p>
-								<div id="gbr2">			
-								</div>
-								<div id="jwb" class="fontt" style="margin-bottom: 10px;">
-									<span style="display:none;" id="jwbsoal2"></span>
-									Jawab :
-									<input type="text" id="jwbsiswa2"/>
-									<span id="hasilbenar2" style="color:green"></span>
-								</div>
-								<center><span class="fontt benarSemua" style="color:green"></span></center>
+							<p id="soal2"></p>
+							<div id="gbr2">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab :<br/>
+								<table>
+									<tr>
+										<td>Jangkauan interkuartil</td>
+										<td> = <input type="text" class="jwbsiswa2"/></td>
+									</tr>
+									<tr>
+										<td>Simpangan kuartil</td>
+										<td> = <input type="text" class="jwbsiswa2"/></td>
+									</tr>
+								</table>
+								<span id="hasil2"></span>
+							</div>
+							<center><span class="fontt benarSemua" style="color:green"></span></center>
 							<center>
 							<div class="menulat" style="margin-bottom: 10px;">
 								<button class="cek prevSoal"><<</button>
@@ -141,16 +149,24 @@
 						</div>
 						<div class="tabcontent" id="content3">
 							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
-								<p id="soal3"></p>
-								<div id="gbr3">			
-								</div>
-								<div id="jwb" class="fontt" style="margin-bottom: 10px;">
-									<span style="display:none;" id="jwbsoal3"></span>
-									Jawab :
-									<input type="text" id="jwbsiswa3"/>
-									<span id="hasilbenar3" style="color:green"></span>
-								</div>
-								<center><span class="fontt benarSemua" style="color:green"></span></center>
+							<p id="soal3"></p>
+							<div id="gbr3">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab :<br/>
+								<table>
+									<tr>
+										<td>Jangkauan interkuartil</td>
+										<td> = <input type="text" class="jwbsiswa3"/></td>
+									</tr>
+									<tr>
+										<td>Simpangan kuartil</td>
+										<td> = <input type="text" class="jwbsiswa3"/></td>
+									</tr>
+								</table>
+								<span id="hasil3"></span>
+							</div>
+							<center><span class="fontt benarSemua" style="color:green"></span></center>
 							<center>
 							<div class="menulat" style="margin-bottom: 10px;">
 								<button class="cek prevSoal"><<</button>
@@ -163,16 +179,24 @@
 						</div>
 						<div class="tabcontent" id="content4">
 							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
-								<p id="soal4"></p>
-								<div id="gbr4">			
-								</div>
-								<div id="jwb" class="fontt" style="margin-bottom: 10px;">
-									<span style="display:none;" id="jwbsoal4"></span>
-									Jawab :
-									<input type="text" id="jwbsiswa4"/>
-									<span id="hasilbenar4" style="color:green"></span>
-								</div>
-								<center><span class="fontt benarSemua" style="color:green"></span></center>
+							<p id="soal4"></p>
+							<div id="gbr4">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab :<br/>
+								<table>
+									<tr>
+										<td>Jangkauan interkuartil</td>
+										<td> = <input type="text" class="jwbsiswa4"/></td>
+									</tr>
+									<tr>
+										<td>Simpangan kuartil</td>
+										<td> = <input type="text" class="jwbsiswa4"/></td>
+									</tr>
+								</table>
+								<span id="hasil4"></span>
+							</div>
+							<center><span class="fontt benarSemua" style="color:green"></span></center>
 							<center>
 							<div class="menulat" style="margin-bottom: 10px;">
 								<button class="cek prevSoal"><<</button>
@@ -185,16 +209,24 @@
 						</div>
 						<div class="tabcontent" id="content5">
 							<h3 style="text-align: left;padding-left: 20px;">Soal :</h3>
-								<p id="soal5"></p>
-								<div id="gbr5">			
-								</div>
-								<div id="jwb" class="fontt" style="margin-bottom: 10px;">
-									<span style="display:none;" id="jwbsoal5"></span>
-									Jawab :
-									<input type="text" id="jwbsiswa5"/>
-									<span id="hasilbenar5" style="color:green"></span>
-								</div>
-								<center><span class="fontt benarSemua" style="color:green"></span></center>
+							<p id="soal5"></p>
+							<div id="gbr5">			
+							</div>
+							<div id="jwb" class="fontt" style="margin-bottom: 10px;">
+								Jawab :<br/>
+								<table>
+									<tr>
+										<td>Jangkauan interkuartil</td>
+										<td> = <input type="text" class="jwbsiswa5"/></td>
+									</tr>
+									<tr>
+										<td>Simpangan kuartil</td>
+										<td> = <input type="text" class="jwbsiswa5"/></td>
+									</tr>
+								</table>
+								<span id="hasil5"></span>
+							</div>
+							<center><span class="fontt benarSemua" style="color:green"></span></center>
 							<center>
 							<div class="menulat" style="margin-bottom: 10px;">
 								<button class="cek prevSoal"><<</button>
@@ -202,7 +234,6 @@
 								<button class="cek ulang">Ulang</button>
 								<button class="cek ulangLat" style="width: 150px !important;">Ulangi Pertanyaan</button>
 								<button class="cekdisabled">>></button>
-								
 							</div>
 							</center>
 						</div>
@@ -212,13 +243,13 @@
 			</div>
 			<div class="halaman">
 				<div class="btn-group">
-					<a href="jangkauan1.html"><< Sebelumnya</a>
-					<a href="jangkauan1.html">1</a>
-					<a href=javascript:void(0)  class="active">2</a>
-<!-- 					<a href="modus3.html">3</a>
-					<a href="modus4.html">4</a>
+					<a href="interkuartil1.html"><< Sebelumnya</a>
+					<a href="interkuartil1.html">1</a>
+					<a href="simpangan1.html" >2</a>
+					<a href=javascript:void(0)  class="active">3</a>
+					<!-- <a href="modus4.html">4</a>
 					<a href="modus5.html">5</a> -->
- 					<a href="kuartil1.html">Selanjutnya >></a>
+ 					<a href="evaluasiC">Selanjutnya >></a>
 				</div>
 			</div>
 		</div>
@@ -227,24 +258,23 @@
 		<script src="../../js/unlock-pages.js"></script>
 		<script src="../../js/style.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-		<script src="../../js/jangkauan2.js"></script>
-		<script src="../../js/latihan_jangkauan.js"></script>
+		<script src="../../js/latihan_interkuartil.js"></script>
 		<script type="text/javascript">
 			const next = document.querySelectorAll('.lanjut');
 
 			next.forEach((item,index)=>{
 				next[index].addEventListener("click", function(e){
 				e.preventDefault();
-				localStorage.setItem('kuartil1','kuartil1');
-				if(localStorage.getItem("progress") <=20){
-		      		localStorage.setItem("progress",20)
+				localStorage.setItem('kuisc','kuisc');
+				if(localStorage.getItem("progress") <=25){
+		      		localStorage.setItem("progress",25)
 		      	}
 
-		      	location.href = 'kuartil1.html'
+		      	location.href = 'evaluasiC'
 				})
 			})
 			
 		</script>
 	</body>
 	
-</html>
+</html> 

@@ -3,9 +3,13 @@
 		<title>STATISTIKA</title>
 
 		<!-- <link href="css/statistik.css" rel="stylesheet"> -->
+		
+		<link rel="shortcut icon" href="Assets/gambar/analytics.png">
 		<link rel="stylesheet" href="Assets/css/main.css">	
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+		
 	</head>
 	<body style="overflow:hidden">
 		
@@ -15,11 +19,10 @@
 							<div class="logo1">
 								<img src="Assets/gambar/logo.png" alt="Gambar Hilang"/>
 							</div>
-							<center><span class="teks"></span></center>
 							<div class="menu">
 								<div class="wadah" style="margin-left:10%;" id="btnMateri">
 									<div class="gambar" style="border-radius: 12px 0px 0px 12px;">
-										<a href="Assets/materi/a/analisis1.html"><img src="Assets/gambar/analytics.png" alt="Gambar Hilang"/></a>
+										<a href="Assets/Materi/b/mean1.html"><img src="Assets/gambar/analytics.png" alt="Gambar Hilang"/></a>
 									</div>
 									<div class="tulisan">
 										<p>Materi</p>
@@ -46,13 +49,15 @@
 			</section>
 
 	  <script>
-      const teks = document.querySelector('.teks');
-      teks.innerHTML=`
-        <h1>Mohon maaf, media hanya bisa di akses di ukuran layar yang lebih dari 1212px (desktop/laptop).</h1>
-      `;
 
-      document.querySelector("#btnMateri").addEventListener("click", function(){
-      	localStorage.setItem("materiA","materiA");
+      document.querySelector("#btnMateri").addEventListener("click", function(e){
+      	e.preventDefault();
+
+      	localStorage.setItem("materi1","materi1");
+      	
+      	if(localStorage.getItem("progress") <=0){
+      		localStorage.setItem("progress",0)
+      	}
       	location.href = 'Assets/Materi/a/analisis1.html'
       })
  	 </script>

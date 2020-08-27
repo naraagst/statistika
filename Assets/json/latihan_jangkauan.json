@@ -17,7 +17,7 @@
 		},
 		{
 			"soal":"Berikut disajikan berat badan siswa kelas VIII D.",
-			"gbr":"<center><img src='../../gambar/latjang1.PNG' width='60%'></center><p>Berapakah jangkauan dari data di atas?</p>",
+			"gbr":"<center><img src='../../gambar/latjang1.PNG' class='w-60'></center><p>Berapakah jangkauan dari data di atas?</p>",
 			"jwb":5
 		},
 		{

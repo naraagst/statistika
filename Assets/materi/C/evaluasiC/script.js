@@ -30,7 +30,7 @@ const myQuestions = [
 		correctAnswer:"c"
 	},
 	{
-		question:"Data tinggi badan siswa kelas IXB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan dari data tersebut adalah ....</p>",
+		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan dari data tersebut adalah ....</p>",
 		answers:{
 			"a": "7",
 	        "b": "8",
@@ -40,7 +40,7 @@ const myQuestions = [
 		correctAnswer:"d"
 	},
 	{
-		question:"Data tinggi badan siswa kelas IXB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
+		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
 			"a": "146, 148 dan 150",
 	        "b": "148, 150 dan 152",
@@ -50,7 +50,7 @@ const myQuestions = [
 		correctAnswer:"b"
 	},
 	{
-		question:"Data tinggi badan siswa kelas IXB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...",
+		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...",
 		answers:{
 			"a": "6 dan 3",
 	        "b": "3 dan 1.5",

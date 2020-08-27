@@ -9,15 +9,17 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Menganalisis Data</h2>
 				<div class="submateri">
-					<div class="tujuan">
+					<div class="tujuan" onclick="tujuanP()">
 						<div id="judulT">Tujuan Pembelajaran</div>
 						<div id="isiT">
 							<ul>
@@ -97,14 +99,7 @@
 			</div>
 			</div>
 			<div class="halaman">
-				<div class="btn-group">
-					<a href="#" style="cursor: not-allowed;"><< Sebelumnya</a>
-					<a href="#" class="active">1</a>
-					<a href="analisis2.html">2</a>
-					<a href="analisis4.html">3</a>
-					<a href="analisis5.html">4</a>
-					<a href="analisis2.html">Selanjutnya >></a>
-				</div>
+				
 			</div>
 		</div>
 
@@ -115,6 +110,22 @@
 		<script src="../../js/style.js"></script>
 		<script src="../../js/diagram.js"></script>
 		<script src="../../js/canvasjs.min.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('ana2','ana2');
+				if(localStorage.getItem("progress") <=1){
+		      		localStorage.setItem("progress",1)
+		      	}
+
+		      	location.href = 'analisis2.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

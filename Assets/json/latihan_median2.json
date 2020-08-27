@@ -22,7 +22,7 @@
 		},
 		{
 			"soal":"Data tinggi badan siswa kelas IXB diukur sampai cm terdekat sebagai berikut.",
-			"gbr":"<center><img src='../../gambar/latmedian2.JPG' style='width:50%'><br/><br/></center><p>Berapakah median dari data tersebut?</p>",
+			"gbr":"<center><img src='../../gambar/latmedian2.JPG' class='w-50'><br/><br/></center><p>Berapakah median dari data tersebut?</p>",
 			"jwb":150
 		}
 	]

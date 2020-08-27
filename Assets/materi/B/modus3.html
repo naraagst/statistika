@@ -24,6 +24,8 @@
 		</script>
 		<script>
 			window.onload = function awal(){
+				document.getElementById("cmean1").style="border:5px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;";
+				document.getElementById("cmean1a").style="border:2px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;";
 				document.getElementById("cobamodus").hidden=true;
 			};
 		</script>
@@ -31,10 +33,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Modus</h2>
@@ -47,9 +51,13 @@
 				</center>
 			</div>
 			<div class="conso" id="conso" style="overflow: hidden;">
-				<div class="btn-group2">
-					<a onclick="consomodus()" id="cm1">Contoh Soal</a>
-					<a onclick="cobamodus()" id="cm2">Pertanyaan</a>
+				<div class="btn-group2 laptop">
+					<a onclick="consomean()" id="cmean1">Contoh Soal</a>
+					<a onclick="cobamean()" id="cmean2">Pertanyaan</a>
+				</div>
+				<div class="btn-group2 hp">
+					<a onclick="consomean()" id="cmean1a">Contoh Soal</a>
+					<a onclick="cobamean()" id="cmean2a">Pertanyaan</a>
 				</div>
 				<div id="containermodus">
 					<div id="consomodus">
@@ -219,6 +227,22 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/consomodus.js"></script>
 		<script src="../../js/latihan_modus.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('kuisb','kuisb');
+				if(localStorage.getItem("progress") <=17){
+		      		localStorage.setItem("progress",17)
+		      	}
+
+		      	location.href = 'evaluasiB'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

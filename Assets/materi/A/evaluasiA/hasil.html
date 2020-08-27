@@ -13,10 +13,12 @@
 	<body>
 		<div class="header">
 			<img src="../../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="ujikompetensi">
 				<div class="submateri2">
 					<h2>Hasil Kuis</h2>
@@ -26,29 +28,44 @@
 			                    <h1 id="new-score"></h1>
 			                    <p id="wrong-correct"></p>
 			                    <p id="ket"></p>
-				                <button class="btn btn-md btn-primary" id="try-again">Ulang Uji Kompetensi</button>
+				                <button class="btn btn-md btn-primary" id="try-again">Ulang Kuis</button>
 			       		        <button class="btn btn-md btn-success" id="next">Materi Selanjutnya</button>
 			       		        <button class="btn btn-md btn-success" id="ulangi">Pelajari Ulang Materi</button>
 			                </div>
 			                <br/>
-			                <h4 class="text-center">Riwayat Nilai</h4>
-			                <div class="table-responsive">
-			                    <table class="table table-bordered">
-			                        <thead>
-			                            <tr>
-			                                <th>No. </th>
-			                                <th>Nama</th>
-			                                <th>Jawaban Benar</th>
-			                                <th>Jawaban Salah</th>
-			                                <th>Nilai</th>
-			                                <th>Keterangan</th>
-			                            </tr>
-			                        </thead>
-			                        <tbody class="resultsContainer">
-
-			                        </tbody>
-			                    </table>
-			                </div>
+			                <div class="row justify-content-center">
+				                <div class="col-md-5 col-sm-12">
+				                <p><b>Waktu Selesai</b><br/>
+				                Hari, tanggal = <span id="tanggal"></span><br/>
+				                Waktu =<span id="waktu"></span></p>
+				                <div class="card">
+				                    <div class="card-body tabelkuis">
+				                    	<table class="table">
+				                    		<tr>
+				                    			<td class="tabel-hasil">Nama</td>
+				                    			<td>: <span id="namaSiswa"></span></td>
+				                    		</tr>
+				                    		<tr>
+				                    			<td>Kelas</td>
+				                    			<td>: <span id="kelasSiswa"></span></td>
+				                    		</tr>
+				                    		<tr>
+				                    			<td>Jawaban Benar</td>
+				                    			<td>: <span id="jawabanBenar"></span></td>
+				                    		</tr>
+				                    		<tr>
+				                    			<td>Jawaban Salah</td>
+				                    			<td>: <span id="jawabanSalah"></span></td>
+				                    		</tr>
+				                    		<tr>
+				                    			<td>Nilai</td>
+				                    			<td>: <span id="nilaiSiswa"></span></td>
+				                    		</tr>
+				                    	</table>
+				                    </div>
+				                </div>
+				        	    </div>
+			        		</div>
 			            </div>
 			        </div>
 				</div>
@@ -57,10 +74,18 @@
 		</div>
 
 		<script src="../../../js/sidebarkuis.js"></script>
+		<script src="../../../js/unlock-pages.js"></script>
 		<script src="../../../js/style.js"></script>
 		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
 		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
 		<script src="script.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
 		<script src="hasil.js"></script>
 	</body>
 	

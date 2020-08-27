@@ -32,10 +32,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Jangkauan</h2>
@@ -94,7 +96,7 @@
 					<div class="tabeltulisan" style="margin-left: 2%">
 					<table>
 						<tr>
-							<td>Selisih berat terbesar dan terkecil</td>
+							<td class="jangtab">Selisih berat terbesar dan terkecil</td>
 							<td>= <span id="sel1"> .  .  . </span> - <span id="sel2"> .  .  . </span></td>
 						</tr>
 						<tr>
@@ -187,6 +189,22 @@
 		<script src="../../js/style.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/jangkauan.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('jangkauan2','jangkauan2');
+				if(localStorage.getItem("progress") <=19){
+		      		localStorage.setItem("progress",19)
+		      	}
+
+		      	location.href = 'jangkauan2.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

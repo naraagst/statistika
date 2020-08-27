@@ -21,7 +21,7 @@
 				<div class="submateri2">
 					<h2>KUIS</h2>
 					<div class="row justify-content-center">
-						<div class="col-9 petunjuk-kuis">
+						<div class="col-md-9 col-sm-12 petunjuk-kuis">
 						<div class="card mt-2">
 							<div class="card-body" >
 								<div style="padding-left:20px; font-family: Muli">
@@ -30,7 +30,7 @@
 									<li>Terdapat 10 soal pilihan ganda pada kuis ini</li>
 									<li>Untuk memulai mengerjakan soal, isi nama, kelas dan token pada kolom yang tersedia kemudian tekan "Mulai"</li>
 									<li>Waktu pengerjaan soal adalah 40 menit, timer terdapat pada bagian kanan atas soal</li>
-									<li>Pada bagian kiri soal terdapat navigasi nomor soal yang apabila di klik akan menampilkan soal berdasarkan nomor soal yang di pilih.</li>
+									<li>Pada bagian <span class="laptop">kiri</span><span class="hp">atas</span> soal terdapat navigasi nomor soal yang apabila di klik akan menampilkan soal berdasarkan nomor soal yang di pilih.</li>
 									<li>Klik atau tekan salah satu pilihan jawaban yang dianggap benar.</li>
 									<li>Jika seluruh soal sudah dikerjakan, klik tombol selesai pada soal terakhir. Jika waktu pengerjaan soal habis maka laman soal akan otomatis tertutup dan siswa akan diarahkan ke laman hasil</li>
 								</ol>
@@ -38,21 +38,21 @@
 							</div>
 						</div>
 						</div>
-						<div class="col-6 identitas-kuis">
+						<div class="col-md-6 col-sm-12 identitas-kuis">
 							<div class="card mt-2">
 								<div class="card-body" >
 								<div class="table-responsive">
 									<table width="100%">
 										<tr>
-											<td>Nama :</td>
+											<td>Nama </td>
 											<td><input type="text" id="name" placeholder="Masukkan Nama" class="form-control"></td>
 										</tr>
 										<tr>
-											<td>Kelas :</td>
+											<td>Kelas </td>
 											<td><input type="text" id="class" placeholder="Masukkan Kelas" class="form-control"></td>
 										</tr>
 										<tr>
-											<td>Token :</td>
+											<td>Token </td>
 											<td><input type="text" id="token" placeholder="Masukkan Token" class="form-control"></td>
 										</tr>
 									</table>
@@ -75,15 +75,24 @@
 		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
 		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
 		<script>
-			let name = document.querySelector("#name")
+			let nama = document.querySelector("#name")
+			let kelas = document.querySelector("#class")
+			let token = document.querySelector("#token")
 			let btnSubmit = document.querySelector("#submit")
 
 			btnSubmit.addEventListener("click", function(){
-				if(name.value === ""){
-					alert("Isi Nama Dulu !!!")
+				if(nama.value === "" || kelas.value === "" || token.value === ""){
+					alert("Data Masih Ada yang Kosong !!!")
 				} else {
-					sessionStorage.setItem("name", name.value)
-					location.href = './soal.html'
+					if(token.value === "4639")
+					{
+						sessionStorage.setItem("nama", nama.value)
+						sessionStorage.setItem("kelas", kelas.value)
+						location.href = './soal.html'
+					}
+					else{
+						alert("Token Salah !!!")
+					}
 				}
 			})
 		</script>

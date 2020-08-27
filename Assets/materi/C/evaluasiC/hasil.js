@@ -1,6 +1,9 @@
+let tanggal = sessionStorage.getItem("tanggal")
+let waktu = sessionStorage.getItem("waktu")
 let correctAnswer = sessionStorage.getItem("correct")
 let wrongAnswer = sessionStorage.getItem("wrong")
-let nameUser = sessionStorage.getItem("name")
+let nameUser = sessionStorage.getItem("nama")
+let classUser = sessionStorage.getItem("kelas")
 let questionLength = sessionStorage.getItem("questionLength")
 let nextt = document.querySelector("#next")
 let kett = document.querySelector("#ket")
@@ -13,24 +16,27 @@ let result = {}
 
 let note
 let score = (parseInt(correctAnswer) / parseInt(questionLength)) * 100
-if(score >= 65) {
+if(score >= 60) {
     note = "Lulus"
     nextt.style.display='inline-block'
     ulangi.style.display='none'
     kett.style.color='green'
-    kett.innerHTML = 'Selamat! Anda bisa melanjutkan ke Latihan.'
+    kett.innerHTML = 'Selamat! Anda bisa melanjutkan ke materi selanjutnya.'
 } else {
     note = "Tidak Lulus"
     nextt.style.display='none'
     ulangi.style.display='inline-block'
     kett.style.color='red'
-    kett.innerHTML = 'Sayang sekali skor anda belum memenuhi untuk dapat lanjut'
+    kett.innerHTML = 'Sayang sekali skor anda belum memenuhi untuk dapat lanjut ke materi selanjutnya'
 }
-score = score < 100 ? score.toFixed(2) : score
+// score = score < 100 ? score.toFixed(2) : score
 
 result.nameUser = nameUser
+result.classUser = classUser
 result.correctAnswer = correctAnswer
 result.wrongAnswer = wrongAnswer
+result.tanggal = tanggal
+result.waktu = waktu
 result.scoreUser = score
 result.noteUser = note
 
@@ -56,47 +62,37 @@ if(localStorage && localStorage.getItem('quizC')) {
 function clearResults() {
     sessionStorage.setItem("correct", "")
     sessionStorage.setItem("wrong", "")
-    sessionStorage.setItem("name", "")
+    sessionStorage.setItem("nama", "")
+    sessionStorage.setItem("kelas", "")
+    sessionStorage.setItem("tanggal", "")
+    sessionStorage.setItem("waktu", "")
 }
 
-function resultsHistory(testNumber, nameUser, correctAnswer, wrongAnswer, scoreUser, noteUser) {
-    let resultsContainer = document.querySelector(".resultsContainer")
+function newResults(tanggal, waktu, nameUser, classUser, numCorrect, numWrong, score) {
 
-    let tr = document.createElement('tr')
-    let html = `
-        <td>${testNumber}</td>
-        <td>${nameUser}</td>
-        <td>${correctAnswer}</td>
-        <td>${wrongAnswer}</td>
-        <td>${scoreUser}</td>
-        <td>${noteUser}</td>
-    `
-    tr.innerHTML = html
-    resultsContainer.appendChild(tr)
-}
+    let tanggalSkrg = document.querySelector("#tanggal")
+    let waktuSkrg = document.querySelector("#waktu")
+    let namaSiswa = document.querySelector("#namaSiswa")
+    let kelasSiswa = document.querySelector("#kelasSiswa")
+    let jawabanBenar = document.querySelector("#jawabanBenar")
+    let jawabanSalah = document.querySelector("#jawabanSalah")
+    let nilaiSiswa = document.querySelector("#nilaiSiswa")
 
-function newResults(numCorrect, numWrong, score) {
-
-    let newScore = document.querySelector("#new-score")
-    let wrongCorrect = document.querySelector("#wrong-correct")
-
-    newScore.innerHTML = `Skor yang anda peroleh<br/>${score}`
-    wrongCorrect.innerHTML =`Jawaban Benar: <b>${numCorrect}</b>, Jawaban Salah: <b>${numWrong}</b><hr>`
+    tanggalSkrg.innerHTML = `${tanggal}`
+    waktuSkrg.innerHTML = `${waktu}`
+    namaSiswa.innerHTML = `${nameUser}`
+    kelasSiswa.innerHTML = `${classUser}`
+    jawabanBenar.innerHTML = `${numCorrect}`
+    jawabanSalah.innerHTML = `${numWrong}`
+    nilaiSiswa.innerHTML = `${score}`
 }
 
 document.addEventListener("DOMContentLoaded", function(){
     let quizC = quizResults["results"].length
     let testNumber = 1
 
-    for(let i=0; i<quizC; i++) {
-        if(quizResults["results"][i].correctAnswer != "" && quizResults["results"][i].wrongAnswer != "") {
-            resultsHistory(testNumber, quizResults["results"][i].nameUser, quizResults["results"][i].correctAnswer, quizResults["results"][i].wrongAnswer, quizResults["results"][i].scoreUser, quizResults["results"][i].noteUser)
-        }
-        testNumber++
-    }
-
     if(result.nameUser != ""){
-        newResults(quizResults["results"][quizC-1].correctAnswer, quizResults["results"][quizC-1].wrongAnswer, quizResults["results"][quizC-1].scoreUser)
+        newResults(quizResults["results"][quizC-1].tanggal, quizResults["results"][quizC-1].waktu, quizResults["results"][quizC-1].nameUser, quizResults["results"][quizC-1].classUser, quizResults["results"][quizC-1].correctAnswer, quizResults["results"][quizC-1].wrongAnswer, quizResults["results"][quizC-1].scoreUser)
     }
 
     let tryAgain = document.querySelector("#try-again")
@@ -104,8 +100,15 @@ document.addEventListener("DOMContentLoaded", function(){
         location.href = './index.html'
     })
     
-    nextt.addEventListener("click", function(){
-        location.href = '../../B/mean1.html'
+    nextt.addEventListener("click", function(e){
+        e.preventDefault();
+
+        localStorage.setItem("quizCakhir","quizCakhir");
+        
+        if(localStorage.getItem("progress") <=26){
+            localStorage.setItem("progress",26)
+        }
+        location.href = '../../quizC'
         clearResults()
     })
 
@@ -115,3 +118,28 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 })
 
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyA0bSfBNKA4Y3oDbiorSA8dYrI6X7thQpI",
+    authDomain: "statistika-smp.firebaseapp.com",
+    databaseURL: "https://statistika-smp.firebaseio.com",
+    projectId: "statistika-smp",
+    storageBucket: "statistika-smp.appspot.com",
+    messagingSenderId: "221055005685",
+    appId: "1:221055005685:web:6704d25858af96560426bc",
+    measurementId: "G-SD240GBRWE"
+  };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+let data = {
+    nama : nameUser,
+    kelas : classUser,
+    nilai : score,
+    tanggal : tanggal,
+    waktu : waktu
+}
+
+const database = firebase.database();
+database.ref("kuis-c").push(data);

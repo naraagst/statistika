@@ -89,19 +89,47 @@
     display: none;
 }
 
-@media only screen and (max-width: 1212px) {
-    .menu {
-        display: none;
+@media only screen and (max-width: 500px) {
+    body{
+      overflow-y: scroll !important;
     }
+    .wadah {
+      width:70%;
+      float: left;
+      margin-left:0 !important;
+      margin-bottom: 10px;     
+    }
+    .gambar{
+      border-radius: 10px 10px 0 0 !important;
+    }
+    .tulisan{
+      visibility: visible;
+      opacity: 1;
+      color: black ;
+      background-color:rgb(0,156,255);
+      font-weight: bolder;
+      border-radius: 0 0 10px 10px;
+    }
+    .menu{
+      width:60%;
+      margin-left:30%;
+    }
+    .container{
+      left:0;
+      width:100%;
+    }
+    .logo1 img{
+      width: 80%;
+      margin:0% 10% 0% 10%;
+    }
+    .background {
+  height:130%;
+?}
 
-    .teks {
-        display: block;
-        margin: 15% 0 0 0%;
-        width: 550px;
-        color:white;
-        text-align: center;
-        font-family: "Muli", sans-serif;
-    }
+
+.background .overlay-bg {
+  height: 130%;
+}
 }
 /*
 .menu{

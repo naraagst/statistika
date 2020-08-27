@@ -1,15 +1,5 @@
 const myQuestions = [
 	{
-		question:"Diagram di bawah ini menunjukkan data penjualan beberapa jenis televisi di Toko Elektronik Wawan Jaya Makmur pada bulan Januari.<p><center><img src='../../../gambar/MD1.PNG' style='width:50%'></center></p><p>Pada bulan tersebut, TV merk apa yang terjual paling banyak dan paling sedikit?</p>",
-		answers:{
-			"a": "TV Merk D terjual paling banyak dan  TV merk A dan E terjual paling sedikit",
-	        "b": "TV Merk B terjual paling banyak dan  TV merk G dan E terjual paling sedikit",
-	        "c": "TV Merk F terjual paling banyak dan  TV merk A dan G terjual paling sedikit",
-	        "d": "TV Merk D terjual paling banyak dan  TV merk C dan G terjual paling sedikit"
-		},
-		correctAnswer:"a"
-	},
-	{
 		question:"Gambar berikut menunjukkan banyaknya anak yang mengikuti jenis olahraga di suatu sekolah.<p><center><img src='../../../gambar/MD2.PNG'></center></p><p>Jenis olahraga yang paling banyak diikuti oleh anak-anak adalah ...</p>",
 		answers:{
 			"a": "Sepak bola",
@@ -46,16 +36,6 @@ const myQuestions = [
 	        "b": "31 anak",
 	        "c": "32 anak",
 	        "d": "33 anak"
-		},
-		correctAnswer:"c"
-	},
-	{
-		question:"Data banyak pengunjung sebuah pameran buku selama enam hari disajikan dalam diagram berikut.<br/><center><img src='../../../gambar/MD4.PNG'></center><p>Pengunjung terbanyak terjadi pada hari ...</p>",
-		answers:{
-			"a": "Senin",
-	        "b": "Selasa",
-	        "c": "Rabu",
-	        "d": "Kamis"
 		},
 		correctAnswer:"c"
 	},
@@ -118,15 +98,5 @@ const myQuestions = [
 	        "d": "275 anak"
 		},
 		correctAnswer:"d"
-	},
-	{
-		question:"Data banyak siswa yang lulus ujian nasional tahun 2007-2011 di SMP Bakti Mulya sebagai berikut.<br/><center><img src='../../../gambar/MD7.PNG'></center><p>Selisih banyak siswa laki-laki dan perempuan yang lulus tahun 2008 ada ...</p>",
-		answers:{
-			"a": "15 anak",
-	        "b": "20 anak",
-	        "c": "25 anak",
-	        "d": "30 anak"
-		},
-		correctAnswer:"b"
 	}
 ]

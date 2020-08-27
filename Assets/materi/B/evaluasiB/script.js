@@ -30,16 +30,6 @@ const myQuestions = [
 		correctAnswer:"d"
 	},
 	{
-		question:"Perhatikan tabel berikut. <div class='tabel' style='margin-top:10px;'><center><table><tr><th>Berat Badan (kg)</th><th>Frekuensi</th></tr><tr><td>40</td><td>5</td></tr><tr><td>43</td><td>7</td></tr><tr><td>46</td><td>14</td></tr><tr><td>49</td><td>5</td></tr><tr><td>52</td><td>6</td></tr><tr><td>54</td><td>3</td></tr></table></center></div><p>Dari tabel diperoleh.</p><ol type='i' style='margin-left:40px;'><li>Median = 47</li><li>Modus = 46</li><li>Mean = 46.6</li></ol><p>Pernyataan yang benar adalah ...</p>",
-		answers:{
-			"a": "(i) dan (ii)",
-	        "b": "(i) dan (iii)",
-	        "c": "(i), (ii), dan (iii)",
-	        "d": "(ii) dan (iii)"
-		},
-		correctAnswer:"d"
-	},
-	{
 		question:"Data banyak pengunjung sebuah pameran buku selama enam hari disajikan dalam diagram berikut.<br/><center><img src='../../../gambar/MD4.PNG'></center><p>Rata-rata banyak pengunjung pameran setiap hari sebanyak ...</p>",
 		answers:{
 			"a": "180 orang",
@@ -50,27 +40,27 @@ const myQuestions = [
 		correctAnswer:"b"
 	},
 	{
-		question:"Data hasil tes seleksi penerimaan karyawan sebuah perusahaan sebagai berikut.<br/><center><img src='../../../gambar/MD5.PNG'></center><p>Mean, median dan modus dari data tersebut berturut-turut adalah ...</p>",
+		question:"Siswa kelas VIIIC sedang mengumpulkan donasi untuk korban bencana alam. Rata-rata setiap siswa menyumbang Rp5.000,00. Jika banyak siswa kelas VIIIC adalah 29 orang, jumlah donasi yang terkumpul adalah ...",
 		answers:{
-			"a": "74.5, 90 dan 80",
-	        "b": "76.5, 60 dan 90",
-	        "c": "70.5, 70 dan 100",
-	        "d": "72.5, 70 dan 80"
-		},
-		correctAnswer:"d"
-	},
-	{
-		question:"Data banyak beras dalam karung di sebuah gudang sebagai berikut.<br/><center><img src='../../../gambar/MD6.PNG'></center><p>Modus dan median dari data tersebut berturut-turut adalah ...</p>",
-		answers:{
-			"a": "25 dan 30",
-	        "b": "15 dan 15",
-	        "c": "20 dan 10",
-	        "d": "15 dan 20"
+			"a": "Rp142.000,00",
+	        "b": "Rp145.000,00",
+	        "c": "Rp152.000,00",
+	        "d": "Rp154.000,00"
 		},
 		correctAnswer:"b"
 	},
 	{
-		question:"Data nilai ulangan IPA kelas IX disajikan dalam diagram berikut.<br/><center><img src='../../../gambar/UPM2.PNG'></center><p>Rata-rata nilai siswa laki-laki dan siswa perempuan berturut-turut adalah ...</p>",
+		question:"Dalam suatu kelas terdapat 40 siswa yang terdiri atas 25 siswa laki-laki dan sisanya perempuan. Jika rata-rata tinggi siswa laki-laki 164 cm dan rata-rata tinggi siswa perempuan 156 cm, rata-rata tinggi seluruh siswa adalah ...",
+		answers:{
+			"a": "156 cm",
+	        "b": "160 cm",
+	        "c": "159 cm",
+	        "d": "161 cm"
+		},
+		correctAnswer:"d"
+	},
+	{
+		question:"Data nilai ulangan IPA kelas VIII disajikan dalam diagram berikut.<br/><center><img src='../../../gambar/UPM2.PNG'></center><p>Rata-rata nilai siswa laki-laki dan siswa perempuan berturut-turut adalah ...</p>",
 		answers:{
 			"a": "5.65 dan 7.9",
 	        "b": "7.76 dan 6.8",
@@ -80,14 +70,14 @@ const myQuestions = [
 		correctAnswer:"c"
 	},
 	{
-		question:"Data nilai ulangan IPA kelas IX disajikan dalam diagram berikut.<br/><center><img src='../../../gambar/UPM2.PNG'></center><p>Modus dan median dari data tersebut berturut-turut adalah ...</p>",
+		question:"Dari beberapa kali ulangan matematika dalam satu semester. Shinta memperoleh nilai sebagai berikut.<p><b>84, 77, 80, 71, 82, 77, 71, 78, 80, 74, 76, 71</b></p>Median dari data tersebut adalah ...",
 		answers:{
-			"a": "8 dan 8",
-	        "b": "9 dan 8",
-	        "c": "7 dan 8",
-	        "d": "8 dan 9"
+			"a": "76",
+	        "b": "77",
+	        "c": "76,5",
+	        "d": "77,5"
 		},
-		correctAnswer:"a"
+		correctAnswer:"b"
 	},
 	{
 		question:"Berikut ini adalah data panjang potongan sekumpulan pipa.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Potongan Pipa (cm)</th><th>Banyak Potongan Pipa</th></tr><tr><td>5</td><td>5</td></tr><tr><td>5.5</td><td>4</td></tr><tr><td>6</td><td>8</td></tr><tr><td>6.5</td><td>6</td></tr><tr><td>7</td><td>7</td></tr><tr><td>7.5</td><td>9</td></tr></table></center></div><p>Banyak potongan pipa yang panjangnya kurang dari median adalah ...</p>",
@@ -98,5 +88,15 @@ const myQuestions = [
 	        "d": "18 buah"
 		},
 		correctAnswer:"c"
+	},
+	{
+		question:"Diketahui kelompok bilangan 2, 3, 7, 7, 8, 8, 8, 9, 11.<br/><p>(1) Modus lebih dari rata-rata.<br/>(2) Median kurang dari rata-rata.<br/>(3) Modus sama dengan rata-rata.<br/>(4) Modus sama dengan median.</p><p>Pernyataan yang benar adalah ...</p>",
+		answers:{
+			"a": "(1), (2), dan (3)",
+	        "b": "(1) dan (3)",
+	        "c": "(2) dan (4)",
+	        "d": "(1) dan (4)"
+		},
+		correctAnswer:"d"
 	}
 ]

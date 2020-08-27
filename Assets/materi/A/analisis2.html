@@ -29,24 +29,54 @@
 					]
 				}]
 			});
+			var chart3a = new CanvasJS.Chart("chartContainer3a", {
+				animationEnabled: true,
+				theme: "light1", // "light1", "light2", "dark1", "dark2"
+				axisY: {
+					title: "Jumlah Pasien Sembuh"
+				},
+				data: [{        
+					type: "column",  
+					showInLegend: true, 
+					legendText: "Tanggal",
+					dataPoints: [      
+						{ y: 2088, label: "12 Ags" , indexLabel: "Tertinggi" },
+						{ y: 1760,  label: "13 Ags"},
+						{ y: 2060,  label: "14 Ags" },
+						{ y: 1703,  label: "15 Ags" },
+						{ y: 1783,  label: "16 Ags"},
+						{ y: 1355, label: "17 Ags", indexLabel: "Terendah" }
+					]
+				}]
+			});
 			chart3.render();
+			chart3a.render();
 			}
 	</script>
 	</head>
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
+			<div class="conso hp">
+				<h3>Jumlah Pasien Covid-19 Sembuh</h3>
+				<div id="chartContainer3a" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
+				<p class="caption">Diagram 1. Data pasien covid-19 sembuh</p>
+				<p class="caption">Sumber : covid19.go.id</p>
+				<p style="color: red; font-size: 14;">*catatan: ketuk setiap batang pada diagram untuk mengetahui jumlah data</p>
+			</div>
 			<div class="materi">
 				<h2>Menganalisis Data</h2>
 				<div class="submateri">
-				<p>Perhatikan diagram batang di samping!</p>
+				<p>Perhatikan diagram batang <span class="laptop">di samping</span><span class="hp">di atas</span>!</p>
 				<p>
-					Dari diagram batang di samping dapat diketahui bahwa data pasien covid-19 yang sembuh di Indonesia pada tanggal 12-17 Agustus 2020 adalah sebagai berikut.
+					Dari diagram batang <span class="laptop">di samping</span><span class="hp">di atas</span> dapat diketahui bahwa data pasien covid-19 yang sembuh di Indonesia pada tanggal 12-17 Agustus 2020 adalah sebagai berikut.
 				</p>
 				<p>
 					Pada tanggal 12 Agustus 2020 sebanyak 2088 orang.<br/>
@@ -57,11 +87,11 @@
 					Pada tanggal 17 Agustus 2020 sebanyak 1355 orang.
 				</p>
 				<p>
-					Dari diagram tersebut dapat terlihat pula bahwa jumlah pasien sembuh terendah terdapat pada tangggal 17 Agustus yaitu sebanyak 1355 orang. Sebaliknya jumlah pasien sembuh tertinggi terdapat pada tangggal 12 Agustus yaitu sebanyak 2088 orang.
+					Dari diagram tersebut dapat terlihat pula bahwa jumlah pasien sembuh terendah terdapat pada tanggal 17 Agustus yaitu sebanyak 1355 orang. Sebaliknya jumlah pasien sembuh tertinggi terdapat pada tanggal 12 Agustus yaitu sebanyak 2088 orang.
 				</p>
 				</div>
 			</div>
-			<div class="conso">
+			<div class="conso laptop">
 				<h3>Jumlah Pasien Covid-19 Sembuh</h3>
 				<div id="chartContainer3" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
 				<p class="caption">Diagram 1. Data pasien covid-19 sembuh</p>
@@ -82,10 +112,27 @@
 		</div>
 
 		<script type="../../text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script src="../../js/unlock-pages.js"></script>
 		<script src="../../js/sidebar.js"></script>
+		<script src="../../js/unlock-pages.js"></script>
+		
 		<script src="../../js/style.js"></script>
 		<script src="../../js/canvasjs.min.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('ana3','ana3');
+				if(localStorage.getItem("progress") <=2){
+		      		localStorage.setItem("progress",2)
+		      	}
+
+		      	location.href = 'analisis4.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

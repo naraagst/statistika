@@ -28,10 +28,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Nilai Tengah (Median)</h2>
@@ -39,6 +41,7 @@
 					<p>
 						Median merupakan salah satu ukuran pemusatan data. Apabila data yang sudah terkumpul diurutkan, maka <b>nilai data yang terletak di tengah (nilai tengah data)</b> disebut <i>median</i>.
 					</p>
+					<p class="hp scroll">Setelah menekan tombol "lihat contoh", scroll ke bawah untuk mencoba contoh</p>
 					<ul>
 						<li>
 						Jika banyak data yang sudah terurut <b>ganjil</b>, maka mediannya adalah nilai data yang terletak tepat di tengah-tengah, yang membagi data menjadi dua bagian yang sama. Dengan kata lain, median terletak pada data ke-$\frac{n+1}{2}$
@@ -129,13 +132,15 @@
 						<input type="text" id="input_median9" onkeyup="urut9()"/>,
 						<input type="text" id="input_median10" onkeyup="urut10()"/>
 						<div id="letak">
+							<div class="laptop">
 							<svg width="120" height="40" style="margin-top:7px;">
 							   <polyline points="30,0 30,15 90,15 90,0" style="fill:none;stroke:red;stroke-width:3"/>
 							   <line x1="60" y1="15" x2="60" y2="24" style="stroke:red;stroke-width:3"/>
 							   <text x="15" y="40" fill="red">Letak Median</text>
 							</svg>
+							</div>
 							<p>Karena banyak data (<i>n</i>) genap yaitu 10, maka mediannya adalah rata-rata data <b>ke-5 dan ke-6</b>, yaitu :</p>
-								<img src="../../gambar/consomediangenap.jpg" alt="Pembahasan" width="70%" />
+								<img src="../../gambar/consomediangenap.jpg" alt="Pembahasan" />
 							<p>Jadi, median dari skor lomba menyanyi adalah <b>140</b></p>
 						</div>
 						<center><button onclick="reset2()" class="cek" id="resetmedian2">Reset</button></center>
@@ -144,23 +149,29 @@
 				</div>
 			</div>
 			</div>
-			<div class="halaman">
-				<div class="btn-group">
-					<a href="mean4.html"><< Sebelumnya</a>
-					<a href=javascript:void(0)  class="active">1</a>
-					<a href="median2.html">2</a>
-					<a href="median3.html">3</a>
-					<a href="median4.html">4</a>
-					<!-- <a href="median5.html">5</a> -->
-					<a href="median2.html">Selanjutnya >></a>
-				</div>
-			</div>
+			<div class="halaman"></div>
 		</div>
 
 		<script src="../../js/sidebar.js"></script>
 		<script src="../../js/unlock-pages.js"></script>
 		<script src="../../js/style.js"></script>
 		<script src="../../js/median.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('median2','median2');
+				if(localStorage.getItem("progress") <=11){
+		      		localStorage.setItem("progress",11)
+		      	}
+
+		      	location.href = 'median2.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

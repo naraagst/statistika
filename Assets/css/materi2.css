@@ -51,6 +51,10 @@
 	font-size: 15px;
 }
 
+.langkahmean2{
+	width:60%;font-size: 18px;font-weight:bold;padding:1%
+}
+
 .angka, .angka td{
 	font-weight:bold;
 	font-size: 20px;
@@ -66,6 +70,10 @@
 
 .tiga td, .tiga input{
 	font-weight: bold;
+}
+
+.langkahmean3{
+	width:50%;padding:5px;text-align:center;
 }
 
 #inp13{
@@ -124,18 +132,16 @@
 	padding:5px;
 }
 
+.rataratamean{
+	width:153px;
+}
+
 #rumusmean td, #rumusmean table{
 	padding:5px;
 	font-family: Poppins;
 	font-size:18px;
 	text-align: center;
 	font-weight:bold;
-}
-#hasildd{
-	font-weight:bold;
-	font-size:20px;
-	width:350px !important;
-	margin-left: -55% !important;
 }
 #ddrumusmean{
 	width:55%;
@@ -152,7 +158,6 @@
   border: 1px solid black;
   text-align: center;
   background-color: white;
-
 }
 .rumus p{
 	font-family: Muli;
@@ -339,7 +344,6 @@
 	font-weight: bold;
 	padding:10px;
 	background-color: white;
-	
 }
 
 #tengah button:hover:enabled, #tengah2 button:hover:enabled, #tengah3 button:hover:enabled{
@@ -356,6 +360,9 @@
 	padding:15px;
 }
 
+.rumusmedianganjil{
+	font-size: 20px;
+}
 #pilihan_a, #pilihan_b, #pilihan_c, #pilihan_d{
 	width:48%;
 	height:50px;
@@ -412,7 +419,7 @@
 
 .tabelkecil table, .tabelkecil th, .tabelkecil tr, .tabelkecil td{
 	padding: 3px !important;
-	width:300px !important;
+	width:300px;
 	margin: 20px;
 }
 #hid_mdn{
@@ -451,8 +458,8 @@
 	padding:15px;
 	width:43%;
 	color: black;
-
 }
+
 .btn-group2 a:hover {
 	background-color: rgb(0,0,0, 0.1) !important;
 
@@ -474,6 +481,56 @@
 	width: 105%;
 	margin-left: -15px;
 	margin-top: -10px;
+}
+.btn-group3 a {
+	background-color:rgb(0,156,255, 0.5);
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0px;
+	border:1px solid white;
+	display:inline-block;
+	font-family:Poppins;
+	font-size:17px;
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+	text-align:center;
+	cursor: pointer;
+	float: left;
+	padding:15px;
+	width:41%;
+	color: black;
+}
+#isianMean2{
+	float:right !important;
+}
+.btn-group3 a:hover {
+	background-color: rgb(0,0,0, 0.1) !important;
+
+}
+.btn-group3 .active {
+	color: black;
+	background-color: white;
+	border-width: 3px 3px 0px 3px;
+	border-color: rgb(0,156,255, 0.5);
+	border-style: solid;
+	pointer-events: none;
+}
+.btn-group3 a:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+.btn-group3:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-group3{
+	padding-left: 5px;
+	width: 97% !important;
 }
 .soalmodus p{
 	text-align: center !important;
@@ -519,7 +576,6 @@
 	width:102%;
 	height:85%;
 	margin-left: -10px;
-	margin-top: -30px;
 	overflow-y: auto;
 }
 .consonav img{
@@ -660,4 +716,14 @@
 }
 .bigtabel th{
 	text-align: left;
+}
+.mean4 h3{
+	padding-left:20%;padding-right:20%;
+}
+.rumusmeanfrek{
+	margin-left:15%;
+}
+.scroll{
+	color:red;
+	font-size: 12px !important;
 }

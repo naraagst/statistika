@@ -77,12 +77,12 @@ function cek(){
     document.getElementById("cobamodus").hidden=true;
     document.getElementById("cekdd").hidden=true;
     document.getElementById("resetdd").hidden=true;
-    document.getElementById("hasildd").innerHTML="Jawabanmu benar. Silahkan pelajari contoh soal dan latihan di samping."
-    document.getElementById("hasildd").style="color:green;"
+    document.getElementById("hasilddbenar").style.display="block"
+    document.getElementById("hasilddsalah").style.display="none"
   }
   else{
-    document.getElementById("hasildd").innerHTML="Jawaban masih salah. Silahkan tekan tombol reset dan coba lagi."
-    document.getElementById("hasildd").style="color:red;"
+    document.getElementById("hasilddsalah").style.display="block"
+    document.getElementById("hasilddbenar").style.display="none"
   }
 }
 

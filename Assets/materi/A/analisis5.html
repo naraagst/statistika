@@ -56,8 +56,33 @@
 					]
 				}]
 			});
+			var chart5a = new CanvasJS.Chart("chartContainer5a", {
+				animationEnabled: true,
+				theme: "light2",
+				axisY: {
+					title: "Liter"
+				},
+				axisX: {
+					title: "Waktu (Jam)"
+				},
+				data: [{        
+					type: "line",  
+					showInLegend: true, 
+					legendText: "Perjalanan dari kota M ke kota N",     
+					dataPoints: [      
+						{ x: 4, y: 40, indexLabel: "A" },
+						{ x: 5, y: 20, indexLabel: "B" },
+						{ x: 6, y: 20, indexLabel: "C" },
+						{ x: 8, y: 10},
+						{ x: 8, y: 60, indexLabel: "D" },
+						{ x: 9, y: 50, indexLabel: "E" },
+						{ x: 10, y: 40, indexLabel: "F" },
+						{ x: 12, y: 10, indexLabel: "G" }
+					]
+				}]
+			});
 			chart5.render();
-
+			chart5a.render();
 			}
 
 	</script>
@@ -65,17 +90,26 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
+			<div class="conso hp">
+				<div class="hp"><h2>Menganalisis Data</h2></div>
+				<h3>Sajian Data Penggunaan Bahan Bakar terhadap Waktu</h3>
+				<div id="chartContainer5a" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
+				<p class="caption">Diagram 3. Data penggunaan bahan bakar</p>
+				<p style="color: red; font-size: 14;">*catatan: ketuk setiap titik pada diagram untuk mengetahui jumlah data</p>
+			</div>
 			<div class="materi" >
-				<h2>Menganalisis Data</h2>
+				<div class="laptop"><h2>Menganalisis Data</h2></div>
 				<div class="submateri" id="submateri">
-				<p>Perhatikan Diagram 3 disamping!</p>
+				<p>Perhatikan Diagram 3 <span class="laptop">di samping</span><span class="hp">di atas</span>!</p>
 				<p>
-					Diagram 3 di samping menyajikan penggunaan bahan bakar terhadap waktu (dalam jam) pada perjalanan sebuah mobil dari kota <i>M</i> ke kota <i>N</i>. Gunakan informasi pada Diagram 3 untuk menjawab pertanyaan berikut.
+					Diagram 3 <span class="laptop">di samping</span><span class="hp">di atas</span> menyajikan penggunaan bahan bakar terhadap waktu (dalam jam) pada perjalanan sebuah mobil dari kota <i>M</i> ke kota <i>N</i>. Gunakan informasi pada Diagram 3 untuk menjawab pertanyaan berikut.
 				</p>
 				<form name="form">
 					<div class="isian">
@@ -152,14 +186,15 @@
 						</li>
 					</ol>
 					<p id="hasilbenar" style="color: green; font-weight: bold;"></p>
-					<p id="hasilsalah" style="color: red; font-weight: bold;margin-top: -15px"></p>
-					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek" style="margin-left:25px;">
-					<div id="isi" style="float: right; font-size: 24px; font-weight:bold; color:red;"></div>
-					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek" id="ulangi">
-					<input type="button" name="submit" onclick="lihatJawaban()" value="Lihat Jawaban" class="cek" id="lihat">
+					<p id="hasilsalah"></p>
+					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek tombolhp" style="margin-left:25px;">
+					<div id="isi"></div>
+					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek tombolhp" id="ulangi">
+					<input type="button" name="submit" onclick="lihatJawaban()" value="Lihat Jawaban" class="cek tombolhp" id="lihat">
 					</div>
 				</form>
 					<div id="jwb_analisis5" style="width:100%;">
+						<h3>Pembahasan</h3>
 							<ol>
 								<li>
 									Bahan bakar yang dihabiskan dalam perjalanan :
@@ -181,11 +216,11 @@
 									Tidak ada bahan bakar yang terpakai diantara kedua titik. Kemungkinan pengendara mobil sedang istirahat atau tidak dalam keadaan berkendara, hal ini terlihat dari tidak ada perubahan pada diagram dari kedua titik.
 								</li>
 							</ol>
-						</div>
+					</div>
 				</div>
 				
 			</div>
-			<div class="conso">
+			<div class="conso laptop">
 				<h3>Sajian Data Penggunaan Bahan Bakar terhadap Waktu</h3>
 				<div id="chartContainer5" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
 				<p class="caption">Diagram 3. Data penggunaan bahan bakar</p>
@@ -210,6 +245,22 @@
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script src="../../js/style.js"></script>
 		<script src="../../js/canvasjs.min.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('ana5','ana5');
+				if(localStorage.getItem("progress") <=4){
+		      		localStorage.setItem("progress",4)
+		      	}
+
+		      	location.href = 'evaluasiA'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

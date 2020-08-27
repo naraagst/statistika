@@ -26,19 +26,21 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h3>Menentukan Median dari Tabel Distribusi Frekuensi</h3>
 				<div class="submateri" style="height:430px">
 					<p>Bagaimana menentuan median dari data yang dikelompokkan berdasarkan frekuensinya? Median untuk data seperti itu ditentukan dengan cara sebagai berikut:</p>
-					<ol type="a" style="margin-left: 40px;margin-top: -10px; line-height: 28px">
+					<ol type="a" style="margin-left: 40px;margin-top: -5px; line-height: 25px">
 						<li>Menentukan banyak data dengan menjumlahkan seluruh frekuensi, kemudian disimbolkan dengan  <i>n</i>.</li>
 						<li>Sama seperti sebelumnya, median ditentukan sesuai banyak data sebagai berikut:
-							<ul type="disc" style="margin-left: 20px;line-height: 33px;">
+							<ul type="disc" style="margin-left: 20px;line-height: 30px;">
 								<li>Jika <i>n</i> ganjil, maka median adalah nilai data </br>ke-$\frac{n+1}{2}$ </br>
 								<center><a onclick="consomdn2a()" class="cek">Lihat Contoh</a></center></li>
 								<li style="margin-top: 15px;">Jika <i>n</i> genap, maka median adalah <img src="../../gambar/rumusmedian.png"></br>
@@ -78,14 +80,14 @@
 							</table>
 						</div>
 						</center>
-						<p>Untuk menentukan median dari data di atas, ikuti langkah-langkah berikut ini :</p>
+						<p>Untuk menentukan median data di atas, ikuti langkah-langkah berikut ini :</p>
 					<ol>
 						<li>Tentukan banyak data dengan menjumlahkan seluruh frekuensi pada tabel<br> 
 							<div class="isian_median">
 								<form name="med2">
 								<table>
 									<tr>
-										<td>Banyak Data ( <i>n</i> )</td>
+										<td class="rumuskiri">Banyak Data ( <i>n</i> )</td>
 										<td>=</td>
 										<td>
 											<input type="text" id="med2a" onfocus="in1()" onfocusout="out1()"/> +
@@ -107,14 +109,14 @@
 							</div>
 						</li>
 						<li id="hid_mdn">
-							Karena banyak data (jumlah frekuensi) <b>ganjil</b>, yakni 45, maka median terletak pada data ke-<font size="50px">$\frac{n+1}{2}=\frac{45+1}{2}$</font>atau <b>data ke-23</b>.</br>
+							Karena banyak data (jumlah frekuensi) <b>ganjil</b>, yakni 45, maka median terletak pada data ke-<span class="rumusmedianganjil">$\frac{n+1}{2}=\frac{45+1}{2}$</span>atau <b>data ke-23</b>.</br>
 							Untuk mempermudah mencari nilai data ke-23, tabel di atas dilengkapi menjadi berikut :
 							<center>
 							<div class="tabel font2 tabelkecil">
 								<table>
 									<tr>
 										<th>Nilai</th>
-										<th>Frekuensi</th>
+										<th class="w-50">Frekuensi</th>
 										<th>Data ke-</th>
 									</tr>
 									<tr>
@@ -218,7 +220,7 @@
 						</li>
 						<li id="hid_mdn2">
 							Karena banyak data (jumlah frekuensi) <b>genap</b>, yakni 40, maka median dapat dicari dengan cara berikut :</br>
-							<center><img src="../../gambar/rumusmedian2.png" style="width:80%;"/></center></br>
+							<center><img src="../../gambar/rumusmedian2.png"/></center></br>
 							Untuk mempermudah mencari nilai data ke-20 dan 21, tabel di atas dilengkapi menjadi berikut :
 							<center>
 							<div class="tabel font2 tabelkecil">
@@ -269,23 +271,29 @@
 				</div>
 			</div>
 			</div>
-			<div class="halaman">
-				<div class="btn-group">
-					<a href="median2.html"><< Sebelumnya</a>
-					<a href="median1.html">1</a>
-					<a href="median2.html" >2</a>
-					<a href=javascript:void(0)  class="active">3</a>
-					<a href="median4.html">4</a>
-					<!-- <a href="median5.html">5</a> -->
-					<a href="median4.html">Selanjutnya >></a>
-				</div>
-			</div>
+			<div class="halaman"></div>
 		</div>
 
 		<script src="../../js/sidebar.js"></script>
 		<script src="../../js/unlock-pages.js"></script>
 		<script src="../../js/style.js"></script>
 		<script src="../../js/median2.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('median4','median4');
+				if(localStorage.getItem("progress") <=13){
+		      		localStorage.setItem("progress",13)
+		      	}
+
+		      	location.href = 'median4.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

@@ -19,19 +19,22 @@ function dropdown5() {
 function dropdown6() {
 				document.getElementById("myDropdown6").classList.toggle("show");
 			}
+function sidebar() {
+  let konten = document.querySelector(".konten");
+  konten.classList.toggle("opa");
+  document.getElementById("sidebar").classList.toggle("show");
+}
 function petunjuk(){
 	if(p==1){
 		document.getElementById("petunjuk").style="display:none";
 		document.getElementById("petunjuka").style="border-radius:10px";
 		document.getElementById("petunjuka").innerHTML="Klik untuk menampilkan petunjuk";
-		console.log("tes");
 		p=0;
 	}
 	else{
 		document.getElementById("petunjuk").style="display:block";
 		document.getElementById("petunjuka").style="border-radius:10px 10px 0px 0px";
 		document.getElementById("petunjuka").innerHTML="Klik untuk menyembunyikan petunjuk";
-		console.log("notes");
 		p=1;
 	}
 }
@@ -51,8 +54,8 @@ function petunjuk2(){
 		q=1;
 	}
 }
-let tujuanP = document.querySelector(".tujuan");
-tujuanP.addEventListener("click", function () {
+
+function tujuanP() {
 	if(tujuan==1){
 		document.getElementById("isiT").style.display="block";
 		document.getElementById("judulT").style="text-decoration:none";
@@ -63,4 +66,4 @@ tujuanP.addEventListener("click", function () {
 		document.getElementById("judulT").style="text-decoration:underline";
 		tujuan=1;
 	}
-})
+}
