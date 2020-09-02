@@ -13,6 +13,8 @@ body {
   width:100%;
   overflow-y: auto;
   position: fixed;
+  font-family: Muli;
+  font-size: 16px;
 }
 
 @font-face {    
@@ -616,6 +618,34 @@ a{
 }
 .m-min15{
 	margin-right:-15px;
+}
+.pemb table, .pemb li{
+	margin:0 20px;
+}
+.pemb{
+	width: 95%;
+	border:2px solid blue;
+	margin-left: 2%;
+}
+.lihat{
+	margin-left: 20px;
+	font-weight: bold;
+	color: red;
+}
+.lihat span{
+	cursor: pointer;
+	text-decoration: underline;
+	color: blue;
+}
+.analisisM{
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.analisisC{
+	height: 100% !important;
+}
+.analisisC h3{
+	color: white;
 }
 @media only screen and (max-width: 1212px) and (min-width: 500px) {
 	body{

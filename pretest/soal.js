@@ -30,7 +30,7 @@ const myQuestions = [
 		correctAnswer:"a"
 	},
 	{
-		question:"Plot berikut menunjukkan kecepatan 12 mobil balap. Tentukan jangkauan interkuartil dari data yang diberikan.<br/><center><img src='/assets/gambar/latihan7.JPG'></center><p>	Jangkauan dari data tersebut adalah ...</p>",
+		question:"Plot berikut menunjukkan kecepatan 12 mobil balap.<br/><center><img src='/assets/gambar/latihan7.JPG'></center><p>	Jangkauan dari data tersebut adalah ...</p>",
 		answers:{
 			"a": "30",
 	        "b": "40",
@@ -90,7 +90,7 @@ const myQuestions = [
 		correctAnswer:"c"
 	},
 	{
-		question:"Data banyak pengunjung sebuah pameran buku selama enam hari disajikan dalam diagram berikut.<br/><center><img src='/assets/gambar/MD4.PNG'></center><p>Rata-rata banyak pengunjung pameran setiap hari sebanyak ...</p>",
+		question:"Data banyak pengunjung sebuah pameran buku selama enam hari disajikan dalam diagram berikut.<br/><center><img src='/assets/gambar/MD4.PNG'></center><p>Rata-rata banyak pengunjung pameran setiap hari adalah ...</p>",
 		answers:{
 			"a": "180 orang",
 	        "b": "185 orang",

@@ -1,7 +1,7 @@
 {
 	"consomean":[
 		{
-			"soal":"<b>Soal :</b><br/>Dari 4 kali ulangan matematika, Rian memperoleh nilai <br/><b>8, 7, 10,</b> dan <b>6</b>. Berapakah nilai rata-rata ulangan Rian?",
+			"soal":"<b>Soal :</b><br/>Dari 4 kali ulangan matematika, Rian memperoleh nilai <br/><b>6, 7, 10,</b> dan <b>9</b>. Berapakah nilai rata-rata ulangan Rian?",
 			"data":"",
 			"soal2":"",
 			"pembahasan":"<p><b>Pembahasan :</b><br/>Untuk memperoleh nilai rata-rata maka kita harus menjumlahkan semua nilai, kemudian membagi dengan banyaknya data seperti yang sudah dipelajari sebelumnya.</p><center><img src='../../gambar/consomean1.PNG' width='60%''></center><p><b>Jadi, nilai rata-rata ulangan Rian adalah 8</b></p>"

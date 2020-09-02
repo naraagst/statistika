@@ -5,12 +5,11 @@ let wrongAnswer = sessionStorage.getItem("wrong")
 let nameUser = sessionStorage.getItem("nama")
 let classUser = sessionStorage.getItem("kelas")
 let questionLength = sessionStorage.getItem("questionLength")
+let jwbSiswa = JSON.parse(sessionStorage.getItem('userAnswer2'));
 let nextt = document.querySelector("#next")
 let kett = document.querySelector("#ket")
 let ulangi = document.querySelector("#ulangi")
 
-console.log(tanggal)
-console.log(waktu)
 
 let quizResults = {}
 quizResults.results = []
@@ -141,6 +140,7 @@ let data = {
     nama : nameUser,
     kelas : classUser,
     nilai : score,
+    jawaban: jwbSiswa,
     tanggal : tanggal,
     waktu : waktu
 }

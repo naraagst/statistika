@@ -101,7 +101,7 @@
 						answers.push(
 							`
 								<label>
-									<input type="radio" name="question${questionNumber}" value="${letter}">
+									<input type="radio" name="question${questionNumber}" value="${letter}" id="${letter}. ${currentQuestion.answers[letter]}">
 									<span>${letter}. ${currentQuestion.answers[letter]}</span>
 								</label>
 							`
@@ -127,13 +127,13 @@
 
 				let numCorrect = 0
 				let numWrong = 0
+				let userAnswer2 = [];
 
 				sliceQuestion.forEach((currentQuestion, questionNumber) => {
 					const answerContainer = answerContainers[questionNumber]
-
 					const selector = `input[name=question${questionNumber}]:checked`
 					const userAnswer = (answerContainer.querySelector(selector) || {}).value
-
+					userAnswer2[questionNumber] = (answerContainer.querySelector(selector) || {}).id;
 					if(userAnswer === currentQuestion.correctAnswer){
 						numCorrect++
 					}else{
@@ -141,14 +141,12 @@
 					}
 
 				})
-
-				console.log(numWrong)
-				console.log(numCorrect)
 				sessionStorage.setItem('questionLength', sliceQuestion.length)
 				sessionStorage.setItem('correct', numCorrect)
 				sessionStorage.setItem('wrong', numWrong)
 				sessionStorage.setItem('tanggal', tanggalHariIni)
 				sessionStorage.setItem('waktu', waktuSekarang)
+				sessionStorage.setItem('userAnswer2', JSON.stringify(userAnswer2))
 				location.href = './hasil.html'
 			}
 
