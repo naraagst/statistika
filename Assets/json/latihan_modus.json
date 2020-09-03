@@ -3,26 +3,31 @@
 		{
 			"soal":"<p>Seorang siswa ditugaskan untuk mencatat jumlah saudara kandung yang dimiliki oleh teman-teman sekelasnya. Hasil catatannya adalah sebagai berikut.</p>",
 			"gbr":"<center><img src='../../gambar/cmedian4.jpg' style='width:80%'></center><p style='margin-left:50px;'>Berapakah modus dari data tersebut?</p>",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Karena datum 2 memiliki frekuensi paling banyak yaitu 12, maka modus dari data tersebut adalah 2.</p>",
 			"jwb":2
 		},
 		{
-			"soal":"<p>Berapakah modus dari data tinggi badan siswa kelas VII SMPN 2 Banjarmasin berikut?</p>",
+			"soal":"<p>Berapakah modus dari data tinggi badan siswa kelas VII SMPN 13 Banjarmasin berikut?</p>",
 			"gbr":"<center><img src='../../gambar/consomedian2.png' style='width:50%'></center><p style='margin-left:50px;'></p>",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Karena datum 150 memiliki frekuensi paling banyak yaitu 5, maka modus dari data tersebut adalah 150.</p>",
 			"jwb":150
 		},
 		{
 			"soal":"<p>Perhatikan data berikut!</p>",
 			"gbr":"<center><img src='../../gambar/consomean6.png' style='width:80%'></center><p style='margin-left:50px;'>Berapakah modus dari data tersebut?</p>",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Karena datum 6 memiliki frekuensi paling banyak yaitu 15, maka modus dari data tersebut adalah 6.</p>",
 			"jwb":6
 		},
 		{
 			"soal":"<p>Perhatikan skor 10 anak yang mengikuti babak semifinal lomba menyanyi berikut.</p>",
 			"gbr":"<div class='tabel font2'><center><table><tr><th colspan='5'>Perolehan Skor Menyanyi</th></tr><tr><td>120</td><td>135</td><td>160</td><td>125</td><td>90</td></tr><tr><td>205</td><td>160</td><td>175</td><td>105</td><td>145</td></tr></table></center></div><p style='margin-left:50px;'>Berapakah modus dari data tersebut?</p>",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Karena skor 160 diperoleh paling banyak yaitu 2 kali, maka modus dari data tersebut adalah 160.</p>",
 			"jwb":160
 		},
 		{
 			"soal":"<p>Berikut ini adalah data ukuran lebar 17 ekor ikan toman:</p><img src='../../gambar/lmedian1.png' style='width:90%;margin-left:20px;'>",
 			"gbr":"<p style='margin-left:50px;'>Berapakah modus dari data tersebut?</p>",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Karena data yang paling sering muncul adalah 5, maka modus dari data tersebut adalah 5.</p>",
 			"jwb":5
 		}
 	]

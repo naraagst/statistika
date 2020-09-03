@@ -9,7 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let benarSemua = document.querySelectorAll(".benarSemua");
   let progressContainer = document.querySelector(".progress");
   let ulangSoal = document.querySelectorAll(".ulang");
+  let lihatPemb = document.querySelectorAll(".lihat");
+  let pembContainer = document.querySelectorAll(".pemb");
+  sal = [];
+  pembContainer[4].style.display = "none";
+  lihatPemb[4].style.display = "none";
   ulangSoal[4].addEventListener("click", ulang);
+  lihatPemb[4].addEventListener("click", lihat);
   retryButton[4].addEventListener("click", retryQuiz);
   let jlhBenar=0;
   progress[4].innerHTML="5";
@@ -27,6 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
     retryButton[n].addEventListener("click", retryQuiz);
     ulangSoal[n].style.display = "none";
     ulangSoal[n].addEventListener("click", ulang);
+    lihatPemb[n].addEventListener("click", lihat);
+    lihatPemb[n].style.display = "none";
+    pembContainer[n].style.display = "none";
+  }
+
+  for (let f = 1; f<=5; f++){
+    sal[f] = 0;
   }
 
   function nextSlide() {
@@ -55,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let answerSatu = document.querySelector("#jwbsiswa");
   let cekSatu = document.querySelector("#cekjwb1");
   let benarSatu = document.querySelector("#hasilbenar");
+  let tampilPembSatu = document.querySelector("#pemb1");
   let jawaban = "";
 
   function loadSoalSatu() {
@@ -66,31 +80,34 @@ document.addEventListener("DOMContentLoaded", function () {
         let soalArray = [];
         let gbrArray = [];
         let jwbArray = [];
+        let pembArray =[];
 
         let randQuestion = soalSatu.soal_modus.sort((a,b) => {return 0.5 - Math.random()})
         let sliceQuestion = randQuestion.slice(0, 5)
 
-
-        console.log(sliceQuestion)
-
         tampilSoalSatu.innerHTML = sliceQuestion[0].soal;
         tampilGbrSatu.innerHTML = sliceQuestion[0].gbr;
+        tampilPembSatu.innerHTML = sliceQuestion[0].pembahasan;
         jawaban = sliceQuestion[0].jwb;
 
         tampilSoalDua.innerHTML = sliceQuestion[1].soal;
         tampilGbrDua.innerHTML = sliceQuestion[1].gbr;
+        tampilPembDua.innerHTML = sliceQuestion[1].pembahasan;
         jawabanDua = sliceQuestion[1].jwb;
 
         tampilSoalTiga.innerHTML = sliceQuestion[2].soal;
         tampilGbrTiga.innerHTML = sliceQuestion[2].gbr;
+        tampilPembTiga.innerHTML = sliceQuestion[2].pembahasan;
         jawabanTiga = sliceQuestion[2].jwb;
 
         tampilSoalEmpat.innerHTML = sliceQuestion[3].soal;
         tampilGbrEmpat.innerHTML = sliceQuestion[3].gbr;
+        tampilPembEmpat.innerHTML = sliceQuestion[3].pembahasan;
         jawabanEmpat = sliceQuestion[3].jwb;
 
         tampilSoalLima.innerHTML = sliceQuestion[4].soal;
         tampilGbrLima.innerHTML = sliceQuestion[4].gbr;
+        tampilPembLima.innerHTML = sliceQuestion[4].pembahasan;
         jawabanLima = sliceQuestion[4].jwb;
 
       }
@@ -123,6 +140,10 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       if (answerSatu.value != "") {
         progress[0].classList.add('progress-salah')
+        sal[1]+=1;
+        if(sal[1]>=2){
+          lihatPemb[0].style.display="block";
+        }
       }
       ulangSoal[0].style.display = "inline-block";
       cekJwb[0].style.display = "none";
@@ -151,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Soal 2
   let tampilSoalDua = document.querySelector("#soal2");
   let tampilGbrDua = document.querySelector("#gbr2");
+  let tampilPembDua = document.querySelector("#pemb2");
   let answerDua = document.querySelector("#jwbsiswa2");
   let cekDua = document.querySelector("#cekjwb2");
   let benarDua = document.querySelector("#hasilbenar2");
@@ -178,6 +200,10 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       if (answerDua.value != "") {
         progress[1].classList.add('progress-salah')
+        sal[2]+=1;
+        if(sal[2]>=2){
+          lihatPemb[1].style.display="block";
+        }
       }
       ulangSoal[1].style.display = "inline-block";
       cekJwb[1].style.display = "none";
@@ -207,6 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //Soal 3
   let tampilSoalTiga = document.querySelector("#soal3");
   let tampilGbrTiga = document.querySelector("#gbr3");
+  let tampilPembTiga = document.querySelector("#pemb3");
   let answerTiga = document.querySelector("#jwbsiswa3");
   let cekTiga = document.querySelector("#cekjwb3");
   let benarTiga = document.querySelector("#hasilbenar3");
@@ -233,6 +260,10 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       if (answerTiga.value != "") {
         progress[2].classList.add('progress-salah')
+        sal[3]+=1;
+        if(sal[3]>=2){
+          lihatPemb[2].style.display="block";
+        }
       }
       ulangSoal[2].style.display = "inline-block";
       cekJwb[2].style.display = "none";
@@ -261,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //Soal Empat
   let tampilSoalEmpat = document.querySelector("#soal4");
   let tampilGbrEmpat = document.querySelector("#gbr4");
+  let tampilPembEmpat = document.querySelector("#pemb4");
   let answerEmpat = document.querySelector("#jwbsiswa4");
   let cekEmpat = document.querySelector("#cekjwb4");
   let benarEmpat = document.querySelector("#hasilbenar4");
@@ -288,6 +320,10 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       if (answerEmpat.value != "") {
         progress[3].classList.add('progress-salah')
+        sal[4]+=1;
+        if(sal[4]>=2){
+          lihatPemb[3].style.display="block";
+        }
       }
       ulangSoal[3].style.display = "inline-block";
       cekJwb[3].style.display = "none";
@@ -316,6 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //Soal Lima
   let tampilSoalLima = document.querySelector("#soal5");
   let tampilGbrLima = document.querySelector("#gbr5");
+  let tampilPembLima = document.querySelector("#pemb5");
   let answerLima = document.querySelector("#jwbsiswa5");
   let cekLima = document.querySelector("#cekjwb5");
   let benarLima = document.querySelector("#hasilbenar5");
@@ -344,6 +381,10 @@ document.addEventListener("DOMContentLoaded", function () {
       cekJwb[4].style.display = "none";
       if (answerLima.value != "") {
         progress[4].classList.add('progress-salah')
+        sal[5]+=1;
+        if(sal[5]>=2){
+          lihatPemb[4].style.display="block";
+        }
       }
     } else {
       answerLima.style.border = "2px solid green" 
@@ -405,5 +446,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     cekJwb[currentTab - 1].style.display="inline-block";
     ulangSoal[currentTab - 1].style.display="none";
+    pembContainer[currentTab - 1].style.display="none";
+    lihatPemb[currentTab - 1].style.display="none";
   }
+
+    function lihat(){
+      pembContainer[currentTab-1].style.display = "block";
+    }
 });
