@@ -627,6 +627,9 @@ a{
 	border:2px solid blue;
 	margin-left: 2%;
 }
+.pemb img{
+	width: 100%;
+}
 .lihat{
 	margin-left: 20px;
 	font-weight: bold;

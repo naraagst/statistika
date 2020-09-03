@@ -13,8 +13,7 @@
 		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 		});
 		</script>
-		<script type="text/javascript" async src="../../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-		</script>
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 		<script>
 			window.onload = function awal(){
 				
@@ -179,11 +178,14 @@
 
 			function showNextSlide(){
 				showSlide(currentSlide + 1)
-
-				let selector2 = `input[name=question${currentSlide}]:checked`
-				let nilai = $(selector2).val();
-				console.log(selector2)
-				console.log(nilai)
+				// let tempatJawaban = questionContainer.querySelectorAll('.answers')
+				// let tJawaban = tempatJawaban[currentSlide]
+				// let selector2 = `input[name=question${currentSlide}]:checked`
+				// let jawaban = $(selector2).val();
+				// console.log(tempatJawaban)
+				// console.log(tJawaban)
+				// console.log(selector2)
+				// console.log(jawaban)
 			}
 
 			function showPreviousSlide(){
@@ -194,6 +196,7 @@
 				showSlide(n)
 			}
 			//DOM Show Question
+
 
 			let questionContainer = document.querySelector("#quiz")
 			let nextButton = document.querySelector("#next")
