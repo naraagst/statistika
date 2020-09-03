@@ -1,0 +1,34 @@
+{
+	"soal_median":[
+		{
+			"soal":"<p>Nilai ujian matematika dari sepuluh orang siswa adalah sebagai berikut :</p><p style='text-align:center;font-weight:bold'>5, 6, 6, 7, 7, 8, 8, 8, 9, 9</p><p>Berapakah median dari data tersebut?</p>",
+			"gbr":"",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Diketahui : <br/>Banyak data ($n$) = 10 (genap)<br/>Data terurut = 5, 6, 6, 7, 7, 8, 8, 8, 9, 9</p><p>Ditanya : Median?</p><div class='pembahasan2'><table style='margin-top: 10px;'><tr><td rowspan='2' style='width: 50px;text-align: right;'>Median</td><td rowspan='2' style='padding:5px;text-align: center;'>=</td><td style='border-bottom:2px solid black; text-align: center'>data ke-($\\frac{n}{2}$) + data ke-($\\frac{n}{2}+1$)</td></tr><tr><td style='text-align: center;'>$2$</td></tr><tr><td rowspan='2' style='text-align: right;'></td><td rowspan='2' style='padding:5px;'>=</td><td style='border-bottom:2px solid black;text-align: center;'>data-5 + data ke-6</td></tr><tr><td style='text-align: center;'>$2$</td></tr><tr></tr><tr><td rowspan='2' style='text-align: right;'></td><td rowspan='2' style='padding:5px;'>=</td><td style='text-align: left;'><span style='border-bottom:2px solid black;'>$7 + 8$</span></td></tr><tr><td style='text-align: left; padding-left: 10px;'>$2$</td></tr><tr><td></td><td>=</td><td>$7.5$</td></tr></table><p><b>Jadi, median dari data tersebut adalah 7.5</b></p>",
+			"jwb":7.5
+		},
+		{
+			"soal":"<p>Berikut ini adalah data berat beberapa buah kasturi (dalam gram):</p><p style='text-align:center;font-weight:bold'>56, 63, 64, 67, 57, 60, 65, 53, 60</p><p>Berapakah median dari data di atas?</p>",
+			"gbr":"",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Diketahui : <br/>Banyak data ($n$) = 9 (ganjil)<br/>Data terurut = 53, 56, 57, 60, 60, 63, 64, 65, 67</p><p>Ditanya : Median?</p><div class='pembahasan2'><table style='margin-top: 10px;'><tr><td style='width: 50px;text-align: right;'>Median</td><td style='padding:5px;text-align: center;'>=</td><td style='text-align: center'>data ke-($\\frac{n+1}{2}$)</td></tr><tr><td style='text-align: right;'></td><td style='padding:5px;'>=</td><td style='solid black;text-align: center;'>data ke-($\\frac{9+1}{2}$)</td></tr><tr></tr><tr><td style='text-align: right;'></td><td style='padding:5px;'>=</td><td style='text-align: left;'><span style='solid black;'>data ke-5</span></td></tr><tr><td></td><td>=</td><td>$60$</td></tr></table><p><b>Jadi, median dari data tersebut adalah 60</b></p>",
+			"jwb":60
+		},
+		{
+			"soal":"<p>Berikut ini adalah data ukuran lebar 17 ekor ikan toman:</p><img src='../../gambar/lmedian1.png' style='width:90%;margin-left:20px;'><p>Berapakah median dari data tersebut?",
+			"gbr":"",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Diketahui : <br/>Banyak data  ($n$) = 17 (ganjil)<br/>Data terurut = 4.3 ,  4.3 ,  4.5 ,  4.5 ,  4.6 ,  4.8 ,  4.9 , 5, 5, 5, 5, 5, 5,  5.2 ,  5.5 ,  5.6 ,  5.7 </p><p>Ditanya : Median?</p><div class='pembahasan2'><table style='margin-top: 10px;'><tr><td style='width: 50px;text-align: right;'>Median</td><td style='padding:5px;text-align: center;'>=</td><td style='text-align: center'>data ke-($\\frac{n+1}{2}$)</td></tr><tr><td style='text-align: right;'></td><td style='padding:5px;'>=</td><td style='solid black;text-align: center;'>data ke-($\\frac{17+1}{2}$)</td></tr><tr></tr><tr><td style='text-align: right;'></td><td style='padding:5px;'>=</td><td style='text-align: left;'><span>data ke-9</span></td></tr><tr><td></td><td>=</td><td>$5$</td></tr></table><p><b>Jadi, median dari data tersebut adalah 5</b></p>",
+			"jwb":5
+		},
+		{
+			"soal":"<p>Berikut ini adalah data ukuran sepatu 15 siswa kelas VIIIA.</p><p style='text-align:center;font-weight:bold'>37, 37, 38, 39, 39, 38, 37, 36, 40, 39, 38, 39, 36, 39, 40</p><p>Berapakah median dari data tersebut?</p>",
+			"gbr":"",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Diketahui : <br/>Banyak data  ($n$) = 15 (ganjil)<br/>Data terurut = 36, 36, 37, 37, 37, 38, 38, 38, 39, 39, 39, 39, 39, 40, 40</p><p>Ditanya : Median?</p><div class='pembahasan2'><table style='margin-top: 10px;'><tr><td style='width: 50px;text-align: right;'>Median</td><td style='padding:5px;text-align: center;'>=</td><td style='text-align: center'>data ke-($\\frac{n+1}{2}$)</td></tr><tr><td style='text-align: right;'></td><td style='padding:5px;'>=</td><td style='solid black;text-align: center;'>data ke-($\\frac{15+1}{2}$)</td></tr><tr></tr><tr><td style='text-align: right;'></td><td style='padding:5px;'>=</td><td style='text-align: left;'><span>data ke-8</span></td></tr><tr><td></td><td>=</td><td>$38$</td></tr></table><p><b>Jadi, median dari data tersebut adalah 38</b></p>",
+			"jwb":38
+		},
+		{
+			"soal":"<p>Diketahui data nilai ulangan Matematika dari 15 orang siswa sebagai berikut.</p><p style='text-align:center;font-weight:bold'>7, 5, 4, 6, 5, 7, 8, 6, 4, 4, 5, 9, 5, 6, 4</p><p>Berapakah median dari data tersebut?</p>",
+			"gbr":"",
+			"pembahasan":"<p><b>Pembahasan</b></p><p>Diketahui : <br/>Banyak data  ($n$) = 15 (ganjil)<br/>Data terurut = 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9</p><p>Ditanya : Median?</p><div class='pembahasan2'><table style='margin-top: 10px;'><tr><td style='width: 50px;text-align: right;'>Median</td><td style='padding:5px;text-align: center;'>=</td><td style='text-align: center'>data ke-($\\frac{n+1}{2}$)</td></tr><tr><td style='text-align: right;'></td><td style='padding:5px;'>=</td><td style='solid black;text-align: center;'>data ke-($\\frac{15+1}{2}$)</td></tr><tr></tr><tr><td style='text-align: right;'></td><td style='padding:5px;'>=</td><td style='text-align: left;'><span>data ke-8</span></td></tr><tr><td></td><td>=</td><td>$5$</td></tr></table><p><b>Jadi, median dari data tersebut adalah 5</b></p>",
+			"jwb":8
+		}
+	]
+}
