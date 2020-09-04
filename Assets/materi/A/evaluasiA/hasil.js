@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if(localStorage.getItem("progress") <=5){
             localStorage.setItem("progress",5)
         }
-        location.href = 'Assets/Materi/b/mean1.html'
+        location.href = '/Assets/Materi/b/mean1.html'
         clearResults()
     })
 
