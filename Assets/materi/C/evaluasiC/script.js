@@ -7,7 +7,8 @@ const myQuestions = [
 	        "c": "2.5",
 	        "d": "3"
 		},
-		correctAnswer:"c"
+		correctAnswer:"c",
+		soal:0
 	},
 	{
 		question:"Berikut ini adalah data panjang potongan sekumpulan pipa.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Potongan Pipa (cm)</th><th>Banyak Potongan Pipa</th></tr><tr><td>5</td><td>5</td></tr><tr><td>5.5</td><td>4</td></tr><tr><td>6</td><td>8</td></tr><tr><td>6.5</td><td>6</td></tr><tr><td>7</td><td>7</td></tr><tr><td>7.5</td><td>9</td></tr></table></center></div><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
@@ -17,7 +18,8 @@ const myQuestions = [
 	        "c": "6.5, 7 dan 7.5",
 	        "d": "5.5, 6.0 dan 6.5"
 		},
-		correctAnswer:"b"
+		correctAnswer:"b",
+		soal:1
 	},
 	{
 		question:"Berikut ini adalah data panjang potongan sekumpulan pipa.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Potongan Pipa (cm)</th><th>Banyak Potongan Pipa</th></tr><tr><td>5</td><td>5</td></tr><tr><td>5.5</td><td>4</td></tr><tr><td>6</td><td>8</td></tr><tr><td>6.5</td><td>6</td></tr><tr><td>7</td><td>7</td></tr><tr><td>7.5</td><td>9</td></tr></table></center></div><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...</p>",
@@ -27,7 +29,8 @@ const myQuestions = [
 	        "c": "1 dan 0.5",
 	        "d": "1 dan 1.5"
 		},
-		correctAnswer:"c"
+		correctAnswer:"c",
+		soal:2
 	},
 	{
 		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan dari data tersebut adalah ....</p>",
@@ -37,7 +40,8 @@ const myQuestions = [
 	        "c": "9",
 	        "d": "10"
 		},
-		correctAnswer:"d"
+		correctAnswer:"d",
+		soal:3
 	},
 	{
 		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
@@ -47,7 +51,8 @@ const myQuestions = [
 	        "c": "150, 152 dan 154",
 	        "d": "152, 154 dan 156"
 		},
-		correctAnswer:"b"
+		correctAnswer:"b",
+		soal:4
 	},
 	{
 		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...",
@@ -57,7 +62,8 @@ const myQuestions = [
 	        "c": "4 dan 2",
 	        "d": "5 dan 2.5"
 		},
-		correctAnswer:"c"
+		correctAnswer:"c",
+		soal:5
 	},
 	{
 		question:"Data hasil tes seleksi penerimaan karyawan sebuah perusahaan sebagai berikut.<br/><center><img src='../../../gambar/MD5.PNG'></center><p>Jangkauan dari data tersebut adalah...</p>",
@@ -67,7 +73,8 @@ const myQuestions = [
 	        "c": "45",
 	        "d": "55"
 		},
-		correctAnswer:"a"
+		correctAnswer:"a",
+		soal:6
 	},
 	{
 		question:"Data hasil tes seleksi penerimaan karyawan sebuah perusahaan sebagai berikut.<br/><center><img src='../../../gambar/MD5.PNG'></center><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
@@ -77,7 +84,8 @@ const myQuestions = [
 	        "c": "70, 80 dan 90",
 	        "d": "80, 90 dan 100"
 		},
-		correctAnswer:"b"
+		correctAnswer:"b",
+		soal:7
 	},
 	{
 		question:"Data hasil tes seleksi penerimaan karyawan sebuah perusahaan sebagai berikut.<br/><center><img src='../../../gambar/MD5.PNG'></center><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...</p>",
@@ -87,7 +95,8 @@ const myQuestions = [
 	        "c": "30 dan 15",
 	        "d": "20 dan 10"
 		},
-		correctAnswer:"d"
+		correctAnswer:"d",
+		soal:8
 	},
 	{
 		question:"Data nilai ulangan IPA kelas IX disajikan dalam diagram berikut.<br/><center><img src='../../../gambar/UPM2.PNG'></center><p>Jangkauan dari data tersebut adalah...</p>",
@@ -97,6 +106,7 @@ const myQuestions = [
 	        "c": "7",
 	        "d": "4"
 		},
-		correctAnswer:"d"
+		correctAnswer:"d",
+		soal:9
 	}
 ]

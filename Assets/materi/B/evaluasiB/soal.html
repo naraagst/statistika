@@ -70,6 +70,15 @@
 		<script src="script.js"></script>
 		
 		<script>
+		let pil_user = [];
+        // menangkap jawaban pengguna dari soal acak
+        let jwb_urut = [];
+        // menyimpan jawaban pengguna yang sudah terurut
+        let jwb_urut_no = [];
+        // menangkap soal acak
+        let jwb_urut_no_fix = [];
+        //   menyimpan soal acak yang sudah terurut
+
 			let randomQuestion = myQuestions.sort((a,b) => {return 0.5 - Math.random()})
 			let sliceQuestion = randomQuestion.slice(0, 10)
 			let numberBtn = document.querySelector(".number-btn")
@@ -114,6 +123,7 @@
 						`
 					)
 					currentNumber++
+					jwb_urut_no.push(currentQuestion.soal)
 				})
 				questionContainer.innerHTML = output.join("")
 			}
@@ -129,6 +139,7 @@
 
 					const selector = `input[name=question${questionNumber}]:checked`
 					const userAnswer = (answerContainer.querySelector(selector) || {}).value
+					pil_user.push(userAnswer);
 
 					if(userAnswer === currentQuestion.correctAnswer){
 						numCorrect++
@@ -146,6 +157,16 @@
 				sessionStorage.setItem('tanggal', tanggalHariIni)
 				sessionStorage.setItem('waktu', waktuSekarang)
 				location.href = './hasil.html'
+
+				for (let i = 0; i < jwb_urut_no.length; i++) {
+                for (let j = 0; j < jwb_urut_no.length; j++) {
+                    if (i == jwb_urut_no[j]) {
+                        jwb_urut.push(pil_user[j]);
+                        jwb_urut_no_fix.push(jwb_urut_no[j])
+                    }
+	                }
+	            }
+	            sessionStorage.setItem("jawaban", JSON.stringify(jwb_urut))
 			}
 
 			function showSlide(n){

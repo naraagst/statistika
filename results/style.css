@@ -12,6 +12,16 @@
 	font-family: Poppins;
 	font-weight: bolder;
 }
+.isiHasil{
+	overflow-y: scroll;
+	width:80%;
+	height: 90%;
+	padding: 20px 0;
+	margin-bottom:20px;
+}
+.isiHasil .tabel table{
+	width: 100% !important;
+}
 .active{
 	background-color: rgb(127,205,255) !important;
 	color: black !important;
@@ -45,5 +55,8 @@
 	}
 	.index{
 		height: auto !important;
+	}
+	.isiHasil{
+		width:100%;
 	}
 }

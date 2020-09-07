@@ -69,6 +69,7 @@ function clearResults() {
     sessionStorage.setItem("kelas", "")
     sessionStorage.setItem("tanggal", "")
     sessionStorage.setItem("waktu", "")
+    sessionStorage.setItem("jawaban", "")
 }
 
 function newResults(tanggal, waktu, nameUser, classUser, numCorrect, numWrong, score) {

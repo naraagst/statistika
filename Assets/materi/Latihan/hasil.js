@@ -5,6 +5,7 @@ let wrongAnswer = sessionStorage.getItem("wrong")
 let nameUser = sessionStorage.getItem("nama")
 let classUser = sessionStorage.getItem("kelas")
 let questionLength = sessionStorage.getItem("questionLength")
+let jwbSiswa = JSON.parse(sessionStorage.getItem("jawaban"))
 let nextt = document.querySelector("#next")
 let kett = document.querySelector("#ket")
 let ulangi = document.querySelector("#ulangi")
@@ -63,6 +64,7 @@ function clearResults() {
     sessionStorage.setItem("kelas", "")
     sessionStorage.setItem("tanggal", "")
     sessionStorage.setItem("waktu", "")
+    sessionStorage.setItem("jawaban", "")
 }
 
 function newResults(tanggal, waktu, nameUser, classUser, numCorrect, numWrong, score) {
@@ -118,6 +120,7 @@ let data = {
     nama : nameUser,
     kelas : classUser,
     nilai : score,
+    jawaban: jwbSiswa,
     tanggal : tanggal,
     waktu : waktu
 }
