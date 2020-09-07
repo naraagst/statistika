@@ -33,7 +33,7 @@ const myQuestions = [
 		soal:2
 	},
 	{
-		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan dari data tersebut adalah ....</p>",
+		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>3</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan dari data tersebut adalah ....</p>",
 		answers:{
 			"a": "7",
 	        "b": "8",
@@ -44,7 +44,7 @@ const myQuestions = [
 		soal:3
 	},
 	{
-		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
+		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>3</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
 			"a": "146, 148 dan 150",
 	        "b": "148, 150 dan 152",
@@ -55,7 +55,7 @@ const myQuestions = [
 		soal:4
 	},
 	{
-		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>4</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...",
+		question:"Data tinggi badan siswa kelas VIIIB diukur sampai cm terdekat sebagai berikut.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Tinggi Badan (cm)</th><th>Banyak Siswa</th></tr><tr><td>146</td><td>3</td></tr><tr><td>148</td><td>9</td></tr><tr><td>150</td><td>10</td></tr><tr><td>152</td><td>8</td></tr><tr><td>154</td><td>5</td></tr><tr><td>156</td><td>4</td></tr></table></center></div><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...",
 		answers:{
 			"a": "6 dan 3",
 	        "b": "3 dan 1.5",
@@ -66,7 +66,7 @@ const myQuestions = [
 		soal:5
 	},
 	{
-		question:"Data hasil tes seleksi penerimaan karyawan sebuah perusahaan sebagai berikut.<br/><center><img src='../../../gambar/MD5.PNG'></center><p>Jangkauan dari data tersebut adalah...</p>",
+		question:"Data berat 11 buah kasturi (dalam gram) adalah sebagai berikut.<br/><center><div class='tabeltulisan bigpad'><table><tr><td>56</td><td>63,</td><td>64,</td><td>67,</td><td>57,</td><td>60,</td></tr><tr><td>65,</td><td>53,</td><td>60,</td><td>55,</td><td>62</td></tr></table></div></center><p>Jangkauan dari data tersebut adalah...</p>",
 		answers:{
 			"a": "50",
 	        "b": "35",
@@ -77,7 +77,7 @@ const myQuestions = [
 		soal:6
 	},
 	{
-		question:"Data hasil tes seleksi penerimaan karyawan sebuah perusahaan sebagai berikut.<br/><center><img src='../../../gambar/MD5.PNG'></center><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
+		question:"Data berat 11 buah kasturi (dalam gram) adalah sebagai berikut.<br/><center><div class='tabeltulisan bigpad'><table><tr><td>56</td><td>63,</td><td>64,</td><td>67,</td><td>57,</td><td>60,</td></tr><tr><td>65,</td><td>53,</td><td>60,</td><td>55,</td><td>62</td></tr></table></div></center><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
 			"a": "50, 60 dan 70",
 	        "b": "60, 70 dan 80",
@@ -88,7 +88,7 @@ const myQuestions = [
 		soal:7
 	},
 	{
-		question:"Data hasil tes seleksi penerimaan karyawan sebuah perusahaan sebagai berikut.<br/><center><img src='../../../gambar/MD5.PNG'></center><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...</p>",
+		question:"Data berat 11 buah kasturi (dalam gram) adalah sebagai berikut.<br/><center><div class='tabeltulisan bigpad'><table><tr><td>56</td><td>63,</td><td>64,</td><td>67,</td><td>57,</td><td>60,</td></tr><tr><td>65,</td><td>53,</td><td>60,</td><td>55,</td><td>62</td></tr></table></div></center><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
 			"a": "10 dan 5",
 	        "b": "40 dan 20",
@@ -99,12 +99,12 @@ const myQuestions = [
 		soal:8
 	},
 	{
-		question:"Data nilai ulangan IPA kelas IX disajikan dalam diagram berikut.<br/><center><img src='../../../gambar/UPM2.PNG'></center><p>Jangkauan dari data tersebut adalah...</p>",
+		question:"Data hasil tes seleksi penerimaan karyawan sebuah perusahaan sebagai berikut.<br/><center><img src='../../../gambar/MD5.PNG'></center><p>Jangkauan dari data tersebut adalah...</p>",
 		answers:{
-			"a": "13",
-	        "b": "30",
-	        "c": "7",
-	        "d": "4"
+			"a": "50",
+	        "b": "55",
+	        "c": "45",
+	        "d": "35"
 		},
 		correctAnswer:"d",
 		soal:9

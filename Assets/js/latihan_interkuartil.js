@@ -9,12 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
   let benarSemua = document.querySelectorAll(".benarSemua");
   let progressContainer = document.querySelector(".progress");
   let ulangSoal = document.querySelectorAll(".ulang");
+  let lihatPemb = document.querySelectorAll(".lihat");
+  let pembContainer = document.querySelectorAll(".pemb");
+  sal = [];
+  pembContainer[4].style.display = "none";
+  lihatPemb[4].style.display = "none";
   ulangSoal[4].addEventListener("click", ulang);
+  lihatPemb[4].addEventListener("click", lihat);
   retryButton[4].addEventListener("click", retryQuiz);
   let jlhBenar=0;
   progress[4].innerHTML="5";
-  retryButton[4].style.display = "none";
   ulangSoal[4].style.display = "none";
+  retryButton[4].style.display = "none";
   let currentTab = 1;
   content1.style.display = "block";
   progress[0].classList.add('progress-ongoing')
@@ -27,6 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
     retryButton[n].addEventListener("click", retryQuiz);
     ulangSoal[n].style.display = "none";
     ulangSoal[n].addEventListener("click", ulang);
+    lihatPemb[n].addEventListener("click", lihat);
+    lihatPemb[n].style.display = "none";
+    pembContainer[n].style.display = "none";
+  }
+  for (let f = 1; f<=5; f++){
+    sal[f] = 0;
   }
 
   function nextSlide() {
@@ -56,6 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let answerSatu = document.querySelectorAll(".jwbsiswa1");
   let cekSatu = document.querySelector("#cekjwb1");
   let benarSatu = document.querySelector("#hasilbenar");
+  let tampilPembSatu = document.querySelector("#pemb1");
+  let tampilPembDua = document.querySelector("#pemb2");
+  let tampilPembTiga = document.querySelector("#pemb3");
+  let tampilPembEmpat = document.querySelector("#pemb4");
+  let tampilPembLima = document.querySelector("#pemb5");
   let jawabanSatu = [];
   let jawabanDua = [];
   let jawabanTiga = [];
@@ -70,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     xhttp.onreadystatechange = function () {
       if (xhttp.readyState === 4 && xhttp.status === 200) {
         let soalSatu = JSON.parse(this.responseText);
-        
+        let pembArray =[];
 
         let randQuestion = soalSatu.soal_interkuartil.sort((a,b) => {return 0.5 - Math.random()})
         let sliceQuestion = randQuestion.slice(0, 5)
@@ -80,22 +97,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tampilSoalSatu.innerHTML = sliceQuestion[0].soal;
         tampilGbrSatu.innerHTML = sliceQuestion[0].gbr;
+        tampilPembSatu.innerHTML = sliceQuestion[0].pembahasan;
         jawabanSatu = sliceQuestion[0].jwb;
 
         tampilSoalDua.innerHTML = sliceQuestion[1].soal;
         tampilGbrDua.innerHTML = sliceQuestion[1].gbr;
+        tampilPembDua.innerHTML = sliceQuestion[1].pembahasan;
         jawabanDua = sliceQuestion[1].jwb;
 
         tampilSoalTiga.innerHTML = sliceQuestion[2].soal;
         tampilGbrTiga.innerHTML = sliceQuestion[2].gbr;
+        tampilPembTiga.innerHTML = sliceQuestion[2].pembahasan;
         jawabanTiga = sliceQuestion[2].jwb;
 
         tampilSoalEmpat.innerHTML = sliceQuestion[3].soal;
         tampilGbrEmpat.innerHTML = sliceQuestion[3].gbr;
+        tampilPembEmpat.innerHTML = sliceQuestion[3].pembahasan;
         jawabanEmpat = sliceQuestion[3].jwb;
 
         tampilSoalLima.innerHTML = sliceQuestion[4].soal;
         tampilGbrLima.innerHTML = sliceQuestion[4].gbr;
+        tampilPembLima.innerHTML = sliceQuestion[4].pembahasan;
         jawabanLima = sliceQuestion[4].jwb;
 
       }
@@ -130,6 +152,10 @@ document.addEventListener("DOMContentLoaded", function () {
             : "<br/>Inputan tidak boleh ada yang kosong."
         }
       `;
+      sal[1]+=1;
+        if(sal[1]>=2){
+          lihatPemb[0].style.display="block";
+        }
       ulangSoal[0].style.display = "inline-block";
       cekJwb[0].style.display = "none";
 
@@ -186,6 +212,10 @@ document.addEventListener("DOMContentLoaded", function () {
             : "<br/>Inputan tidak boleh ada yang kosong."
         }
       `;
+      sal[2]+=1;
+        if(sal[2]>=2){
+          lihatPemb[1].style.display="block";
+        }
       ulangSoal[1].style.display = "inline-block";
       cekJwb[1].style.display = "none";
 
@@ -243,6 +273,10 @@ document.addEventListener("DOMContentLoaded", function () {
             : "<br/>Inputan tidak boleh ada yang kosong."
         }
       `;
+      sal[3]+=1;
+        if(sal[3]>=2){
+          lihatPemb[2].style.display="block";
+        }
       ulangSoal[2].style.display = "inline-block";
       cekJwb[2].style.display = "none";
 
@@ -299,6 +333,10 @@ document.addEventListener("DOMContentLoaded", function () {
             : "<br/>Inputan tidak boleh ada yang kosong."
         }
       `;
+      sal[4]+=1;
+        if(sal[4]>=2){
+          lihatPemb[3].style.display="block";
+        }
       ulangSoal[3].style.display = "inline-block";
       cekJwb[3].style.display = "none";
 
@@ -357,6 +395,10 @@ document.addEventListener("DOMContentLoaded", function () {
             : "<br/>Inputan tidak boleh ada yang kosong."
         }
       `;
+      sal[5]+=1;
+        if(sal[5]>=2){
+          lihatPemb[4].style.display="block";
+        }
       ulangSoal[4].style.display = "inline-block";
       cekJwb[4].style.display = "none";
 
@@ -429,5 +471,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     cekJwb[currentTab - 1].style.display="inline-block"
     ulangSoal[currentTab - 1].style.display="none";
+    pembContainer[currentTab - 1].style.display="none";
+    lihatPemb[currentTab - 1].style.display="none";
   }
+
+  function lihat(){
+      pembContainer[currentTab-1].style.display = "block";
+    }
 });
