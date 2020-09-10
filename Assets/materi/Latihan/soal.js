@@ -20,11 +20,11 @@ const myQuestions = [
 		correctAnswer:"b"
 	},
 	{
-		question:"Tabel berikut ini menunjukkan lama tidur di waktu malam (dalam jam) beberapa siswa kelas VIII.<br/><center><img src='/assets/gambar/latihan3.JPG' style='width:50%'></center><p>Q<sub>1</sub>, Q<sub>2</sub>, Q<sub>3</sub> dari data tersebut berturut-turut adalah ...</p>",
+		question:"Tabel berikut ini menunjukkan lama tidur di waktu malam (dalam jam) beberapa siswa kelas VIII.<br/><center><img src='https://ibb.co/vD8WKGH' style='width:50%'></center><p>Q<sub>1</sub>, Q<sub>2</sub>, Q<sub>3</sub> dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
-			"a": "5, 6 dan 7,5",
+			"a": "5, 6, dan 7",
 	        "b": "4, 5 dan 5,5",
-	        "c": "5, 6, dan 7",
+	        "c": "5, 6 dan 7,5",
 	        "d": "6, 7 dan 7,5"
 		},
 		correctAnswer:"a"

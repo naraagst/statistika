@@ -29,7 +29,7 @@ const myQuestions = [
 	        "c": "18 anak",
 	        "d": "24 anak"
 		},
-		correctAnswer:"d",
+		correctAnswer:"a",
 		soal:2
 	},
 	{

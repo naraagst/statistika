@@ -20,15 +20,27 @@
 			<div class="isiHasil">
 			<h1>Hasil Kuis A</h1>
 			<button id="btnExport" onclick="fnExcelReport();" class="cek" style="margin:10px 0; width:200px !important;"> Download File Excel </button>
-			<div class="tabel">
+			<div class="tabeljwb">
 				<table id="tblData2">
 					<thead>
 						<tr>
-							<th>No. </th>
-							<th>Nama</th>
-							<th>Kelas</th>
-							<th>Nilai</th>
-							<th>Waktu Selesai</th>
+							<th rowspan="2">No. </th>
+							<th rowspan="2">Nama</th>
+							<th rowspan="2">Kelas</th>
+							<th rowspan="2">Nilai</th>
+							<th colspan="10">Jawaban</th>
+						</tr>
+						<tr>
+							<th>b</th>
+							<th>a</th>
+							<th>d</th>
+							<th>c</th>
+							<th>b</th>
+							<th>c</th>
+							<th>b</th>
+							<th>d</th>
+							<th>b</th>
+							<th>d</th>
 						</tr>
 					</thead>
 					<tbody id="data">
@@ -72,15 +84,20 @@
 		    index+=1;
 		    var hasil = childSnapshot.val();
 		    var tblData = document.getElementById("data");
-		    tblData.innerHTML += `
-		      <tr>
-		        <td>${index}.</td>
-		        <td>${hasil.nama}</td>
-		        <td>${hasil.kelas}</td>
-		        <td>${hasil.nilai}</td>      
-		        <td>${hasil.tanggal}<br/>${hasil.waktu}</td>      
-		      </tr>
-		    `
+		    let kunciJawaban = ["b","a","d","c","b","c","b","d","b","d"]
+		    let mm = '';
+                mm = `<tr><td>${index}.</td><td>${hasil.nama}</td><td >${hasil.kelas}</td><td>${hasil.nilai}</td>`;
+                for (let i = 0; i < kunciJawaban.length; i++) {
+                    if (hasil.jawaban[i] == kunciJawaban[i]) {
+                        mm += `<td class="benar">${hasil.jawaban[i]}</td>`;
+                    } else if (hasil.jawaban[i]==undefined) {
+                    	mm += `<td class="salah">-</td>`;
+                    } else {
+                        mm += `<td class="salah">${hasil.jawaban[i]}</td>`;
+                    }
+                }
+                mm += `</tr>`;
+                tblData.innerHTML += mm;
 		  })
 		});
 
