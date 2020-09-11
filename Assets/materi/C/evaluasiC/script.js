@@ -106,7 +106,7 @@ const myQuestions = [
 	        "c": "45",
 	        "d": "35"
 		},
-		correctAnswer:"d",
+		correctAnswer:"a",
 		soal:9
 	}
 ]

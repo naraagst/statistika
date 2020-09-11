@@ -18,7 +18,7 @@
 		<div class="content">
 			<center>
 			<div class="isiHasil">
-			<h1>Hasil Kuis A</h1>
+			<h1>Hasil Kuis C</h1>
 			<button id="btnExport" onclick="fnExcelReport();" class="cek" style="margin:10px 0; width:200px !important;"> Download File Excel </button>
 			<div class="tabeljwb">
 				<table id="tblData2">
@@ -31,7 +31,17 @@
 							<th colspan="10">Jawaban</th>
 							<th rowspan="2">Waktu</th>
 						</tr>
-						<tr id="tblKunci">
+						<tr>
+							<th>b</th>
+							<th>a</th>
+							<th>d</th>
+							<th>c</th>
+							<th>b</th>
+							<th>c</th>
+							<th>b</th>
+							<th>d</th>
+							<th>b</th>
+							<th>d</th>
 						</tr>
 					</thead>
 					<tbody id="data">
@@ -75,9 +85,8 @@
 		    index+=1;
 		    var hasil = childSnapshot.val();
 		    var tblData = document.getElementById("data");
-		    let kunciJawaban = ["c","b","c","d","b","c","a","b","d","d"]
+		    let kunciJawaban = ["c","b","c","d","b","c","a","b","d","a"]
 		    let mm = '';
-		    let tk = '';
                 mm = `<tr><td>${index}.</td><td>${hasil.nama}</td><td >${hasil.kelas}</td><td>${hasil.nilai}</td>`;
                 for (let i = 0; i < kunciJawaban.length; i++) {
                     if (hasil.jawaban[i] == kunciJawaban[i]) {
@@ -87,11 +96,9 @@
                     } else {
                         mm += `<td class="salah">${hasil.jawaban[i]}</td>`;
                     }
-                    tk+=`<th>${kunciJawaban[i]}</th>`;
                 }
                 mm += `<td>${hasil.tanggal}<br/>${hasil.waktu}</td></tr>`;
                 tblData.innerHTML += mm;
-                tblKunci.innerHTML = tk;
 		  })
 		});
 
