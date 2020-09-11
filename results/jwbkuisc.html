@@ -31,17 +31,7 @@
 							<th colspan="10">Jawaban</th>
 							<th rowspan="2">Waktu</th>
 						</tr>
-						<tr>
-							<th>b</th>
-							<th>a</th>
-							<th>d</th>
-							<th>c</th>
-							<th>b</th>
-							<th>c</th>
-							<th>b</th>
-							<th>d</th>
-							<th>b</th>
-							<th>d</th>
+						<tr id="tblKunci">
 						</tr>
 					</thead>
 					<tbody id="data">
@@ -78,15 +68,16 @@
 		  firebase.initializeApp(firebaseConfig);
 
 		var database = firebase.database();
-		var data = database.ref('kuis-a');
+		var data = database.ref('kuis-c');
 		var index = 0;
 		data.on('value', function(snapshot) {
 		  snapshot.forEach(function(childSnapshot) {
 		    index+=1;
 		    var hasil = childSnapshot.val();
 		    var tblData = document.getElementById("data");
-		    let kunciJawaban = ["b","a","d","c","b","c","b","d","b","d"]
+		    let kunciJawaban = ["c","b","c","d","b","c","a","b","d","d"]
 		    let mm = '';
+		    let tk = '';
                 mm = `<tr><td>${index}.</td><td>${hasil.nama}</td><td >${hasil.kelas}</td><td>${hasil.nilai}</td>`;
                 for (let i = 0; i < kunciJawaban.length; i++) {
                     if (hasil.jawaban[i] == kunciJawaban[i]) {
@@ -96,9 +87,11 @@
                     } else {
                         mm += `<td class="salah">${hasil.jawaban[i]}</td>`;
                     }
+                    tk+=`<th>${kunciJawaban[i]}</th>`;
                 }
                 mm += `<td>${hasil.tanggal}<br/>${hasil.waktu}</td></tr>`;
                 tblData.innerHTML += mm;
+                tblKunci.innerHTML = tk;
 		  })
 		});
 

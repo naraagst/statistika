@@ -13,10 +13,10 @@ const myQuestions = [
 	{
 		question:"Berikut ini adalah data panjang potongan sekumpulan pipa.<br/><div class='tabel' style='margin-top:10px;'><center><table><tr><th>Potongan Pipa (cm)</th><th>Banyak Potongan Pipa</th></tr><tr><td>5</td><td>5</td></tr><tr><td>5.5</td><td>4</td></tr><tr><td>6</td><td>8</td></tr><tr><td>6.5</td><td>6</td></tr><tr><td>7</td><td>7</td></tr><tr><td>7.5</td><td>9</td></tr></table></center></div><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
-			"a": "5.0, 5.5 dan 6.5",
-	        "b": "6.0, 6.5 dan 7",
+			"a": "5, 5.5 dan 6.5",
+	        "b": "6, 6.5 dan 7",
 	        "c": "6.5, 7 dan 7.5",
-	        "d": "5.5, 6.0 dan 6.5"
+	        "d": "5.5, 6 dan 6.5"
 		},
 		correctAnswer:"b",
 		soal:1
@@ -68,10 +68,10 @@ const myQuestions = [
 	{
 		question:"Data berat 11 buah kasturi (dalam gram) adalah sebagai berikut.<br/><center><div class='tabeltulisan bigpad'><table><tr><td>56</td><td>63,</td><td>64,</td><td>67,</td><td>57,</td><td>60,</td></tr><tr><td>65,</td><td>53,</td><td>60,</td><td>55,</td><td>62</td></tr></table></div></center><p>Jangkauan dari data tersebut adalah...</p>",
 		answers:{
-			"a": "50",
-	        "b": "35",
-	        "c": "45",
-	        "d": "55"
+			"a": "14",
+	        "b": "15",
+	        "c": "16",
+	        "d": "17"
 		},
 		correctAnswer:"a",
 		soal:6
@@ -79,10 +79,10 @@ const myQuestions = [
 	{
 		question:"Data berat 11 buah kasturi (dalam gram) adalah sebagai berikut.<br/><center><div class='tabeltulisan bigpad'><table><tr><td>56</td><td>63,</td><td>64,</td><td>67,</td><td>57,</td><td>60,</td></tr><tr><td>65,</td><td>53,</td><td>60,</td><td>55,</td><td>62</td></tr></table></div></center><p>Kuartil bawah, kuartil tengah dan kuartil atas dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
-			"a": "50, 60 dan 70",
-	        "b": "60, 70 dan 80",
-	        "c": "70, 80 dan 90",
-	        "d": "80, 90 dan 100"
+			"a": "55, 60 dan 63",
+	        "b": "56, 60 dan 64",
+	        "c": "56, 62 dan 65",
+	        "d": "57, 63 dan 67"
 		},
 		correctAnswer:"b",
 		soal:7
@@ -90,10 +90,10 @@ const myQuestions = [
 	{
 		question:"Data berat 11 buah kasturi (dalam gram) adalah sebagai berikut.<br/><center><div class='tabeltulisan bigpad'><table><tr><td>56</td><td>63,</td><td>64,</td><td>67,</td><td>57,</td><td>60,</td></tr><tr><td>65,</td><td>53,</td><td>60,</td><td>55,</td><td>62</td></tr></table></div></center><p>Jangkauan interkuartil dan simpangan kuartil dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
-			"a": "10 dan 5",
-	        "b": "40 dan 20",
-	        "c": "30 dan 15",
-	        "d": "20 dan 10"
+			"a": "5 dan 2.5",
+	        "b": "6 dan 3",
+	        "c": "7 dan 3.5",
+	        "d": "8 dan 4"
 		},
 		correctAnswer:"d",
 		soal:8

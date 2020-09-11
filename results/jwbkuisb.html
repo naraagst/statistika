@@ -29,18 +29,9 @@
 							<th rowspan="2">Kelas</th>
 							<th rowspan="2">Nilai</th>
 							<th colspan="10">Jawaban</th>
+							<th rowspan="2">Waktu</th>
 						</tr>
-						<tr>
-							<th>b</th>
-							<th>c</th>
-							<th>a</th>
-							<th>b</th>
-							<th>b</th>
-							<th>d</th>
-							<th>c</th>
-							<th>b</th>
-							<th>c</th>
-							<th>d</th>
+						<tr id="tblKunci">
 						</tr>
 					</thead>
 					<tbody id="data">
@@ -86,6 +77,7 @@
 		    var tblData = document.getElementById("data");
 		    let kunciJawaban = ["b","c","a","b","b","d","c","b","c","d"]
 		    let mm = '';
+		    let tk = '';
                 mm = `<tr><td>${index}.</td><td>${hasil.nama}</td><td >${hasil.kelas}</td><td>${hasil.nilai}</td>`;
                 for (let i = 0; i < kunciJawaban.length; i++) {
                     if (hasil.jawaban[i] == kunciJawaban[i]) {
@@ -95,9 +87,11 @@
                     } else {
                         mm += `<td class="salah">${hasil.jawaban[i]}</td>`;
                     }
+                    tk+=`<th>${kunciJawaban[i]}</th>`;
                 }
-                mm += `</tr>`;
+                mm += `<td>${hasil.tanggal}<br/>${hasil.waktu}</td></tr>`;
                 tblData.innerHTML += mm;
+                tblKunci.innerHTML = tk;
 		  })
 		});
 
