@@ -84,11 +84,15 @@
 				if(nama.value === "" || kelas.value === "" || token.value === ""){
 					alert("Data Masih Ada yang Kosong !!!")
 				} else {
-
-					sessionStorage.setItem("nama", nama.value)
-					sessionStorage.setItem("kelas", kelas.value)
-					location.href = './soal.html'
-		
+					if(token.value === "4639")
+					{
+						sessionStorage.setItem("nama", nama.value)
+						sessionStorage.setItem("kelas", kelas.value)
+						location.href = './soal.html'
+					}
+					else{
+						alert("Token Salah !!!")
+					}
 				}
 			})
 		</script>
