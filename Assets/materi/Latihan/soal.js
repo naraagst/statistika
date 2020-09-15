@@ -2,12 +2,12 @@ const myQuestions = [
 	{
 		question:"Sebuah dealer menjual dua produk sepeda motor. Data penjualan dua produk sepeda motor selama 6 bulan sebagai berikut.<br/><center><img src='/assets/gambar/Latihan1.JPG'></center><p>Penjualan kedua produk sepeda motor turun pada bulan ...</p>",
 		answers:{
-			"a": "Februari dan Maret",
-	        "b": "Februari dan April",
-	        "c": "Februari dan Mei",
-	        "d": "Februari dan Juni"
+			"a": "Januari",
+	        "b": "Februari",
+	        "c": "Maret",
+	        "d": "April"
 		},
-		correctAnswer:"d"
+		correctAnswer:"b"
 	},
 	{
 		question:"Data tentang panjang batang suatu tanaman pada suhu yang berbeda disajikan dengan diagram batang sebagai berikut.<br/><center><img src='/assets/gambar/Latihan2.JPG' style='width:50%'></center><p>Panjang batang tanaman tertinggi jika tanaman tersebut ditanam pada suhu ...</p>",
@@ -20,7 +20,7 @@ const myQuestions = [
 		correctAnswer:"b"
 	},
 	{
-		question:"Tabel berikut ini menunjukkan lama tidur di waktu malam (dalam jam) beberapa siswa kelas VIII.<br/><center><img src='https://ibb.co/vD8WKGH' style='width:50%'></center><p>Q<sub>1</sub>, Q<sub>2</sub>, Q<sub>3</sub> dari data tersebut berturut-turut adalah ...</p>",
+		question:"Tabel berikut ini menunjukkan lama tidur di waktu malam (dalam jam) beberapa siswa kelas VIII.<br/><center><img src='/assets/gambar/lat3.jpg' style='width:50%'></center><p>Q<sub>1</sub>, Q<sub>2</sub>, Q<sub>3</sub> dari data tersebut berturut-turut adalah ...</p>",
 		answers:{
 			"a": "5, 6, dan 7",
 	        "b": "4, 5 dan 5,5",

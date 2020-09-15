@@ -78,7 +78,7 @@
 		    let kunciJawaban = ["c","b","c","d","b","c","a","b","d","a"]
 		    let mm = '';
 		    let tk = '';
-                mm = `<tr><td>${index}.</td><td>${hasil.nama}</td><td >${hasil.kelas}</td><td>${hasil.nilai}</td>`;
+                mm = `<tr><td style="text-align:center">${index}.</td><td>${hasil.nama}</td><td style="text-align:center">${hasil.kelas}</td><td style="text-align:center">${hasil.nilai}</td>`;
                 for (let i = 0; i < kunciJawaban.length; i++) {
                     if (hasil.jawaban[i] == kunciJawaban[i]) {
                         mm += `<td class="benar">${hasil.jawaban[i]}</td>`;
