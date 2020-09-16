@@ -10,6 +10,8 @@ let nextt = document.querySelector("#next")
 let kett = document.querySelector("#ket")
 let ulangi = document.querySelector("#ulangi")
 
+console.log(jwbSiswa)
+
 let quizResults = {}
 quizResults.results = []
 

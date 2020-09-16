@@ -2,8 +2,8 @@
 	<head>
 		<title>STATISTIKA</title>
 	
-		<link href="../../css/statistik.css" rel="stylesheet">	
-		<link href="../../css/materi2.css" rel="stylesheet">	
+		<link href="/assets/css/statistik.css" rel="stylesheet">	
+		<link href="/assets/css/materi2.css" rel="stylesheet">	
 		<link rel="stylesheet" href="style.css">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 		<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
@@ -104,7 +104,7 @@
 						answers.push(
 							`
 								<label>
-									<input type="radio" name="question${questionNumber}" value="${letter}">
+									<input type="radio" name="question${questionNumber}" value="${letter}" id="${letter}. ${currentQuestion.answers[letter]}">
 									<span>${letter}. ${currentQuestion.answers[letter]}</span>
 								</label>
 							`
@@ -131,10 +131,10 @@
 
 				let numCorrect = 0
 				let numWrong = 0
+				let userAnswer2 = [];
 
 				sliceQuestion.forEach((currentQuestion, questionNumber) => {
 					const answerContainer = answerContainers[questionNumber]
-
 					const selector = `input[name=question${questionNumber}]:checked`
 					const userAnswer = (answerContainer.querySelector(selector) || {}).value
 					pil_user.push(userAnswer);
@@ -146,19 +146,11 @@
 					}
 
 				})
-
-				console.log(numWrong)
-				console.log(numCorrect)
 				sessionStorage.setItem('questionLength', sliceQuestion.length)
 				sessionStorage.setItem('correct', numCorrect)
 				sessionStorage.setItem('wrong', numWrong)
 				sessionStorage.setItem('tanggal', tanggalHariIni)
 				sessionStorage.setItem('waktu', waktuSekarang)
-
-				localStorage.setItem('unduh','unduh');
-				if(localStorage.getItem("progress") <=27){
-		      		localStorage.setItem("progress",27)
-		      	}
 				location.href = './hasil.html'
 
 				for (let i = 0; i < jwb_urut_no.length; i++) {
@@ -201,11 +193,14 @@
 
 			function showNextSlide(){
 				showSlide(currentSlide + 1)
-
-				let selector2 = `input[name=question${currentSlide}]:checked`
-				let nilai = $(selector2).val();
-				console.log(selector2)
-				console.log(nilai)
+				// let tempatJawaban = questionContainer.querySelectorAll('.answers')
+				// let tJawaban = tempatJawaban[currentSlide]
+				// let selector2 = `input[name=question${currentSlide}]:checked`
+				// let jawaban = $(selector2).val();
+				// console.log(tempatJawaban)
+				// console.log(tJawaban)
+				// console.log(selector2)
+				// console.log(jawaban)
 			}
 
 			function showPreviousSlide(){
@@ -216,6 +211,7 @@
 				showSlide(n)
 			}
 			//DOM Show Question
+
 
 			let questionContainer = document.querySelector("#quiz")
 			let nextButton = document.querySelector("#next")
